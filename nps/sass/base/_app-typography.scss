@@ -1,0 +1,34 @@
+/* GLOBAL TEXT SYLES
+   ========================================================================== */
+
+$primary-font: 'Open Sans', sans-serif; 
+$secondary-font: 'Roboto', sans-serif; 
+
+$base-font-size: 16px;
+$titles_size: 3rem;
+$secondary_size: 1.2rem;
+$tertiary_size: 1.125rem;
+$default_size: 1rem;
+$small_size: .925rem; 
+
+$light_weight: 300;
+$default_weight: 400;
+$medium_weight: 500;
+$bold_weight: 700;
+
+* { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { font-family: $secondary-font; font-size: $base-font-size; color: $masala; font-weight: $light_weight; line-height: 1.5; }
+
+h1 { font-family: $primary-font; font-size: $titles_size; font-weight: $light_weight; line-height: 1.2; margin: 0; }
+h2 { font-family: $primary-font; font-size: $titles_size; font-weight: $light_weight; line-height: 1.2; margin: 0; }
+h3 { text-transform: uppercase; font-family: $primary-font; font-size: $default_size; font-weight: $bold_weight; line-height: 1.2; } 
+h4 { font-family: $primary-font; font-size: $tertiary_size; font-weight: $medium_weight; line-height: 1.2; }
+
+p { font-family: $secondary-font; font-size: $small_size; font-weight: $default_weight; line-height: 1.5; }
+
+a { margin: 0; font-family: inherit; font-size: inherit; font-weight: inherit; text-transform: none; text-decoration: none; cursor: pointer; color: $primary; }
+
+
+
+
+
