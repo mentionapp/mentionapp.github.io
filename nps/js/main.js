@@ -36,7 +36,7 @@ $(document).ready(function() {
 			analytics.identify(''+AnoID+'', {
 				email: sEmail,
 			});
-			analytics.identify(null, {
+			analytics.identify(''+AnoID+'', {
 			  name: data.PRIVATE.name,
 			  gender: data.DEMOGRAPHICS.gender,
 			  city: data.GEOGRAPHICS.location_city,
