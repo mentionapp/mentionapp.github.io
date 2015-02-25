@@ -32,7 +32,8 @@ $(document).ready(function() {
 		$.getJSON(augurAPI).done(function(data){
 			console.log("success: we have to parse data");
 			console.log(data);
-			analytics.identify(''+sEmail+'', {
+			var AnoID = analytics.user().anonymousId();
+			analytics.identify(''+AnoID+'', {
 				email: sEmail,
 			});
 			analytics.identify(null, {
@@ -44,7 +45,7 @@ $(document).ready(function() {
 			  bioTwitter: data.PRIVATE.bio[0].value,
 			  linkedin: data.PROFILES.linkedin_handle
 			});
-			analytics.alias(''+ sEmail +'');
+			// analytics.alias(''+ AnoID +'');
 		}).fail(function(){
 			console.log('failed to get json from augur API');
 		});
