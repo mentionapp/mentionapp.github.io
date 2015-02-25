@@ -20,8 +20,7 @@ $(document).ready(function() {
 		var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 		if (filter.test(sEmail)) {
 	    return true;
-	  }
-	  else {
+	  } else {
 	    return false;
 	  }
 	}​
@@ -32,8 +31,11 @@ $(document).ready(function() {
 			console.log("success: we have to parse data");
 			console.log(data);
 			var anoID = analytics.user().anonymousId();
+			analytics.track('Registered for ebook', {
+		  	ebookName : 'NPS'
+			});
 			analytics.identify(''+ anoID +'', {
-				email: sEmail,
+				email: sEmail
 			});
 			analytics.identify(''+ sEmail +'', {
 			  name: data.PRIVATE.name,
@@ -43,9 +45,6 @@ $(document).ready(function() {
 			  twitter: data.PROFILES.twitter_handle,
 			  bioTwitter: data.PRIVATE.bio[0].value,
 			  linkedin: data.PROFILES.linkedin_handle
-			});
-			analytics.track('Registered for ebook', {
-		  	ebookName : 'NPS'
 			});
 		}).fail(function(){
 			console.log('failed to get json from augur API');
