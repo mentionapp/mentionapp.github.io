@@ -31,7 +31,7 @@ $(document).ready(function() {
 			console.log("success: we have to parse data");
 			console.log(data);
 			var anoID = analytics.user().anonymousId();
-			analytics.track(''+anoID+'', 'Registered for ebook', {
+			analytics.track(''+ anoID +'', 'Registered for ebook', {
 		  	ebookName: 'NPS'
 			});
 			analytics.identify(''+ anoID +'', {
