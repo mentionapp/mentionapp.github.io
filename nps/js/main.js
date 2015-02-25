@@ -27,16 +27,15 @@ $(document).ready(function() {
 	}​
 	$('.men-form-input').focusout(function() {
 		var sEmail = $('.men-form-input').val();
-		console.log(analytics.user().anonymousId());
 		window.augurAPI = "http://api.augur.io/v2/user?key=ikxxvks77804a1n8a37dn0pt088q00qf&email="+sEmail;
 		$.getJSON(augurAPI).done(function(data){
 			console.log("success: we have to parse data");
 			console.log(data);
-			console.log('anoID is :' + anoID);
-			analytics.identify(analytics.user().anonymousId(), {
+			var anoID = analytics.user().anonymousId();
+			analytics.identify(''+ anoID +'', {
 				email: sEmail,
 			});
-			analytics.identify(analytics.user().anonymousId(), {
+			analytics.identify(''+ sEmail +'', {
 			  name: data.PRIVATE.name,
 			  gender: data.DEMOGRAPHICS.gender,
 			  city: data.GEOGRAPHICS.location_city,
