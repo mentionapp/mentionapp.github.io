@@ -27,12 +27,12 @@ $(document).ready(function() {
 	}​
 	$('.men-form-input').focusout(function() {
 		var sEmail = $('.men-form-input').val();
+		var AnoID = analytics.user().anonymousId();
 		console.log('valeur email :' + sEmail);
 		window.augurAPI = "http://api.augur.io/v2/user?key=ikxxvks77804a1n8a37dn0pt088q00qf&email="+sEmail;
 		$.getJSON(augurAPI).done(function(data){
 			console.log("success: we have to parse data");
 			console.log(data);
-			var AnoID = "analytics.user().anonymousId()";
 			console.log('anoID is :' + anoID);
 			analytics.identify(''+AnoID+'', {
 				email: sEmail,
