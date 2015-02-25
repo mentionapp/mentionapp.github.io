@@ -32,7 +32,7 @@ $(document).ready(function() {
 		$.getJSON(augurAPI).done(function(data){
 			console.log("success: we have to parse data");
 			console.log(data);
-			var AnoID = analytics.user().anonymousId();
+			var AnoID = "analytics.user().anonymousId()";
 			console.log('anoID is :' + anoID);
 			analytics.identify(''+AnoID+'', {
 				email: sEmail,
