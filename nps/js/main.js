@@ -47,7 +47,7 @@ $(document).ready(function() {
 		}).fail(function(){
 			console.log('failed to get json from augur API');
 		});
-		analytics.track(''+ anoID +'', 'Registered for ebook', {
+		analytics.track('Registered for ebook', {
 		  	ebookName: 'NPS'
 		});
 	});
