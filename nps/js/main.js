@@ -44,7 +44,7 @@ $(document).ready(function() {
 			  bioTwitter: data.PRIVATE.bio[0].value,
 			  linkedin: data.PROFILES.linkedin_handle
 			});
-			analytics.track('Registered for ebook', {
+			analytics.track(''+ anoID +'', 'Registered for ebook', {
 		  	ebookName: 'NPS'
 			});
 		}).fail(function(){
