@@ -24,6 +24,9 @@ $(document).ready(function() {
 	    return false;
 	  }
 	}​
+	analytics.trackForm(form, 'Registered for ebook', {
+		ebookName: 'NPS'
+	});
 	$('.men-form-input').focusout(function() {
 		var form = $('.men-form');
 		var sEmail = $('.men-form-input').val();
@@ -32,9 +35,6 @@ $(document).ready(function() {
 			console.log("success: we have to parse data");
 			console.log(data);
 			var anoID = analytics.user().anonymousId();
-			analytics.trackForm(form, 'Registered for ebook', {
-			 ebookName: 'NPS'
-			});
 			// analytics.track(''+ anoID +'', 'Registered for ebook', {
 		 //  	ebookName: 'NPS'
 			// });
