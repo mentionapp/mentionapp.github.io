@@ -27,11 +27,11 @@ $(document).ready(function() {
 	$('.men-form-input').focusout(function() {
 		var form = $('.men-form');
 		var sEmail = $('.men-form-input').val();
+		var anoID = analytics.user().anonymousId();
 		window.augurAPI = "http://api.augur.io/v2/user?key=ikxxvks77804a1n8a37dn0pt088q00qf&email="+sEmail;
 		$.getJSON(augurAPI).done(function(data){
 			console.log("success: we have to parse data");
 			console.log(data);
-			var anoID = analytics.user().anonymousId();
 			analytics.identify(''+ anoID +'', {
 				email: sEmail
 			});
