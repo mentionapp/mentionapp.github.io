@@ -47,6 +47,7 @@ $(document).ready(function() {
 			analytics.track('Registered for ebook', { 
 				ebook: 'NPS'
 			});	
+			console.log('mxcnote: the end');
 		}).fail(function(){
 			console.log('failed to get json from augur API');
 		});
