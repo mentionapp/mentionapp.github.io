@@ -44,13 +44,11 @@ $(document).ready(function() {
 			  bioTwitter: data.PRIVATE.bio[0].value,
 			  linkedin: data.PROFILES.linkedin_handle
 			});
+			analytics.track(''+ anoID +'', 'Registered for ebook', { 
+				ebook: 'NPS'
+			});	
 		}).fail(function(){
 			console.log('failed to get json from augur API');
 		});
-		analytics.track('Registered for ebook', {
-  			ebook: 'NPS'
-			}, {
-  			anonymousId: ''+ anoID +''
-		});	
 	});
 });
