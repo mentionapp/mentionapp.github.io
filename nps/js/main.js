@@ -45,10 +45,10 @@ $(document).ready(function() {
 			  twitter: data.PROFILES.twitter_handle,
 			  bioTwitter: null,
 			  linkedin: data.PROFILES.linkedin_handle
-			}
-			if (data.PRIVATE.bio !== undefined && data.PRIVATE.bio.length > 0 ) {
-				properties.bioTwitter = data.PRIVATE.bio[0].value
 			};
+			if (data.PRIVATE.bio !== undefined && data.PRIVATE.bio.length > 0) {
+				properties.bioTwitter = data.PRIVATE.bio[0].value;
+			}
 			analytics.identify(''+ sEmail +'', properties);
 			console.log('begin track');
 			analytics.track('Registered for ebook', { 
