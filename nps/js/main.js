@@ -38,6 +38,7 @@ $(document).ready(function() {
 			});
 			console.log('begin identify 2');
 			properties = {
+				mail: sEmail,
 			  name: data.PRIVATE.name,
 			  gender: data.DEMOGRAPHICS.gender,
 			  city: data.GEOGRAPHICS.location_city,
