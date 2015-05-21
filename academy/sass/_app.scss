@@ -1,0 +1,64 @@
+* { @include box-sizing(border-box); text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+html { height: 100%; }
+body { color: #111; margin: 0; line-height: 1.5; overflow-x: hidden; -webkit-overflow-scrolling: touch; height: auto; font-size: 16px; font-family: 'Roboto', sans-serif; background: #fff; }
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; }
+
+// welcome
+.ac__welcome { height: 500px; background: url('/img/office.jpg') center center no-repeat; background-size: cover; }
+
+// nav
+.ac__nav { width: 100%; padding: 32px 2%; }
+.ac__nav-container { display: table; width: 100%; }
+.ac__logo-container { display: table-cell; vertical-align: middle; text-align: left; }
+.ac__cta--nav-container { display: table-cell; vertical-align: middle; text-align: right; }
+.ac__cta--nav { padding: 10px 21px; border: 1px solid #fff; color: #fff; border-radius: 3px; text-decoration: none; }
+
+// header
+.ac__header { margin-top: 80px; width: 100%; text-align: center; }
+.ac__title { font-size: 4rem; margin:0; line-height: 1.2; color: #fff; }
+.ac__desc { width: 700px; margin: 0 auto; color: #fff; }
+
+// ctas
+.ac__ctas { background: #fafafa; padding: 42px 0; position: static; }
+.ac__ctas-container { max-width: 1280px; margin: 0 auto; text-align: center; }
+.ac__form-container form { display: inline-block; vertical-align: middle; }
+.ac__form-container span { margin-right: 21px; vertical-align: middle; color: #888; }
+.ac__mail--main { height: 56px; width: 250px; margin-right: 10px; border: 1px solid #eee; border-radius: 3px; }
+.ac__cta--main, .ac__cta--twitter { display: inline-block; text-decoration: none; border-radius: 3px; height: 56px; line-height: 56px; padding: 0 21px; background: #36a3dc; color: #fff; }
+.ac__cta--twitter { padding: 0 42px;  }
+.ac__form-container--last span { margin: 0 21px; }
+
+// fixed
+.ac__cta--fixed { position: fixed; bottom: 0; width: 100%; padding: 32px 2%; border-top: 1px solid #fafafa; background: #fff; }
+
+// content
+.ac__content { padding: 4% 0; }
+.ac__content-wrapper { max-width: 960px; margin: 0 auto; text-align: left; }
+.ac__content-title { font-size: 2.5rem; margin: 0; margin-bottom: 4%; line-height: 1.2; text-align: center; }
+
+//tests
+.ac__tests { margin: 0 auto; margin-top: 10%; text-align: center; }
+.ac__tests-container { display: inline-block; width: 280px; margin-top: 4%; }
+.ac__tests-container:nth-child(6), .ac__tests-container:nth-child(3) { margin: 4% 20px 0 20px; }
+.ac__tests-img { border-radius: 100%; }
+.ac__tests-container p { color: #888; }
+.ac__tests-container .ac__tests-author { color: #444; margin-bottom: 5px; }
+.ac__tests-container .ac__tests-author-position { color: #36a3dc; margin: 0; }
+
+
+
+
+
+
+
