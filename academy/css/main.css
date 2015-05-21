@@ -400,7 +400,10 @@ body {
 
 @media only screen and (max-width: 640px) {
   .ac__content-wrapper {
-    padding: 0 21px; } }
+    padding: 0 21px; }
+
+  .ac__content-title {
+    font-size: 1.5rem; } }
 .ac__tests {
   margin: 0 auto;
   margin-top: 10%;
