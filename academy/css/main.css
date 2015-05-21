@@ -282,7 +282,7 @@ body {
 
 .ac__welcome {
   height: 500px;
-  background: url("/img/office.jpg") center center no-repeat;
+  background: url("../img/office.jpg") center -300px no-repeat;
   background-size: cover; }
 
 .ac__nav {
