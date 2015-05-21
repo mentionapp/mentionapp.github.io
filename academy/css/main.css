@@ -282,7 +282,7 @@ body {
 
 .ac__welcome {
   height: 500px;
-  background: url("../img/office.jpg") center -300px no-repeat;
+  background: url("../img/office.jpg") center center no-repeat;
   background-size: cover; }
 
 .ac__nav {
@@ -326,6 +326,13 @@ body {
   margin: 0 auto;
   color: #fff; }
 
+@media only screen and (max-width: 640px) {
+  .ac__title {
+    font-size: 2rem; }
+
+  .ac__desc {
+    width: 90%;
+    margin: 0 auto; } }
 .ac__ctas {
   background: #fafafa;
   padding: 42px 0;
@@ -391,6 +398,9 @@ body {
   line-height: 1.2;
   text-align: center; }
 
+@media only screen and (max-width: 640px) {
+  .ac__content-wrapper {
+    padding: 0 21px; } }
 .ac__tests {
   margin: 0 auto;
   margin-top: 10%;
