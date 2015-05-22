@@ -94,7 +94,7 @@ header nav a#trial {
   text-align: center;
   font-weight: 400;
 }
-.top #readmore:after, .top #readmore:before {
+/*.top #readmore:after, .top #readmore:before {
   top: 100%;
   left: 50%;
   border: solid transparent;
@@ -104,19 +104,11 @@ header nav a#trial {
   position: absolute;
   pointer-events: none;
   margin-top: 10px;
-}
+}*/
 
 .top #readmore:after {
-	border-color: transparent;
-	border-top-color: #FFFFFF;
-	border-width: 20px;
-	margin-left: -20px;
-}
-.top #readmore:before {
-	border-color: transparent;
-	border-top-color: #FFFFFF;
-	border-width: 20px;
-	margin-left: -20px;
+	content: "";
+	background-image: url('../img/more.svg');
 }
 
 .head-page {
@@ -159,7 +151,7 @@ header nav a#trial {
 
 .block-white {
 	position: relative;
-	padding:80px 20px;
+	padding:42px 21px;
 	background-color: #fafafa;
 	width: 100%;
 	overflow: hidden;
@@ -191,7 +183,7 @@ header nav a#trial {
 	float:right;
 }
 .block-center {
-	padding:80px 20px;
+	padding:42px 21px;
 	text-align: center;
 	overflow: hidden;
 }
