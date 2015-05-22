@@ -181,6 +181,11 @@ h1 {
   font-size: 22px;
   margin:40px 0 20px 0;
 }
+
+.ctas-container {
+  text-align: center;
+}
+
 #result #redirect-mention {
   display: inline-block;
   text-align: center;
@@ -197,17 +202,21 @@ h1 {
   height: auto;
   line-height: auto;
   vertical-align: top;
+  margin-right: 21px; 
 }
 #result #share-twitter {
   vertical-align: top;
+  width: 250px;
   display: inline-block;
   background-color: transparent;
   padding:18px 32px;
   border-radius: 4px;
+  height: auto;
+  line-height: auto;
   border: 1px solid #1799DD;
   color:#1799DD;
   float:right;
-  margin-top: 80px;
+  text-decoration: none;
 }
 
 
