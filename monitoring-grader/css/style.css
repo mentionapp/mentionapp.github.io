@@ -93,6 +93,15 @@ header nav a#trial {
   width: 100%;
   text-align: center;
   font-weight: 400;
+  opacity: .5;
+  transition:all 0.3s ease;
+	-webkit-transition:all 0.3s ease;
+}
+
+.top #readmore:hover {
+	opacity: .8;
+	transition:all 0.3s ease;
+	-webkit-transition:all 0.3s ease;
 }
 
 .head-page {
