@@ -94,22 +94,6 @@ header nav a#trial {
   text-align: center;
   font-weight: 400;
 }
-/*.top #readmore:after, .top #readmore:before {
-  top: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  margin-top: 10px;
-}*/
-
-.top #readmore:after {
-	content: "";
-	background-image: url('../img/more.svg');
-}
 
 .head-page {
 	margin-top: 100px;
