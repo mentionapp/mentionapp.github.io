@@ -94,16 +94,16 @@ header nav a#trial {
   text-align: center;
   font-weight: 400;
   opacity: .5;
-  transition:all 0.3s ease;
-	-webkit-transition:all 0.3s ease;
 }
 
 .top #readmore img {
 	opacity: .5;
+	transition:all 0.3s ease;
+	-webkit-transition:all 0.3s ease;
 }
 
 .top #readmore:hover img {
-	opacity: .8;
+	opacity: 1;
 	transition:all 0.3s ease;
 	-webkit-transition:all 0.3s ease;
 }
