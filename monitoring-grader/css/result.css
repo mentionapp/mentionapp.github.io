@@ -204,6 +204,7 @@ h1 {
   vertical-align: top;
   margin-right: 21px; 
 }
+
 #result #share-twitter {
   vertical-align: top;
   width: 250px;
@@ -215,7 +216,6 @@ h1 {
   line-height: auto;
   border: 1px solid #1799DD;
   color:#1799DD;
-  float:right;
   text-decoration: none;
 }
 
