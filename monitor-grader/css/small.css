@@ -1,0 +1,43 @@
+@media screen and (max-width: 1280px) {
+	
+	a#readmore, .block-white, .block-center, .block-button, footer {
+		display:none !important;
+	}
+
+	.left {
+		width: auto;
+	}
+	.right {
+		width: auto;
+	}
+	
+	header #logomention {
+		  margin-top: 9px;
+	}
+	header nav a#trial {
+		padding: 2px 10px;
+	}
+
+	header nav a:not(#trial) {
+		display: none;
+	}
+
+	.head-page p {
+		width: auto;
+		padding: 0 40px;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+	header nav a{
+		display: none;
+	}
+	.left {
+		width: 100%;
+		text-align: center;
+	}
+	.head-page button {
+		  font-size: 14px;
+	}
+}
