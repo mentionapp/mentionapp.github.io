@@ -96,12 +96,12 @@ function textScore(score){
     $('p.descr').html(descr);
 }
 
-$(window).load(function() {
+analytics.ready(function() {
     var score = parseInt(qs["score"]);
     console.log('coucou');
     var anoID = analytics.user().anonymousId();
     console.log(anoID);
-    analytics.identify();
+    analytics.identify(''+ anoID +'');
     console.log('id success');
     analytics.track('Completed Marketing Grader', { 
         marketing_grader_score: score
