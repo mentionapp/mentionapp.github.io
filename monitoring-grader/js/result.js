@@ -4,7 +4,7 @@ $(document).ready(function() {
     updateSvg(score);
     textScore(score);
     var url = $('#share-twitter').attr("href");
-    var url_modified = "https://twitter.com/share?url=mention.com&text=I got a score of " + score + " at the Mention Media Monitoring Grader! Test your skills too";
+    var url_modified = "https://twitter.com/share?url=http://get.mention.com/monitoring-grader&text=I got a score of " + score + " at the Mention Media Monitoring Grader! Test your skills too";
     url = url.replace('parse', url_modified);
     $('#share-twitter').attr('href', url)
 });
