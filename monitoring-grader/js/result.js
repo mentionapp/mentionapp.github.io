@@ -95,3 +95,16 @@ function textScore(score){
     $('h2#title-score').text(title);
     $('p.descr').html(descr);
 }
+
+$(document).ready(function() {
+    var anoID = analytics.user().anonymousId();
+    analytics.identify(''+ anoID +'');
+    analytics.track('Completed Marketing Grader', { 
+        marketing_grader_score: score
+    }); 
+)};
+
+
+
+
+
