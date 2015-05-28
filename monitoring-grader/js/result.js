@@ -98,9 +98,8 @@ function textScore(score){
 
 $(document).ready(function() {
     var score = parseInt(qs["score"]);
-    var anoID = analytics.user().anonymousId();
     console.log('coucou');
-    analytics.identify('' + anoID + '');
+    analytics.identify(analytics.user().anonymousId());
     console.log('id success' + anoID);
     analytics.track('Completed Marketing Grader', { 
         marketing_grader_score: score
