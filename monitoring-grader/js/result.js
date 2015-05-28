@@ -105,7 +105,7 @@ $(document).ready(function() {
         marketing_grader_score: score
     });
     console.log('success tracked');
-)};
+});
 
 
 
