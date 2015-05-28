@@ -96,13 +96,10 @@ function textScore(score){
     $('p.descr').html(descr);
 }
 
-$(document).ready(function() {
+$(window).load(function() {
     var score = parseInt(qs["score"]);
     console.log('coucou');
-    setTimeout(function(){
-        console.log("settimeout",analytics.user())
-    },1000)
-    var anoID = analytics.user.anonymousId();
+    var anoID = analytics.user().anonymousId();
     console.log(anoID);
     analytics.identify();
     console.log('id success');
