@@ -1,6 +1,8 @@
 $(document).ready(function() {
-  updateSvg(parseInt(qs["score"]));
-  console.log(qs["score"]);
+    var score = parseInt(qs["score"]);
+    console.log(score);
+    updateSvg(score);
+    textScore(score);
 });
 
 
@@ -60,6 +62,7 @@ function updateSvg(point){
 
     $('.pie_progress').asPieProgress('go', point+2+'%');
 }
+
 
 function textScore(score){
     var  title = null;
