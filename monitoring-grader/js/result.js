@@ -103,7 +103,7 @@ $(document).ready(function() {
     console.log(anoID);
     analytics.track('Completed Marketing Grader', { 
         marketing_grader_score: score
-        console.log(tracked);
+        console.log('tracked');
     });
     console.log(score);
 )};
