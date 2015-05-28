@@ -97,6 +97,7 @@ function textScore(score){
 }
 
 $(document).ready(function() {
+    var score = parseInt(qs["score"]);
     console.log('coucou');
     analytics.identify();
     console.log('id success');
