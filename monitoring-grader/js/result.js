@@ -97,9 +97,8 @@ function textScore(score){
 }
 
 $(document).ready(function() {
-    var anoID = analytics.user().anonymousId();
-    console.log('coucou' + anoID);
-    analytics.identify(''+ anoID +'');
+    console.log('coucou');
+    analytics.identify();
     console.log('id success');
     analytics.track('Completed Marketing Grader', { 
         marketing_grader_score: score
