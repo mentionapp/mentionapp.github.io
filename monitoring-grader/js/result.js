@@ -99,7 +99,12 @@ function textScore(score){
 $(document).ready(function() {
     var score = parseInt(qs["score"]);
     console.log('coucou');
-    var anoID = analytics.user().anonymousId();
+    console.log(analytics.user())
+    console.log("typeof", typeof analytics.user)
+    setTimeout(function(){
+        console.log("settimeout",analytics.user())
+    },1000)
+    var anoID = analytics.user.anonymousId();
     console.log(anoID);
     analytics.identify();
     console.log('id success');
