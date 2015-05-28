@@ -98,10 +98,14 @@ function textScore(score){
 
 $(document).ready(function() {
     var anoID = analytics.user().anonymousId();
+    console.log('coucou');
     analytics.identify(''+ anoID +'');
+    console.log(anoID);
     analytics.track('Completed Marketing Grader', { 
         marketing_grader_score: score
-    }); 
+        console.log(tracked);
+    });
+    console.log(score);
 )};
 
 
