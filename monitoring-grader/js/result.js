@@ -3,6 +3,10 @@ $(document).ready(function() {
     console.log(score);
     updateSvg(score);
     textScore(score);
+    var url = $('#share-twitter').attr("href");
+    var url_modified = "https://twitter.com/share?url=mention.com&text=I got" + score + "at the Mention Media Monitoring Grader! Test your skills here";
+    url = url.replace('parse', url_modified);
+    $('#share-twitter').attr('href', url)
 });
 
 
