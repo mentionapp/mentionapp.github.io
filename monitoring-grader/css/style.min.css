@@ -1,0 +1,21 @@
+html,body{height:100%;font-family:'Source Sans Pro',sans-serif;font-size:15px;line-height:24px;font-weight:300;color:#444}*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+h1,h2,h3,h4,h5,h6{line-height:1.2}p{line-height:1.5}.left{width:50%;float:left}.right{width:50%;float:right}.max-width{max-width:1200px;margin:0 auto}
+.top{position:relative;background-color:rgba(59,130,169,0.7);overflow:hidden;height:100%}.top:after{content:"";background:url(../img/bg-header.jpg);background-size:cover;opacity:.5;top:0;left:0;bottom:0;right:0;position:absolute;z-index:-1;max-height:100%}
+header{width:100%;padding:20px 40px;overflow:hidden;clear:both}header a{color:#fff;text-decoration:none}header #logomention{height:28px}header .right{text-align:right}
+header nav a{display:inline-block;margin:0 20px;line-height:40px}header nav a#trial{border:1px solid #fff;border-radius:3px;padding:5px 20px;text-transform:uppercase;padding-top:5px;font-weight:500;font-size:.85rem}
+.top #readmore{position:absolute;bottom:60px;color:#fff;font-size:20px;text-decoration:none;display:block;width:100%;text-align:center;font-weight:400;opacity:.5}
+.top #readmore img{opacity:.5;transition:all .3s ease;-webkit-transition:all .3s ease}.top #readmore:hover img{opacity:1;transition:all .3s ease;-webkit-transition:all .3s ease}
+.head-page{margin-top:100px;color:#fff;text-align:center;width:100%}.head-page h1{text-transform:uppercase;font-size:40px;font-weight:600}.head-page p{font-size:16px;font-size:1rem;width:700px;margin:40px auto;display:block}
+.head-page a#test{display:inline-block;text-decoration:none;margin-top:20px;background-color:#3fa2d9;padding:20px 21px;border:0;text-transform:uppercase;color:#fff;font-size:16px;font-weight:400;cursor:pointer;border-radius:3px;transition:all .3s ease;-webkit-transition:all .3s ease}
+.head-page button:hover{background-color:#3eb3f4}.block-white{position:relative;padding:42px 21px;background-color:#fafafa;width:100%;overflow:hidden;min-height:500px}
+.block-white .left,.block-white .right{padding:20px}.block-white .left{padding-top:60px}.block-white .right{text-align:right}.block-white h2{font-size:38px;font-weight:400;margin-bottom:40px}
+.block-white p{max-width:60%}.block-white img{position:relative;max-width:90%;bottom:0;right:0;zoom:.6;float:right}.block-center{padding:42px 21px;text-align:center;overflow:hidden}
+.block-center h3{margin-top:40px;font-size:38px;font-weight:400}.block-center p{max-width:500px;margin:30px auto}.block-center .left,.block-center .right,.block-center .quote{padding:20px}
+.block-center .quote{text-align:left;margin-bottom:20px}.block-center .quote .text{text-align:left;position:relative;background-color:#f7f9fa;border:1px solid #dce4e8;border-radius:3px;padding:10px 20px;line-height:1.5}
+.block-center .quote .text:after,.block-center .quote .text:before{top:100%;left:40px;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}
+.block-center .quote .text:after{border-color:rgba(247,249,250,0);border-top-color:#f7f9fa;border-width:10px;margin-left:-10px}.block-center .quote .text:before{border-color:rgba(220,228,232,0);border-top-color:#dce4e8;border-width:11px;margin-left:-11px}
+.block-center .quote .avatar{width:64px;height:64px;border-radius:50%;float:left;margin:20px 0 0 10px}.block-center .quote h5{font-size:16px;font-weight:400;display:inline-block;margin-top:30px;margin-left:18px}
+.block-center .quote span{color:#3fa2d9;margin-left:6px;display:inline-block}.block-button{background-color:#fafafa;text-align:center;padding:80px 0}.block-button a{display:inline-block;text-decoration:none;color:#3fa2d9;font-style:18px;display:inline-block;margin:0 20px;border:1px solid #3fa2d9;background-color:transparent;text-transform:uppercase;border-radius:3px;padding:20px 30px;cursor:pointer;transition:all .4s ease;-webkit-transition:all .4s ease}
+.block-button a:hover{background-color:#3fa2d9;color:#fff}.block-button a:first-child{background:#3fa2d9;color:#fff}footer{overflow:hidden;background-color:#eee;padding:40px 60px;width:100%}
+footer .left img{height:20px}footer .right{text-align:right}footer ul li{display:inline-block;margin-left:20px}footer ul li a{color:#444;text-decoration:none}
+footer ul li.social a{font-weight:400}
