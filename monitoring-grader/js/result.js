@@ -99,8 +99,6 @@ function textScore(score){
 $(document).ready(function() {
     var score = parseInt(qs["score"]);
     console.log('coucou');
-    console.log(analytics.user())
-    console.log("typeof", typeof analytics.user)
     setTimeout(function(){
         console.log("settimeout",analytics.user())
     },1000)
