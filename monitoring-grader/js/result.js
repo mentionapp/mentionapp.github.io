@@ -3,6 +3,18 @@ $(document).ready(function() {
     console.log(score);
     updateSvg(score);
     textScore(score);
+
+    analytics.ready(function() {
+        console.log('coucou');
+        var anoID = analytics.user().anonymousId();
+        console.log(anoID);
+        analytics.identify(''+ anoID +'');
+        console.log('id success');
+        analytics.track('Completed Marketing Grader', { 
+            marketing_grader_score: score
+        });
+        console.log('success tracked');
+    });
 });
 
 
@@ -95,19 +107,6 @@ function textScore(score){
     $('h2#title-score').text(title);
     $('p.descr').html(descr);
 }
-
-analytics.ready(function() {
-    var score = parseInt(qs["score"]);
-    console.log('coucou');
-    var anoID = analytics.user().anonymousId();
-    console.log(anoID);
-    analytics.identify(''+ anoID +'');
-    console.log('id success');
-    analytics.track('Completed Marketing Grader', { 
-        marketing_grader_score: score
-    });
-    console.log('success tracked');
-});
 
 
 
