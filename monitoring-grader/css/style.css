@@ -208,7 +208,7 @@ header nav a#trial {
 	border:1px solid #dce4e8;
 	border-radius:3px;
 	padding:10px 20px;
-	line-height: 20px;
+	line-height: 1.5;
 }
 .block-center .quote .text:after, .block-center .quote .text:before {
 	top: 100%;

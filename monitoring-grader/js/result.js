@@ -60,3 +60,35 @@ function updateSvg(point){
 
     $('.pie_progress').asPieProgress('go', point+2+'%');
 }
+
+function textScore(score){
+    var  title = null;
+    var  descr = null;
+    var  link = "https://en.mention.com/features";
+
+    console.log(title);
+
+    switch (true) {
+        case (score <= 25):
+            title = "Don’t give up! ";
+            descr = "You’re a monitoring newbie, but that just means you’re a candidate for “most improved!” Get ready to learn the ins and outs of monitoring an online presence for your business. <a href='"+ link +"'>Take a look around.</a>";
+            break;
+        case (score <= 50):
+            title = "It’s a good start!";
+            descr = "When it comes to your monitoring skills, you’ve laid the groundwork pretty well. This definitely isn’t your first rodeo. But you’ve still got a lot to learn, so I hope you’re excited to get started! <a href='"+ link +"'>Become an advanced monitor.</a>";
+            break;
+        case (score <= 75):
+            title = "Not too shabby!";
+            descr = "Okay, you’ve impressed us. You’re definitely no beginner student. In fact, your skills may give ours a run for our money. But remember, there’s always room for improvement. <a href='"+ link +"'>See what you’re missing.</a>";
+            break;
+        case (score <= 100):
+            title = "You’re a true monitoring master!";
+            descr = "What can’t you do? You are a true expert when it comes to monitoring for your business. At this point, it’s just a matter of ‘practice makes perfect’ for you. <a href='"+ link +"'>Keep on practicing.</a>";
+            break;
+    }
+
+    console.log(title);
+
+    $('h2#title-score').text(title);
+    $('p.descr').html(descr);
+}
