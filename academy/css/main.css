@@ -310,6 +310,9 @@ body {
   border-radius: 3px;
   text-decoration: none; }
 
+@media only screen and (max-width: 640px) {
+  .ac__logo-container {
+    text-align: center; } }
 .ac__header {
   margin-top: 80px;
   width: 100%;
@@ -382,6 +385,9 @@ body {
   margin: 0 21px; }
 
 @media only screen and (max-width: 640px) {
+  .ac__cta--main {
+    margin-top: 21px; }
+
   .ac__form-container span {
     margin-bottom: 15px; } }
 .ac__cta--fixed {
@@ -412,6 +418,9 @@ body {
   margin: 0 auto 15px auto; }
 
 @media only screen and (max-width: 640px) {
+  .ac__content {
+    padding: 10% 0; }
+
   .ac__content-wrapper {
     padding: 0 21px; }
 
@@ -446,3 +455,7 @@ body {
 .ac__tests-container .ac__tests-author-position {
   color: #36a3dc;
   margin: 0; }
+
+@media only screen and (max-width: 640px) {
+  .ac__tests-container {
+    margin: 4% 0 0 0 !important; } }
