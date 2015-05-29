@@ -29,8 +29,10 @@ body { color: #111; margin: 0; line-height: 1.5; overflow-x: hidden; -webkit-ove
 .ac__title { font-size: 4rem; margin:0; line-height: 1.2; color: #fff; }
 .ac__desc { width: 65%; margin: 15px auto; color: #fff; }
 @include mquery(640px) {
+     .ac__header { margin-top: 50px; }
 	.ac__title { font-size: 2rem; }
-	.ac__desc { width: 90%; margin: 0 auto; }
+	.ac__desc { width: 90%; margin: 15px auto; }
+     .ac__cta--nav { display: none; }
 }
 
 // ctas
@@ -42,6 +44,9 @@ body { color: #111; margin: 0; line-height: 1.5; overflow-x: hidden; -webkit-ove
 .ac__cta--main, .ac__cta--twitter { display: inline-block; text-decoration: none; border-radius: 3px; height: 56px; line-height: 56px; padding: 0 21px; background: #36a3dc; color: #fff; }
 .ac__cta--twitter { padding: 0 42px;  }
 .ac__form-container--last span { margin: 0 21px; }
+@include mquery(640px) {
+     .ac__form-container span { margin-bottom: 15px; }
+}
 
 // fixed
 .ac__cta--fixed { position: fixed; bottom: 0; width: 100%; padding: 32px 2%; border-top: 1px solid #fafafa; background: #fff; }
@@ -54,6 +59,7 @@ body { color: #111; margin: 0; line-height: 1.5; overflow-x: hidden; -webkit-ove
 @include mquery(640px) {
 	.ac__content-wrapper { padding: 0 21px; }
 	.ac__content-title { font-size: 1.5rem; }
+     .ac__content-descr { width: 100%; }
 }
 
 //tests

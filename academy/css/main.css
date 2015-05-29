@@ -327,12 +327,18 @@ body {
   color: #fff; }
 
 @media only screen and (max-width: 640px) {
+  .ac__header {
+    margin-top: 50px; }
+
   .ac__title {
     font-size: 2rem; }
 
   .ac__desc {
     width: 90%;
-    margin: 0 auto; } }
+    margin: 15px auto; }
+
+  .ac__cta--nav {
+    display: none; } }
 .ac__ctas {
   background: #fafafa;
   padding: 42px 0;
@@ -375,6 +381,9 @@ body {
 .ac__form-container--last span {
   margin: 0 21px; }
 
+@media only screen and (max-width: 640px) {
+  .ac__form-container span {
+    margin-bottom: 15px; } }
 .ac__cta--fixed {
   position: fixed;
   bottom: 0;
@@ -407,7 +416,10 @@ body {
     padding: 0 21px; }
 
   .ac__content-title {
-    font-size: 1.5rem; } }
+    font-size: 1.5rem; }
+
+  .ac__content-descr {
+    width: 100%; } }
 .ac__tests {
   margin: 0 auto;
   margin-top: 10%;
