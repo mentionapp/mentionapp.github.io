@@ -326,6 +326,7 @@ body {
 
 .ac__desc {
   width: 65%;
+  max-width: 960px;
   margin: 15px auto;
   color: #fff; }
 
