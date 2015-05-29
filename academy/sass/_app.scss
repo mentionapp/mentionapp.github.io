@@ -50,6 +50,7 @@ body { color: #111; margin: 0; line-height: 1.5; overflow-x: hidden; -webkit-ove
 @include mquery(640px) {
      .ac__cta--main { margin-top: 21px; }
      .ac__form-container span { margin-bottom: 15px; }
+     .ac__form-container--last { padding: 0 21px; }
 }
 
 // fixed
