@@ -27,7 +27,7 @@ body { color: #111; margin: 0; line-height: 1.5; overflow-x: hidden; -webkit-ove
 // header
 .ac__header { margin-top: 80px; width: 100%; text-align: center; }
 .ac__title { font-size: 4rem; margin:0; line-height: 1.2; color: #fff; }
-.ac__desc { width: 700px; margin: 0 auto; color: #fff; }
+.ac__desc { width: 700px; margin: 15px auto; color: #fff; }
 @include mquery(640px) {
 	.ac__title { font-size: 2rem; }
 	.ac__desc { width: 90%; margin: 0 auto; }
@@ -50,6 +50,7 @@ body { color: #111; margin: 0; line-height: 1.5; overflow-x: hidden; -webkit-ove
 .ac__content { padding: 4% 0; }
 .ac__content-wrapper { max-width: 960px; margin: 0 auto; text-align: left; }
 .ac__content-title { font-size: 2.5rem; margin: 0; margin-bottom: 4%; line-height: 1.2; text-align: center; }
+.ac__content-descr { width: 90%; }
 @include mquery(640px) {
 	.ac__content-wrapper { padding: 0 21px; }
 	.ac__content-title { font-size: 1.5rem; }
