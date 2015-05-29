@@ -27,7 +27,7 @@ body { color: #111; margin: 0; line-height: 1.5; overflow-x: hidden; -webkit-ove
 // header
 .ac__header { margin-top: 80px; width: 100%; text-align: center; }
 .ac__title { font-size: 4rem; margin:0; line-height: 1.2; color: #fff; }
-.ac__desc { width: 700px; margin: 15px auto; color: #fff; }
+.ac__desc { width: 65%; margin: 15px auto; color: #fff; }
 @include mquery(640px) {
 	.ac__title { font-size: 2rem; }
 	.ac__desc { width: 90%; margin: 0 auto; }
