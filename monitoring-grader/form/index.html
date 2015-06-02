@@ -56,13 +56,11 @@
     }}();
 </script>
 <script>
-  $(window).load(function() {
     var anoID = analytics.user().anonymousId();
     analytics.identify(''+ anoID +'');
     console.log(anoID);
     analytics.track('Started Marketing Grader', { 
     });
     console.log('success');
-  });
 </script>
 </html>
