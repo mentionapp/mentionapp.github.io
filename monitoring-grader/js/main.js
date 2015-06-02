@@ -22,3 +22,11 @@ function onresize(){
     });
 }
 
+$(window).load(function() {
+    var anoID = analytics.user().anonymousId();
+    analytics.identify(''+ anoID +'');
+    console.log(anoID);
+    analytics.track('Viewed marketing grader', { 
+    });
+});
+
