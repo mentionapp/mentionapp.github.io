@@ -73,6 +73,15 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/lesson-1\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/lesson-1\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/sass\/_app.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -124,7 +133,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Gilles Bertaux",
+"lastSavedByUser": "Mention",
 "manualImportLinks": {
 	},
 "projectAttributes": {
@@ -634,7 +643,7 @@
 			"flagValue": -1
 			},
 		"debug": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"devel": {
@@ -706,11 +715,11 @@
 			"flagValue": -1
 			},
 		"unparam": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"vars": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"white": {

@@ -252,6 +252,9 @@ Mixins available:
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased; }
 
+*:focus {
+  outline: 0; }
+
 html {
   height: 100%; }
 
@@ -280,10 +283,32 @@ body {
 * html .clearfix {
   height: 1%; }
 
+.hidden {
+  display: none; }
+
+.visble {
+  display: block; }
+
+.ac__mail--main.border-is-red {
+  border: 1px solid red;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+.ac__ctas.stick {
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  width: 100%; }
+
 .ac__welcome {
   height: 500px;
   background: url("../img/office.jpg") center center no-repeat;
   background-size: cover; }
+
+.ac__welcome--lesson {
+  height: 350px; }
 
 .ac__nav {
   width: 100%;
@@ -318,11 +343,17 @@ body {
   width: 100%;
   text-align: center; }
 
+.ac__header--lesson {
+  margin-top: 40px; }
+
 .ac__title {
   font-size: 4rem;
   margin: 0;
   line-height: 1.2;
   color: #fff; }
+
+.ac__lesson-title {
+  font-size: 2.5rem; }
 
 .ac__desc {
   width: 65%;
@@ -331,8 +362,15 @@ body {
   color: #fff; }
 
 @media only screen and (max-width: 640px) {
+  .ac__welcome {
+    height: auto;
+    padding: 21px; }
+
   .ac__header {
     margin-top: 50px; }
+
+  .ac__header--lesson {
+    margin-top: 0px; }
 
   .ac__title {
     font-size: 2rem; }
@@ -345,7 +383,7 @@ body {
     display: none; } }
 .ac__ctas {
   background: #fafafa;
-  padding: 42px 0;
+  padding: 21px 0;
   position: static; }
 
 .ac__ctas-container {
@@ -360,24 +398,69 @@ body {
 .ac__form-container span {
   margin-right: 21px;
   vertical-align: middle;
-  color: #888; }
+  color: #888;
+  font-weight: 500; }
 
 .ac__mail--main {
   height: 56px;
-  width: 250px;
+  width: 300px;
+  padding-left: 21px;
+  font-size: .85rem;
+  color: #666;
   margin-right: 10px;
-  border: 1px solid #eee;
-  border-radius: 3px; }
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+.ac__mail--main:focus {
+  border: 1px solid #2D8BBD;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
 
 .ac__cta--main, .ac__cta--twitter {
   display: inline-block;
   text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
   border-radius: 3px;
   height: 56px;
   line-height: 56px;
-  padding: 0 21px;
+  padding: 0 35px;
   background: #36a3dc;
+  background: -moz-linear-gradient(top, #36a3dc 0%, #2F8EC0 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #36a3dc), color-stop(100%, #2F8EC0));
+  background: -webkit-linear-gradient(top, #36a3dc 0%, #2F8EC0 100%);
+  background: -o-linear-gradient(top, #36a3dc 0%, #2F8EC0 100%);
+  background: -ms-linear-gradient(top, #36a3dc 0%, #2F8EC0 100%);
+  background: linear-gradient(to bottom, #36a3dc 0%, #2F8EC0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$startcolor', endColorstr='$endcolor',GradientType=0 );
+  border: 1px solid #2D8BBD;
   color: #fff; }
+
+.ac__cta--main:hover {
+  background: #2F8EC0;
+  background: -moz-linear-gradient(top, #2F8EC0 0%, #36a3dc 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2F8EC0), color-stop(100%, #36a3dc));
+  background: -webkit-linear-gradient(top, #2F8EC0 0%, #36a3dc 100%);
+  background: -o-linear-gradient(top, #2F8EC0 0%, #36a3dc 100%);
+  background: -ms-linear-gradient(top, #2F8EC0 0%, #36a3dc 100%);
+  background: linear-gradient(to bottom, #2F8EC0 0%, #36a3dc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$startcolor', endColorstr='$endcolor',GradientType=0 );
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+.ac__cta--main:focus {
+  outline: 0; }
 
 .ac__cta--twitter {
   padding: 0 42px; }
@@ -417,6 +500,10 @@ body {
   line-height: 1.2;
   text-align: center; }
 
+.ac__content-title--lesson {
+  font-size: 1.5rem;
+  margin-bottom: 0; }
+
 .ac__content-descr {
   width: 80%;
   margin: 0 auto 15px auto; }
@@ -435,8 +522,14 @@ body {
     width: 100%; } }
 .ac__tests {
   margin: 0 auto;
-  margin-top: 10%;
+  padding-top: 10%;
   text-align: center; }
+
+.ac__tests.ac__tests--lesson {
+  padding-top: 3%;
+  margin-top: 3%;
+  border-top: 1px solid #eee;
+  max-width: 640px; }
 
 .ac__tests-container {
   display: inline-block;
@@ -448,6 +541,10 @@ body {
 
 .ac__tests-img {
   border-radius: 100%; }
+
+.ac__tests-img--lesson {
+  width: 100px;
+  height: auto; }
 
 .ac__tests-container p {
   color: #888; }
