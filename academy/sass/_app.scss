@@ -14,7 +14,7 @@ body { color: #111; margin: 0; line-height: 1.5; overflow-x: hidden; -webkit-ove
 
 .clearfix { display: inline-block; }
 * html .clearfix { height: 1%; }
-.hidden { display: none; }
+.hidden { display: none !important; }
 .visble { display: block; }
 .ac__mail--main.border-is-red { @include border(1px, solid, red); @include hover(.2s); }
 .ac__ctas.stick { position: fixed; top: 0; z-index: 10000; width: 100%; }
