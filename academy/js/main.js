@@ -83,10 +83,15 @@ $(document).ready(function() {
 		var referrer = document.referrer;
 		var tw_referrer =  "twitter";
 		var ggl_referrer =  "google";
+		var fb_referrer =  "facebook";
 		if (referrer.indexOf(tw_referrer) > -1) {
 			console.log('twitter');
 		} else if (referrer.indexOf(ggl_referrer) > -1) {
 			console.log('google');
+		} else if (referrer.indexOf(fb_referrer) > -1) {
+			console.log('facebook');
+		} else {
+			console.log('no-ref')
 		}
 	}
 });
