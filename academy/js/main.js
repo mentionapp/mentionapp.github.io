@@ -80,6 +80,7 @@ $(document).ready(function() {
 
 	// Get referrer and display different form
 	window.onload = function () {
+		console.log('test');
 		function ref_adapt() {
 			var referrer = document.referrer;
 			var tw_referrer =  "twitter";
