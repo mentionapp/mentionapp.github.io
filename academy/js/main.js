@@ -81,24 +81,22 @@ $(document).ready(function() {
 	// Get referrer and display different form
 	window.onload = function () {
 		console.log('test');
-		function ref_adapt() {
-			var referrer = document.referrer;
-			var tw_referrer =  "twitter";
-			var ggl_referrer =  "google";
-			var fb_referrer =  "facebook";
-			console.log('entered');
-			console.log(referrer);
-			if (referrer.indexOf(tw_referrer) > -1) {
-				console.log('twitter');
-			} else if (referrer.indexOf(ggl_referrer) > -1) {
-				console.log('google');
-			} else if (referrer.indexOf(fb_referrer) > -1) {
-				console.log('facebook');
-			} else {
-				console.log('no-ref')
-			}
+		console.log('test1');
+		var referrer = document.referrer;
+		var tw_referrer =  "twitter";
+		var ggl_referrer =  "google";
+		var fb_referrer =  "facebook";
+		console.log('entered');
+		console.log(referrer);
+		if (referrer.indexOf(tw_referrer) > -1) {
+			console.log('twitter');
+		} else if (referrer.indexOf(ggl_referrer) > -1) {
+			console.log('google');
+		} else if (referrer.indexOf(fb_referrer) > -1) {
+			console.log('facebook');
+		} else {
+			console.log('no-ref')
 		}
-		ref_adapt();
 	}
 
 });
