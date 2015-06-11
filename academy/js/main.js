@@ -85,6 +85,8 @@ $(document).ready(function() {
 			var tw_referrer =  "twitter";
 			var ggl_referrer =  "google";
 			var fb_referrer =  "facebook";
+			console.log('entered');
+			console.log(referrer);
 			if (referrer.indexOf(tw_referrer) > -1) {
 				console.log('twitter');
 			} else if (referrer.indexOf(ggl_referrer) > -1) {
