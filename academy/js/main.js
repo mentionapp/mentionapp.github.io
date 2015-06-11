@@ -98,6 +98,7 @@ $(document).ready(function() {
 				console.log('no-ref')
 			}
 		}
+		ref_adapt();
 	}
 
 });
