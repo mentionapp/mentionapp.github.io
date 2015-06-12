@@ -34,10 +34,12 @@ body { color: #111; margin: 0; line-height: 1.5; overflow-x: hidden; -webkit-ove
 }
 
 // header
-.ac__header { margin-top: 80px; width: 100%; text-align: center; }
-.ac__header--lesson { margin-top: 40px; }
+.ac__header { width: 95%; max-width: 750px; margin: 80px auto 0 auto; text-align: center; }
+.ac__header--lesson { margin-top: 0px; }
+.ac__header--lesson img, .ac__header--lesson span { display: inline-block; vertical-align: middle; color: #fff; }
+.ac__header--lesson img { width: 48px; height: auto; border-radius: 100%; margin: 0 10px; }
 .ac__title { font-size: 4rem; margin:0; line-height: 1.2; color: #fff; }
-.ac__lesson-title { font-size: 2.5rem; }
+.ac__lesson-title { font-size: 2.5rem; margin-bottom: 15px; }
 .ac__desc { width: 65%; max-width: 960px; margin: 15px auto; color: #fff; }
 @include mquery(640px) {
      .ac__welcome { height: auto; padding: 21px; }
@@ -72,27 +74,36 @@ body { color: #111; margin: 0; line-height: 1.5; overflow-x: hidden; -webkit-ove
 
 // content
 .ac__content { padding: 4% 0; }
-.ac__content-wrapper { max-width: 960px; margin: 0 auto; text-align: left; }
+.ac__content-wrapper { max-width: 750px; margin: 0 auto; text-align: left; }
 .ac__content-title { font-size: 2.5rem; margin: 0; margin-bottom: 4%; line-height: 1.2; text-align: center; }
 .ac__content-title--lesson { font-size: 1.5rem; margin-bottom: 0; }
-.ac__content-descr { width: 80%; margin: 0 auto 15px auto; }
+.ac__content-descr, .ac__content p, .ac__content ul { width: 80%; margin: 0 auto 15px auto; }
+.ac__content h2 { text-align: center; margin-top: 42px; font-size: 2rem; }
+.ac__content hr { width: 30%; border: none; border-top: 1px solid #eee; margin: 42px auto; }
+.ac__content .ac__cttw { font-size: 1.3rem; margin-top: 21px; margin-bottom: 21px; padding-left: 5px; border-left: 3px solid #36a3dc; padding-left: 21px; }
+.ac__content a, .ac__content .ac__cttw a { color: #36a3dc; text-decoration: none;  }
+.ac__content .ac__key { display: block; padding: 21px 14px; border-radius: 4px; border: 1px solid #eee; background: #fafafa; }
 @include mquery(640px) {
      .ac__content { padding: 10% 0; }
+     .ac__content--lesson { padding: 3% 0; }
 	.ac__content-wrapper { padding: 0 21px; }
 	.ac__content-title { font-size: 1.5rem; }
      .ac__content-descr { width: 100%; }
+     .ac__content-descr, .ac__content p, .ac__content ul { width: 100%; margin: 0 auto 15px auto; }
+     .ac__content h2 { text-align: left; margin-top: 42px; font-size: 1.7rem; }
 }
 
 //tests
 .ac__tests { margin: 0 auto; padding-top: 10%; text-align: center; }
 .ac__tests.ac__tests--lesson { padding-top: 3%; margin-top: 3%; border-top: 1px solid #eee; max-width: 640px; }
-.ac__tests-container { display: inline-block; width: 280px; margin-top: 4%; }
+.ac__tests-container { display: inline-block; width: 80%; margin-top: 4%; }
 .ac__tests-container:nth-child(6), .ac__tests-container:nth-child(3) { margin: 4% 20px 0 20px; }
+.ac__tests-text--lesson { width: 95%; max-width: 450px; }
 .ac__tests-img { border-radius: 100%; }
 .ac__tests-img--lesson { width: 100px; height: auto; }
 .ac__tests-container p { color: #888; }
 .ac__tests-container .ac__tests-author { color: #444; margin-bottom: 5px; }
-.ac__tests-container .ac__tests-author-position { color: #36a3dc; margin: 0; }
+.ac__tests-container .ac__tests-author-position { color: #36a3dc; margin: 0 auto; }
 @include mquery(640px) {
      .ac__tests-container { margin: 4% 0 0 0 !important; }
 }
