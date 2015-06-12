@@ -28,8 +28,9 @@ body { color: #111; margin: 0; line-height: 1.5; overflow-x: hidden; -webkit-ove
 .ac__nav-container { display: table; width: 100%; }
 .ac__logo-container { display: table-cell; vertical-align: middle; text-align: left; }
 .ac__cta--nav-container { display: table-cell; vertical-align: middle; text-align: right; }
-.ac__cta--nav { padding: 10px 21px; border: 1px solid #fff; color: #fff; border-radius: 3px; text-decoration: none; }
+.ac__cta--nav { padding: 10px 21px; margin-left: 21px; border: 1px solid #fff; color: #fff; border-radius: 3px; text-decoration: none; }
 @include mquery(640px) { 
+     .ac__cta--nav-container { display: none; }
      .ac__logo-container { text-align: center; }
 }
 

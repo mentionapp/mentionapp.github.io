@@ -330,12 +330,16 @@ body {
 
 .ac__cta--nav {
   padding: 10px 21px;
+  margin-left: 21px;
   border: 1px solid #fff;
   color: #fff;
   border-radius: 3px;
   text-decoration: none; }
 
 @media only screen and (max-width: 640px) {
+  .ac__cta--nav-container {
+    display: none; }
+
   .ac__logo-container {
     text-align: center; } }
 .ac__header {
