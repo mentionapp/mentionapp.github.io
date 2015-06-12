@@ -34,8 +34,8 @@ body { color: #111; margin: 0; line-height: 1.5; overflow-x: hidden; -webkit-ove
 }
 
 // header
-.ac__header { width: 95%; max-width: 750px; margin: 80px auto 0 auto; text-align: center; }
-.ac__header--lesson { margin-top: 0px; }
+.ac__header { width: 95%; max-width: 1280px; margin: 80px auto 0 auto; text-align: center; }
+.ac__header--lesson { max-width: 750px; margin-top: 0px; }
 .ac__header--lesson img, .ac__header--lesson span { display: inline-block; vertical-align: middle; color: #fff; }
 .ac__header--lesson img { width: 48px; height: auto; border-radius: 100%; margin: 0 10px; }
 .ac__title { font-size: 4rem; margin:0; line-height: 1.2; color: #fff; }
@@ -58,7 +58,7 @@ body { color: #111; margin: 0; line-height: 1.5; overflow-x: hidden; -webkit-ove
 .ac__mail--main { height: 56px; width: 300px; padding-left: 21px; font-size: .85rem; color: #666; margin-right: 10px; border: 1px solid #ccc; border-radius: 3px; @include hover(.2s); }
 .ac__mail--main:focus { @include border(1px, solid, #2D8BBD); @include hover(.2s); }
 .ac__cta--main, .ac__cta--twitter { display: inline-block; text-decoration: none; @include hover(.2s); font-weight: 500; border-radius: 3px; height: 56px; line-height: 56px; padding: 0 35px; @include background-gradient(#36a3dc, #2F8EC0, vertical); @include border(1px, solid, #2D8BBD); color: #fff; }
-.ac__cta--main:hover { @include background-gradient(#2F8EC0, #36a3dc, vertical); @include hover(.2s); }
+.ac__cta--main:hover { @include background-gradient(#2F8EC0, #2F8EC0, vertical); @include hover(.2s); }
 .ac__cta--main:focus { outline: 0; }
 .ac__cta--twitter { padding: 0 42px;  }
 .ac__form-container--last span { margin: 0 21px; }
@@ -74,7 +74,8 @@ body { color: #111; margin: 0; line-height: 1.5; overflow-x: hidden; -webkit-ove
 
 // content
 .ac__content { padding: 4% 0; }
-.ac__content-wrapper { max-width: 750px; margin: 0 auto; text-align: left; }
+.ac__content-wrapper { max-width: 950px; margin: 0 auto; text-align: left; }
+.ac__content-wrapper--lesson { max-width: 750px; margin: 0 auto; text-align: left; }
 .ac__content-title { font-size: 2.5rem; margin: 0; margin-bottom: 4%; line-height: 1.2; text-align: center; }
 .ac__content-title--lesson { font-size: 1.5rem; margin-bottom: 0; }
 .ac__content-descr, .ac__content p, .ac__content ul { width: 80%; margin: 0 auto 15px auto; }
@@ -94,12 +95,12 @@ body { color: #111; margin: 0; line-height: 1.5; overflow-x: hidden; -webkit-ove
 }
 
 //tests
-.ac__tests { margin: 0 auto; padding-top: 10%; text-align: center; }
+.ac__tests { margin: 0 auto; padding-top: 21px; text-align: center; }
 .ac__tests.ac__tests--lesson { padding-top: 3%; margin-top: 3%; border-top: 1px solid #eee; max-width: 640px; }
-.ac__tests-container { display: inline-block; width: 80%; margin-top: 4%; }
+.ac__tests-container { display: inline-block; width: 80%; max-width: 300px; margin-top: 4%; }
 .ac__tests-container:nth-child(6), .ac__tests-container:nth-child(3) { margin: 4% 20px 0 20px; }
 .ac__tests-text--lesson { width: 95%; max-width: 450px; }
-.ac__tests-img { border-radius: 100%; }
+.ac__tests-img { border-radius: 100%; width: 100px; height: auto; }
 .ac__tests-img--lesson { width: 100px; height: auto; }
 .ac__tests-container p { color: #888; }
 .ac__tests-container .ac__tests-author { color: #444; margin-bottom: 5px; }

@@ -340,11 +340,12 @@ body {
     text-align: center; } }
 .ac__header {
   width: 95%;
-  max-width: 750px;
+  max-width: 1280px;
   margin: 80px auto 0 auto;
   text-align: center; }
 
 .ac__header--lesson {
+  max-width: 750px;
   margin-top: 0px; }
 
 .ac__header--lesson img, .ac__header--lesson span {
@@ -460,12 +461,12 @@ body {
 
 .ac__cta--main:hover {
   background: #2F8EC0;
-  background: -moz-linear-gradient(top, #2F8EC0 0%, #36a3dc 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2F8EC0), color-stop(100%, #36a3dc));
-  background: -webkit-linear-gradient(top, #2F8EC0 0%, #36a3dc 100%);
-  background: -o-linear-gradient(top, #2F8EC0 0%, #36a3dc 100%);
-  background: -ms-linear-gradient(top, #2F8EC0 0%, #36a3dc 100%);
-  background: linear-gradient(to bottom, #2F8EC0 0%, #36a3dc 100%);
+  background: -moz-linear-gradient(top, #2F8EC0 0%, #2F8EC0 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2F8EC0), color-stop(100%, #2F8EC0));
+  background: -webkit-linear-gradient(top, #2F8EC0 0%, #2F8EC0 100%);
+  background: -o-linear-gradient(top, #2F8EC0 0%, #2F8EC0 100%);
+  background: -ms-linear-gradient(top, #2F8EC0 0%, #2F8EC0 100%);
+  background: linear-gradient(to bottom, #2F8EC0 0%, #2F8EC0 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$startcolor', endColorstr='$endcolor',GradientType=0 );
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -502,6 +503,11 @@ body {
   padding: 4% 0; }
 
 .ac__content-wrapper {
+  max-width: 950px;
+  margin: 0 auto;
+  text-align: left; }
+
+.ac__content-wrapper--lesson {
   max-width: 750px;
   margin: 0 auto;
   text-align: left; }
@@ -577,7 +583,7 @@ body {
     font-size: 1.7rem; } }
 .ac__tests {
   margin: 0 auto;
-  padding-top: 10%;
+  padding-top: 21px;
   text-align: center; }
 
 .ac__tests.ac__tests--lesson {
@@ -589,6 +595,7 @@ body {
 .ac__tests-container {
   display: inline-block;
   width: 80%;
+  max-width: 300px;
   margin-top: 4%; }
 
 .ac__tests-container:nth-child(6), .ac__tests-container:nth-child(3) {
@@ -599,7 +606,9 @@ body {
   max-width: 450px; }
 
 .ac__tests-img {
-  border-radius: 100%; }
+  border-radius: 100%;
+  width: 100px;
+  height: auto; }
 
 .ac__tests-img--lesson {
   width: 100px;
