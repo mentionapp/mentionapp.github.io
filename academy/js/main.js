@@ -111,22 +111,6 @@ $(document).ready(function() {
 		}
 	});
 
-	
-	// Sticky form
-	function sticky_relocate() {
-	    var window_top = $(window).scrollTop();
-	    var div_top = $('.ac__ctas-anchor').offset().top;
-	    if (window_top > div_top) {
-	        $('.ac__first-cta').addClass('stick');
-	    } else {
-	        $('.ac__first-cta').removeClass('stick');
-	    }
-	}
-	$(function () {
-	    $(window).scroll(sticky_relocate);
-	    sticky_relocate();
-	});
-
 });
 
 
