@@ -26,7 +26,7 @@ body { border-top: 3px solid #368BBA; }
 .ac__title { font-size: 4rem; margin:0; line-height: 1.2; color: #fff; }
 .ac__welcome { height: auto; background: transparent; width: 100%; }
 
-.ac__nav {  width: 100%; text-align: left; padding: 0; max-width: 800px; margin: 57px 0 0 0; display: table; }
+.ac__nav { width: 100%; text-align: left; padding: 0; max-width: 800px; margin: 57px auto 0 auto; display: table; }
      .ac__nav img { width: auto; height: 32px; }
      .ac__logo { display: table-cell; text-align: left; vertical-align: middle; width: 200px; }
      .ac__menu { display: table-cell; text-align: left; vertical-align: middle; }
@@ -73,20 +73,20 @@ body { border-top: 3px solid #368BBA; }
     .ac__submit { background-image: linear-gradient(-180deg, #3FA2D9 0%, #3FA2D9 100%); border: 1px solid #3FA2D9; border-radius: 4px; width: 100%; margin-top: 18px; font-weight: 600; font-size: .85rem; height: 56px; display: block; line-height: 56px; border-radius: 4px; text-align: center; color: #fff; text-decoration: none; }
     .ac__learn { background: #CFCFCF; border: none; border-radius: 4px;width: 100%; margin-top: 18px; font-weight: 600; font-size: .85rem; height: 56px; display: block; line-height: 56px; border-radius: 4px; text-align: center; color: #fff; text-decoration: none; }
 
-// LESSONS
-
-.ac__lesson-title { font-size: 2rem; margin-bottom: 42px; max-width: 700px; line-height: 1.3; color: #333; }
-.ac__content-wrapper--lesson { margin: 0 auto; text-align: left; }
-.ac__content--lesson { width: 100%; max-width: 960px; }
-.ac__content--lesson h2 { font-size: 1.2rem; color: #333; font-family: Roboto; font-weight: 600; margin: 42px 0 21px 0; }
-.ac__content--lesson hr { border: none; border-top: 1px solid #ddd; margin: 42px auto; width: 50%; }
-.ac__content--lesson p, .ac__content--lesson li { font-family: 'Open Sans'; font-size: 1rem; width: 100%; max-width: 700px; line-height: 1.8; color: #666; font-weight: 00; margin: 0 0 21px 0; }
-.ac__content--lesson b { font-weight: 600; }
-.ac__content--lesson li { margin-bottom: 0; }
-.ac__content--lesson strong { color: #666; font-weight: 600; }
-.ac__content--lesson .ac__cttw { font-size: 1.3rem; margin-top: 21px; margin-bottom: 21px; padding-left: 5px; border-left: 3px solid #36a3dc; padding-left: 21px; }
-.ac__content--lesson a, .ac__content--lesson .ac__cttw a { color: #36a3dc; text-decoration: none; }
-.ac__content--lesson .ac__key { display: block; padding: 21px 14px; border-radius: 4px; border: 1px solid #eee; background: #fafafa; }
+// LESSON
+.ac__lesson-title { font-size: 2rem; margin-bottom: 42px; max-width: 800px; line-height: 1.3; color: #333; }
+.ac__content-wrapper--lesson { margin: 0 auto; text-align: left; max-width: 800px; }
+.ac__content--lesson { width: 100%; max-width: 800px; }
+  .ac__content--lesson h2 { font-size: 1.2rem; color: #333; font-family: Roboto; font-weight: 600; margin: 42px 0 21px 0; }
+  .ac__content--lesson hr { border: none; border-top: 1px solid #ddd; margin: 42px auto; width: 50%; }
+  .ac__content--lesson p, .ac__content--lesson li { font-family: 'Open Sans'; font-size: 1rem; width: 100%; line-height: 1.8; color: #666; font-weight: 00; margin: 0 0 21px 0; }
+  .ac__content--lesson b { font-weight: 600; }
+  .ac__content--lesson img { width: auto; height: auto; display: block; margin: 21px auto; max-width: 700px; }
+  .ac__content--lesson li { margin-bottom: 0; }
+  .ac__content--lesson strong { color: #666; font-weight: 600; }
+  .ac__content--lesson .ac__cttw { font-size: 1.3rem; margin-top: 21px; margin-bottom: 21px; padding-left: 5px; border-left: 3px solid #36a3dc; padding-left: 21px; }
+  .ac__content--lesson a, .ac__content--lesson .ac__cttw a { color: #36a3dc; text-decoration: none; }
+  .ac__content--lesson .ac__key { display: block; padding: 21px 14px; border-radius: 4px; border: 1px solid #eee; background: #fafafa; }
 
 .ac__content--lesson .next { margin: 21px auto; display: block; max-width: 700px; }
 
