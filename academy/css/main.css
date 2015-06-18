@@ -289,7 +289,7 @@ body {
 .visble {
   display: block; }
 
-.ac__mail--main.border-is-red {
+.ac__input.border-is-red {
   border: 1px solid red;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;

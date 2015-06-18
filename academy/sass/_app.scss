@@ -16,7 +16,7 @@ body { color: #111; margin: 0; line-height: 1.5; overflow-x: hidden; -webkit-ove
 * html .clearfix { height: 1%; }
 .hidden { display: none !important; }
 .visble { display: block; }
-.ac__mail--main.border-is-red { @include border(1px, solid, red); @include hover(.2s); }
+.ac__input.border-is-red { @include border(1px, solid, red); @include hover(.2s); }
 
 body { border-top: 3px solid #368BBA; }
 
