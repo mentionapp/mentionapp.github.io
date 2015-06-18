@@ -4,11 +4,11 @@ $(document).ready(function() {
 	var tw_referrer =  "twitter";
 
 	// Check email
-	$('.ac__cta--main').click(function(e) {
-    var mail = $('.ac__mail--main').val();
+	$('.ac__submit').click(function(e) {
+    var mail = $('.ac__input').val();
     if ($.trim(mail).length === 0) {
       alert('Please enter valid email address');
-      $('.ac__mail--main').addClass('border-is-red');
+      $('.ac__input').addClass('border-is-red');
       e.preventDefault();
     }
     if (validateEmail(mail)) {
@@ -17,7 +17,7 @@ $(document).ready(function() {
     }
     else {
       alert('Invalid Email Address');
-      $('.ac__mail--main').addClass('border-is-red');
+      $('.ac__input').addClass('border-is-red');
       e.preventDefault();
     }
 	});
@@ -42,14 +42,14 @@ $(document).ready(function() {
 	}
 
 	// Segment + Augur Hack
-	$('.ac__mail--main').focusout(function() {
+	$('.ac__input').focusout(function() {
 		var form = $('.ac__form');
 		var anoID = analytics.user().anonymousId();
 		
 		// Hack if ref is twitter
 		if (referrer.indexOf(tw_referrer) > -1) {
 			console.log('twitter, get augur for twitter');
-			var twitter =  $('.ac__mail--main').val();
+			var twitter =  $('.ac__input').val();
 			window.augurAPI = "http://api.augur.io/v2/user?key=ikxxvks77804a1n8a37dn0pt088q00qf&twitter_handle="+twitter;
 			$.getJSON(augurAPI).done(function(data){
 				console.log("got data");
@@ -80,7 +80,7 @@ $(document).ready(function() {
 		// Hack if ref is everything else
 		} else {
 			console.log('no-ref, get augur for email');
-			var mail = $('.ac__mail--main').val();
+			var mail = $('.ac__input').val();
 			window.augurAPI = "http://api.augur.io/v2/user?key=ikxxvks77804a1n8a37dn0pt088q00qf&email="+mail;
 			$.getJSON(augurAPI).done(function(data){
 				console.log("got data");
