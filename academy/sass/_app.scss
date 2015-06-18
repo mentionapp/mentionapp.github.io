@@ -22,8 +22,6 @@ body { border-top: 3px solid #368BBA; }
 
 .ac__main { margin: 0 auto; margin-right: 360px; padding: 0 100px; }
 .ac__side { position: fixed; top: 0; right: 0; bottom: 0; left: auto; width: 360px; border-left: 1px solid #ddd; border-top: 3px solid #ddd; background: #fbfbfb; }
-
-.ac__title { font-size: 4rem; margin:0; line-height: 1.2; color: #fff; }
 .ac__welcome { height: auto; background: transparent; width: 100%; }
 
 .ac__nav { width: 100%; text-align: left; padding: 0; max-width: 800px; margin: 57px auto 0 auto; display: table; }
@@ -35,7 +33,7 @@ body { border-top: 3px solid #368BBA; }
      .twitter-share-button { margin-right: 10px; }
 
 .ac__content { margin: 84px auto 0 auto; max-width: 800px; padding-bottom: 84px; border-bottom: 1px solid #FBFBFB; }
-     .ac__title { font-family: Roboto; font-size: 3rem; color: #999; font-weight: 300; }
+     .ac__title { font-family: Roboto; margin:0; line-height: 1.2; font-size: 2.5rem; color: #999; font-weight: 300; }
      .ac__content span { color: #3FA2D9; }
      .ac__content .ac__subtitle { font-family: 'Open Sans'; font-size: .85rem; color: #999; text-transform: uppercase; font-weight: 600; }
      .ac__content .ac__desc { font-family: 'Open Sans'; font-size: 1rem; width: 100%; max-width: 700px; line-height: 1.8; color: #888; font-weight: 300; margin: 34px 0 0 0; }
@@ -44,9 +42,11 @@ body { border-top: 3px solid #368BBA; }
   .ac__form-cont .ac__form { max-width: 500px; margin: 0 auto; }
   .ac__form-cont h2 { color: #999; text-transform: uppercase; line-height: 1.3; font-size: .85rem; margin-bottom: 21px; }
 
-.ac__logos-cont { background-color: #fafafa; padding: 21px; text-align: center; margin-top: 0; border: 1px solid #eee; border-radius: 4px; }
+.ac__logos-cont { background-color: #fff; padding: 21px; text-align: center; margin-top: 0; border: 1px solid #eee; border-radius: 4px; }
   .ac__logos-cont h2 { color: #999; text-transform: uppercase; line-height: 1.3; font-size: .85rem; }
-  .ac__logos-cont img { margin: 10px; }
+  .ac__logos-cont img { margin: 10px; width: auto; height: 48px; vertical-align: middle; }
+  .ac__logos-cont img.wb { height: 70px; width: auto; }
+  .ac__logos-cont img.sm { height: 30px; width: auto; }
 
 .ac__list { list-style: none; padding: 0; max-width: 700px; background-color: #fbfbfb; border: 1px solid #eee; margin-top: 42px; border-radius: 4px; }
   .ac__lesson-link { display: block; position: relative; padding: 21px; padding-left: 80px; margin: 0; color: #888; border-bottom: 1px solid #ddd; }
@@ -57,10 +57,10 @@ body { border-top: 3px solid #368BBA; }
   .ac__lesson-sub { margin-top: 0; color: #aaa; font-style: italic; }
 
 .ac__experts-cont { margin-top: 42px; }
-  .ac__experts { display: inline-block; margin-top: 21px; margin-right: 42px; }
+  .ac__experts { display: inline-block; margin-top: 21px; margin-right: 42px; width: 300px; }
     .ac__experts-img, .ac__experts-desc { display: table-cell; vertical-align: middle; }
-    .ac__experts-img img { border-radius: 100%; height: 56px; width: auto; vertical-align: middle; margin-right: 21px }
-    .ac__experts-desc { }
+    .ac__experts-img img { border-radius: 100%; height: 60px; width: auto; vertical-align: middle; margin-right: 21px }
+    .ac__experts-desc p { font-size: 1rem;}
     .ac__experts-desc p, .ac__experts-desc h3 { margin: 0; color: #888; }
 
 .ac__side .ac__ctas-cont, .ac__side .ac__about-cont { padding:0 39px; }
@@ -96,8 +96,8 @@ body { border-top: 3px solid #368BBA; }
 
 .ac__expert--lesson { padding: 21px; background-color: #fafafa; border-radius: 4px; max-width: 700px; margin: 0 auto; display: block; border: 1px solid #eee;  }
 .ac__expert-name { font-size: 1.2rem; margin: 0; margin-bottom: 15px; }
-.ac__expert--lesson .ac__experts-desc { display: inline-block; vertical-align: middle; margin: 0; max-width: 500px; }
-.ac__expert--lesson .ac__tests-author { margin: 0; }
+.ac__expert--lesson .ac__experts-desc { display: inline-block; vertical-align: middle; margin: 0; max-width: 500px; text-align: left; }
+.ac__expert--lesson .ac__tests-author { margin: 0; font-weight: 600; }
 .ac__expert--lesson .ac__experts-desc p { margin: 0; }
 .ac__expert--lesson img { border-radius: 100%; display: inline-block; height: 64px; width: auto; vertical-align: middle; margin-right: 21px; }
 
@@ -110,5 +110,8 @@ body { border-top: 3px solid #368BBA; }
 }
 @include mquery(480px) { .ac__main { margin: 0 auto; padding: 0 10px; } }
 @include mquery(790px) { .ac__cta--nav { display: none; } }
-@include mquery(640px) { .ac__shares { display: table-cell; vertical-align: middle; text-align: left; } }
+@include mquery(640px) { 
+  .ac__shares { display: table-cell; vertical-align: middle; text-align: left; } 
+  .ac__expert--lesson { text-align: center; }
+}
 

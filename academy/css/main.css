@@ -315,12 +315,6 @@ body {
   border-top: 3px solid #ddd;
   background: #fbfbfb; }
 
-.ac__title {
-  font-size: 4rem;
-  margin: 0;
-  line-height: 1.2;
-  color: #fff; }
-
 .ac__welcome {
   height: auto;
   background: transparent;
@@ -375,7 +369,9 @@ body {
 
 .ac__title {
   font-family: Roboto;
-  font-size: 3rem;
+  margin: 0;
+  line-height: 1.2;
+  font-size: 2.5rem;
   color: #999;
   font-weight: 300; }
 
@@ -421,7 +417,7 @@ body {
   margin-bottom: 21px; }
 
 .ac__logos-cont {
-  background-color: #fafafa;
+  background-color: #fff;
   padding: 21px;
   text-align: center;
   margin-top: 0;
@@ -435,7 +431,18 @@ body {
   font-size: .85rem; }
 
 .ac__logos-cont img {
-  margin: 10px; }
+  margin: 10px;
+  width: auto;
+  height: 48px;
+  vertical-align: middle; }
+
+.ac__logos-cont img.wb {
+  height: 70px;
+  width: auto; }
+
+.ac__logos-cont img.sm {
+  height: 30px;
+  width: auto; }
 
 .ac__list {
   list-style: none;
@@ -487,7 +494,8 @@ body {
 .ac__experts {
   display: inline-block;
   margin-top: 21px;
-  margin-right: 42px; }
+  margin-right: 42px;
+  width: 300px; }
 
 .ac__experts-img, .ac__experts-desc {
   display: table-cell;
@@ -495,10 +503,13 @@ body {
 
 .ac__experts-img img {
   border-radius: 100%;
-  height: 56px;
+  height: 60px;
   width: auto;
   vertical-align: middle;
   margin-right: 21px; }
+
+.ac__experts-desc p {
+  font-size: 1rem; }
 
 .ac__experts-desc p, .ac__experts-desc h3 {
   margin: 0;
@@ -683,10 +694,12 @@ body {
   display: inline-block;
   vertical-align: middle;
   margin: 0;
-  max-width: 500px; }
+  max-width: 500px;
+  text-align: left; }
 
 .ac__expert--lesson .ac__tests-author {
-  margin: 0; }
+  margin: 0;
+  font-weight: 600; }
 
 .ac__expert--lesson .ac__experts-desc p {
   margin: 0; }
@@ -720,4 +733,7 @@ body {
   .ac__shares {
     display: table-cell;
     vertical-align: middle;
-    text-align: left; } }
+    text-align: left; }
+
+  .ac__expert--lesson {
+    text-align: center; } }
