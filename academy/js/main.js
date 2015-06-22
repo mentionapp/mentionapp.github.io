@@ -4,7 +4,7 @@ var referrer = document.referrer;
 var tw_referrer =  "twitter";
 	
 	// particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-	particlesJS.load('particles-js', '/js/particles.json', function() {
+	particlesJS.load('particles-js', '../academy/js/particles.json', function() {
 	  console.log('callback - particles.js config loaded');
 	});
 	
