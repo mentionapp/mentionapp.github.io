@@ -163,6 +163,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/mailjet-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16510,
+		"inputAbbreviatedPath": "\/img\/mailjet-logo.png",
+		"outputAbbreviatedPath": "\/img\/mailjet-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/office.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
