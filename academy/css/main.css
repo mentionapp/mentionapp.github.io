@@ -277,6 +277,19 @@ body {
   clear: both;
   height: 0; }
 
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #36a3dc;
+  z-index: -10; }
+
+hr {
+  border: none;
+  border-top: 1px solid #fafafa; }
+
 .clearfix {
   display: inline-block; }
 
@@ -288,13 +301,6 @@ body {
 
 .visble {
   display: block; }
-
-.ac__input:valid {
-  border: 1px solid green;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
 
 body {
   border-top: 3px solid #368BBA; }
@@ -319,6 +325,9 @@ body {
   height: auto;
   background: transparent;
   width: 100%; }
+
+.ac__welcome h1 {
+  font-size: 3rem; }
 
 .ac__nav {
   width: 100%;
@@ -362,10 +371,8 @@ body {
   margin-right: 10px; }
 
 .ac__content {
-  margin: 84px auto 0 auto;
-  max-width: 800px;
-  padding-bottom: 84px;
-  border-bottom: 1px solid #FBFBFB; }
+  margin: 63px auto 63px auto;
+  max-width: 960px; }
 
 .ac__title {
   font-family: Roboto;
@@ -389,14 +396,13 @@ body {
   font-family: 'Open Sans';
   font-size: 1rem;
   width: 100%;
-  max-width: 700px;
+  max-width: 800px;
   line-height: 1.8;
   color: #888;
   font-weight: 300;
   margin: 34px 0 0 0; }
 
 .ac__form-cont {
-  display: none;
   background-color: #fafafa;
   padding: 21px;
   margin-bottom: 84px;
@@ -420,7 +426,7 @@ body {
   background-color: #fff;
   padding: 21px;
   text-align: center;
-  margin-top: 0;
+  margin-top: 84px;
   border: 1px solid #eee;
   border-radius: 4px; }
 
@@ -447,10 +453,10 @@ body {
 .ac__list {
   list-style: none;
   padding: 0;
-  max-width: 700px;
+  padding: 20px;
   background-color: #fbfbfb;
   border: 1px solid #eee;
-  margin-top: 42px;
+  margin: 42px auto 0 auto;
   border-radius: 4px; }
 
 .ac__lesson-link {
@@ -459,8 +465,11 @@ body {
   padding: 21px;
   padding-left: 80px;
   margin: 0;
-  color: #888;
-  border-bottom: 1px solid #ddd; }
+  color: #888; }
+
+.ac__label {
+  display: inline-block;
+  max-width: 450px; }
 
 .ac__label:last-child .ac__lesson-link {
   border-bottom: none; }
@@ -489,13 +498,19 @@ body {
   font-style: italic; }
 
 .ac__experts-cont {
-  margin-top: 42px; }
+  margin-top: 42px;
+  padding: 21px;
+  background-color: #fbfbfb;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  text-align: center; }
 
 .ac__experts {
   display: inline-block;
-  margin-top: 21px;
-  margin-right: 42px;
-  width: 300px; }
+  margin: 21px 0;
+  vertical-align: middle;
+  width: 300px;
+  text-align: left; }
 
 .ac__experts-img, .ac__experts-desc {
   display: table-cell;
@@ -555,16 +570,15 @@ body {
   padding-left: 15px; }
 
 .ac__submit {
-  background-image: linear-gradient(-180deg, #3FA2D9 0%, #3FA2D9 100%);
+  background-image: linear-gradient(-180deg, #26EC91 0%, #26EC91 100%);
   cursor: pointer;
-  border: 1px solid #3FA2D9;
   width: 100%;
   margin-top: 18px;
   font-weight: 600;
   font-size: .9rem;
   height: 56px;
   display: block;
-  line-height: 52px;
+  line-height: 56px;
   border-radius: 4px;
   text-align: center;
   color: #fff; }
@@ -601,6 +615,103 @@ body {
 .ac__about-cont img.sm {
   height: 30px;
   width: auto; }
+
+@media only screen and (max-width: 1280px) {
+  .ac__main {
+    margin: 0 auto;
+    padding: 0 50px; }
+
+  .ac__side {
+    display: none; }
+
+  .ac__form-cont, .ac__form-cont--lesson {
+    display: block; } }
+@media only screen and (max-width: 480px) {
+  .ac__main {
+    margin: 0 auto;
+    padding: 0 10px; } }
+@media only screen and (max-width: 790px) {
+  .ac__cta--nav {
+    display: none; } }
+@media only screen and (max-width: 640px) {
+  .ac__content {
+    padding: 10px; }
+
+  .ac__welcome h1 {
+    font-size: 2.5rem; }
+
+  .ac__shares {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left; }
+
+  .ac__expert--lesson {
+    text-align: center; } }
+.ac__main--home {
+  margin: 0 auto;
+  margin-right: 0;
+  padding: 0; }
+
+.ac__welcome--home {
+  height: auto;
+  background: transparent;
+  width: 100%;
+  padding-bottom: 84px;
+  position: relative; }
+
+.ac__titles {
+  border: none;
+  max-width: 1280px; }
+
+.ac__welcome--home .ac__title {
+  text-align: center;
+  color: #fff; }
+
+.ac__welcome--home .ac__subtitle {
+  text-align: center;
+  color: #fff; }
+
+.ac__welcome--home .ac__content {
+  color: #fff; }
+
+.ac__nav--home {
+  max-width: 1280px;
+  margin-top: 0;
+  padding-top: 57px; }
+
+.ac__form-cont--home {
+  max-width: 650px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  z-index: 100; }
+
+.ac__form-cont--home h2 {
+  margin-top: 0;
+  color: #fff; }
+
+.ac__form-cont--home a {
+  text-decoration: none; }
+
+.ac__menu--home .ac__cta--nav {
+  color: #fff; }
+
+.ac__main-desc {
+  background-color: #fafafa;
+  margin-top: 0;
+  text-align: center;
+  max-width: 100%;
+  padding: 42px 0; }
+
+.ac__main-desc p {
+  margin: 0 auto;
+  font-family: 'Open Sans';
+  font-size: 1.2rem;
+  width: 100%;
+  max-width: 800px;
+  line-height: 1.8;
+  color: #888;
+  font-weight: 500; }
 
 .ac__lesson-title {
   font-size: 2rem;
@@ -693,6 +804,10 @@ body {
 .ac__form-cont--lesson .ac__submit {
   color: #fff; }
 
+.ac__side .ac__submit {
+  background: #36a3dc;
+  text-decoration: none; }
+
 .ac__expert--lesson {
   padding: 21px;
   background-color: #fafafa;
@@ -730,27 +845,8 @@ body {
   margin-right: 21px; }
 
 @media only screen and (max-width: 1280px) {
-  .ac__main {
-    margin: 0 auto;
-    padding: 0 50px; }
-
   .ac__side {
     display: none; }
 
   .ac__form-cont, .ac__form-cont--lesson {
     display: block; } }
-@media only screen and (max-width: 480px) {
-  .ac__main {
-    margin: 0 auto;
-    padding: 0 10px; } }
-@media only screen and (max-width: 790px) {
-  .ac__cta--nav {
-    display: none; } }
-@media only screen and (max-width: 640px) {
-  .ac__shares {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: left; }
-
-  .ac__expert--lesson {
-    text-align: center; } }

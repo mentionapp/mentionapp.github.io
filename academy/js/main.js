@@ -3,6 +3,11 @@ $(document).ready(function() {
 var referrer = document.referrer;
 var tw_referrer =  "twitter";
 	
+	// particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+	particlesJS.load('particles-js', '../js/particles.json', function() {
+	  console.log('callback - particles.js config loaded');
+	});
+	
 	// Change input variable if mobile or desktop
 	if ($('#ac__input-default').is(":visible")) {
 		var input = $('#ac__input-default');
