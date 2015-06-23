@@ -390,9 +390,10 @@ body {
 
 .ac__content .ac__subtitle {
   font-family: 'Open Sans';
-  font-size: .85rem;
+  font-size: 1rem;
   color: #999;
-  font-weight: 600; }
+  font-weight: 500;
+  margin-top: 5px; }
 
 .ac__content .ac__desc {
   font-family: 'Open Sans';
