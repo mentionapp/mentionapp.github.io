@@ -12,4 +12,5 @@
 .ac__menu--home .ac__cta--nav { color: #fff; }
 .ac__main-desc { background-color: #fafafa; margin-top: 0; text-align: center; max-width: 100%; padding: 42px 0; }
 .ac__main-desc p { margin: 0 auto; font-family: 'Open Sans'; font-size: 1.2rem; width: 100%; max-width: 800px; line-height: 1.8; color: #888; font-weight: 500; }
-
+.ac__form-success { text-align: center; color: #fff; @include fadeIn; }
+.ac__form-success .ac__shares { display: inline-block; }

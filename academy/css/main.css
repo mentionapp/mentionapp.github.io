@@ -302,6 +302,9 @@ hr {
 .visble {
   display: block; }
 
+button {
+  border: none; }
+
 body {
   border-top: 3px solid #368BBA; }
 
@@ -712,6 +715,15 @@ body {
   line-height: 1.8;
   color: #888;
   font-weight: 500; }
+
+.ac__form-success {
+  text-align: center;
+  color: #fff;
+  -webkit-animation: fadeIn 1s ease-out 1;
+  animation: fadeIn 1s ease-out 1; }
+
+.ac__form-success .ac__shares {
+  display: inline-block; }
 
 .ac__lesson-title {
   font-size: 2rem;
