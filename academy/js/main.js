@@ -39,10 +39,10 @@ var tw_referrer =  "twitter";
 				window.augurAPI = "http://api.augur.io/v2/user?key=ikxxvks77804a1n8a37dn0pt088q00qf&twitter_handle="+twitter;
 				$.getJSON(augurAPI).done(function(data){
 					console.log("got twitter data");
-					// console.log('begin identify 1');
-					// analytics.identify(''+ anoID +'', {
-					// 	twitter: twitter
-					// });
+					console.log('begin identify 1');
+					analytics.identify(''+ anoID +'', {
+						twitter: twitter
+					});
 					console.log('begin identify 2');
 					properties = {
 						email: null,
@@ -70,8 +70,8 @@ var tw_referrer =  "twitter";
 					}
 
 					// identify
-					analytics.identify(''+ twitter +'', properties);
-					console.log('begin track');
+					// analytics.identify(''+ twitter +'', properties);
+					// console.log('begin track');
 					analytics.track('Registered for academy');	
 					console.log('end');
 				}).fail(function(){
@@ -88,10 +88,10 @@ var tw_referrer =  "twitter";
 				$.getJSON(augurAPI).done(function(data){
 					console.log("got mail data");
 					console.log('begin identify 1');
-					// analytics.identify(''+ anoID +'', {
-					// 	email: mail
-					// });
-					// console.log('begin identify 2');
+					analytics.identify(''+ anoID +'', {
+						email: mail
+					});
+					console.log('begin identify 2');
 					properties = {
 						email: mail,
 						name: null,
@@ -119,8 +119,8 @@ var tw_referrer =  "twitter";
 					}
 
 					// identify
-					analytics.identify(''+ mail +'', properties);
-					console.log('begin track');
+					// analytics.identify(''+ mail +'', properties);
+					// console.log('begin track');
 					analytics.track('Registered for academy');	
 					console.log('end');
 				}).fail(function(){
