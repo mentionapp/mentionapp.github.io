@@ -472,7 +472,8 @@ body {
 
 .ac__label {
   display: inline-block;
-  max-width: 450px; }
+  max-width: 450px;
+  vertical-align: top; }
 
 .ac__label:last-child .ac__lesson-link {
   border-bottom: none; }

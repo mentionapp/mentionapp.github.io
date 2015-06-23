@@ -57,7 +57,7 @@ body { border-top: 3px solid #368BBA; }
 
 .ac__list { list-style: none; padding: 0; padding: 20px; background-color: #fbfbfb; border: 1px solid #eee; margin: 42px auto 0 auto; border-radius: 4px; }
   .ac__lesson-link { display: block; position: relative; padding: 21px; padding-left: 80px; margin: 0; color: #888; }
-  .ac__label { display: inline-block; max-width: 450px; }
+  .ac__label { display: inline-block; max-width: 450px; vertical-align: top; }
   .ac__label:last-child .ac__lesson-link { border-bottom: none; }
   .ac__link-content header { position: relative; margin-bottom: .3em; }
   .ac__link-content h2 { font-size: 1.2rem; color: #999; font-family: Roboto; font-weight: 400; margin-bottom: 5px;  }
