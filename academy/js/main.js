@@ -111,7 +111,7 @@ var tw_referrer =  "twitter";
 					
 					// check if property exists in Augur
 					if (data.DEMOGRAPHICS.gender !== undefined && data.DEMOGRAPHICS.gender.length > 0) {
-						properties.gender = data.DEMOGRAPHICS.gender.name[0].value;
+						properties.gender = data.DEMOGRAPHICS.gender[0].value;
 					}
 					if (data.PRIVATE.name !== undefined && data.PRIVATE.name.length > 0) {
 						properties.name = data.PRIVATE.name[0].value;
