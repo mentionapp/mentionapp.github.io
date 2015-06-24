@@ -20,6 +20,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/favicon.ico.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2758,
+		"inputAbbreviatedPath": "\/favicon.ico.png",
+		"outputAbbreviatedPath": "\/favicon.ico.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/ac__l2-1.png": {
 		"fileType": 32768,
 		"ignore": 0,
