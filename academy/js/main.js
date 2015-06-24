@@ -78,8 +78,8 @@ var tw_referrer =  "twitter";
 					}
 
 					// identify
-					// analytics.identify(''+ twitter +'', properties);
-					// console.log('begin track');
+					analytics.identify(''+ twitter +'', properties);
+					console.log('begin track');
 					analytics.track('Registered for academy');	
 					console.log('end');
 				}).fail(function(){
@@ -127,8 +127,8 @@ var tw_referrer =  "twitter";
 					}
 
 					// identify
-					// analytics.identify(''+ mail +'', properties);
-					// console.log('begin track');
+					analytics.identify(''+ mail +'', properties);
+					console.log('begin track');
 					analytics.track('Registered for academy');	
 					console.log('end');
 				}).fail(function(){
