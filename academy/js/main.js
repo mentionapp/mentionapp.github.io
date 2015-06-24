@@ -57,7 +57,8 @@ var tw_referrer =  "twitter";
 						name: null,
 						gender: null,
 						location: null,
-						linkedin: null
+						linkedin: null,
+						title: null
 					};
 					
 					// check if property exists in Augur
@@ -75,6 +76,9 @@ var tw_referrer =  "twitter";
 					}
 					if (data.PROFILES.linkedin_handle !== undefined && data.PROFILES.linkedin_handle.length > 0) {
 						properties.linkedin = data.PROFILES.linkedin_handle[0].value;
+					}
+					if (data.PROFILES.linkedin_handle !== undefined && data.PROFILES.linkedin_handle.length > 0) {
+						properties.title = data.PRIVATE.description[0].value;
 					}
 
 					// identify
@@ -106,7 +110,8 @@ var tw_referrer =  "twitter";
 						gender: null,
 						location: null,
 						twitter: null,
-						linkedin: null
+						linkedin: null,
+						title: null
 					};
 					
 					// check if property exists in Augur
@@ -124,6 +129,9 @@ var tw_referrer =  "twitter";
 					}
 					if (data.PROFILES.linkedin_handle !== undefined && data.PROFILES.linkedin_handle.length > 0) {
 						properties.linkedin = data.PROFILES.linkedin_handle[0].value;
+					}
+					if (data.PROFILES.linkedin_handle !== undefined && data.PROFILES.linkedin_handle.length > 0) {
+						properties.title = data.PRIVATE.description[0].value;
 					}
 
 					// identify
