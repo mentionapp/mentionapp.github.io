@@ -163,17 +163,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/favicon.ico.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2758,
-		"inputAbbreviatedPath": "\/img\/favicon.ico.png",
-		"outputAbbreviatedPath": "\/img\/favicon.ico.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/General_Assembly_logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
