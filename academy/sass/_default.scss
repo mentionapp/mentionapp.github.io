@@ -69,6 +69,8 @@ body { border-top: 3px solid #368BBA; }
     .ac__experts-img, .ac__experts-desc { display: table-cell; vertical-align: middle; }
     .ac__experts-img img { border-radius: 100%; height: 60px; width: auto; vertical-align: middle; margin-right: 21px }
     .ac__experts-desc p { font-size: 1rem;}
+    .ac__experts-desc h3 { font-weight: 500; }
+    .ac__experts-desc h3 a { color: #3FA2D9; text-decoration: none; }
     .ac__experts-desc p, .ac__experts-desc h3 { margin: 0; color: #888; }
 
 .ac__side .ac__ctas-cont, .ac__side .ac__about-cont { padding:0 39px; }

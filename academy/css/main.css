@@ -531,6 +531,13 @@ body {
 .ac__experts-desc p {
   font-size: 1rem; }
 
+.ac__experts-desc h3 {
+  font-weight: 500; }
+
+.ac__experts-desc h3 a {
+  color: #3FA2D9;
+  text-decoration: none; }
+
 .ac__experts-desc p, .ac__experts-desc h3 {
   margin: 0;
   color: #888; }
