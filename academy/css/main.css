@@ -431,7 +431,8 @@ body {
   text-align: center;
   margin-top: 84px;
   border: 1px solid #eee;
-  border-radius: 4px; }
+  border-radius: 4px;
+  max-width: 1090px; }
 
 .ac__logos-cont h2 {
   color: #999;
@@ -755,7 +756,7 @@ body {
   width: 50%; }
 
 .ac__content--lesson p, .ac__content--lesson li {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   width: 100%;
   line-height: 1.8;

@@ -119,6 +119,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/Customerio-Logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 66019,
+		"inputAbbreviatedPath": "\/img\/Customerio-Logo.png",
+		"outputAbbreviatedPath": "\/img\/Customerio-Logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/denise.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
