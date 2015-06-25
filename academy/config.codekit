@@ -185,6 +185,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/janet.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 169347,
+		"inputAbbreviatedPath": "\/img\/janet.png",
+		"outputAbbreviatedPath": "\/img\/janet.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/logo-mention.png": {
 		"fileType": 32768,
 		"ignore": 0,
