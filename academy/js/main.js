@@ -60,11 +60,7 @@ var tw_referrer =  "twitter";
 				window.augurAPI = "http://api.augur.io/v2/user?key=ikxxvks77804a1n8a37dn0pt088q00qf&twitter_handle="+twitter;
 				$.getJSON(augurAPI).done(function(data){
 					console.log("got twitter data");
-					console.log('begin identify 1');
-					analytics.identify(''+ SegmentID +'', {
-						twitter: twitter
-					});
-					console.log('begin identify 2');
+					console.log('begin identify');
 					properties = {
 						email: null,
 						name: null,
@@ -112,11 +108,7 @@ var tw_referrer =  "twitter";
 				window.augurAPI = "http://api.augur.io/v2/user?key=ikxxvks77804a1n8a37dn0pt088q00qf&email="+mail;
 				$.getJSON(augurAPI).done(function(data){
 					console.log("got mail data");
-					console.log('begin identify 1');
-					analytics.identify(''+ SegmentID +'', {
-						email: mail
-					});
-					console.log('begin identify 2');
+					console.log('begin identify');
 					properties = {
 						email: mail,
 						name: null,
