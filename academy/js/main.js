@@ -49,7 +49,6 @@ var tw_referrer =  "twitter";
 	$('.ac__input').focusout(function() {
 		if ( input.val().length > 0) {
 			var form = $('.ac__form');
-			var SegmentID = analytics.user().anonymousId();
 			console.log(SegmentID);
 			
 			// Hack if ref is twitter && input !== empty
