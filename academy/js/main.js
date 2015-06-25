@@ -77,7 +77,7 @@ var tw_referrer =  "twitter";
 					if (data.PROFILES.linkedin_handle !== undefined && data.PROFILES.linkedin_handle.length > 0) {
 						properties.linkedin = data.PROFILES.linkedin_handle[0].value;
 					}
-					if (data.PROFILES.linkedin_handle !== undefined && data.PROFILES.linkedin_handle.length > 0) {
+					if (data.PRIVATE.description !== undefined && data.PRIVATE.description.length > 0) {
 						properties.title = data.PRIVATE.description[0].value;
 					}
 
@@ -130,7 +130,7 @@ var tw_referrer =  "twitter";
 					if (data.PROFILES.linkedin_handle !== undefined && data.PROFILES.linkedin_handle.length > 0) {
 						properties.linkedin = data.PROFILES.linkedin_handle[0].value;
 					}
-					if (data.PROFILES.linkedin_handle !== undefined && data.PROFILES.linkedin_handle.length > 0) {
+					if (data.PRIVATE.description !== undefined && data.PRIVATE.description.length > 0) {
 						properties.title = data.PRIVATE.description[0].value;
 					}
 
