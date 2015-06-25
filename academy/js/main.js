@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+var SegmentID = null;
 var referrer = document.referrer;
 var tw_referrer =  "twitter";
 	
@@ -31,12 +31,26 @@ var tw_referrer =  "twitter";
 	    $('.ac__form').addClass('hidden');
 	});
 
+	// Does Segment ID exist?
+	$(window).load(function() {
+		SegmentID = analytics.user().id();
+		if (SegmentID !== null && SegmentID.length > 0) {
+			// exist, ok
+			SegmentID = analytics.user().id();
+			console.log("exist, ok");
+		} else {
+			// does not exist, switch to anonymous
+			SegmentID = analytics.user().anonymousId();
+			console.log("does not exist, switch to anonymous");
+		}
+	});
+
 	// Segment + Augur Hack
 	$('.ac__input').focusout(function() {
 		if ( input.val().length > 0) {
 			var form = $('.ac__form');
-			var anoID = analytics.user().anonymousId();
-			console.log(anoID);
+			var SegmentID = analytics.user().anonymousId();
+			console.log(SegmentID);
 			
 			// Hack if ref is twitter && input !== empty
 			if (referrer.indexOf(tw_referrer) > -1) {
@@ -48,7 +62,7 @@ var tw_referrer =  "twitter";
 				$.getJSON(augurAPI).done(function(data){
 					console.log("got twitter data");
 					console.log('begin identify 1');
-					analytics.identify(''+ anoID +'', {
+					analytics.identify(''+ SegmentID +'', {
 						twitter: twitter
 					});
 					console.log('begin identify 2');
@@ -100,7 +114,7 @@ var tw_referrer =  "twitter";
 				$.getJSON(augurAPI).done(function(data){
 					console.log("got mail data");
 					console.log('begin identify 1');
-					analytics.identify(''+ anoID +'', {
+					analytics.identify(''+ SegmentID +'', {
 						email: mail
 					});
 					console.log('begin identify 2');
