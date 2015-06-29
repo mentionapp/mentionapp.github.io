@@ -31,6 +31,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/ac__cs-1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 121589,
+		"inputAbbreviatedPath": "\/img\/ac__cs-1.png",
+		"outputAbbreviatedPath": "\/img\/ac__cs-1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/ac__cs-2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 425434,
+		"inputAbbreviatedPath": "\/img\/ac__cs-2.png",
+		"outputAbbreviatedPath": "\/img\/ac__cs-2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/ac__cs-3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 196594,
+		"inputAbbreviatedPath": "\/img\/ac__cs-3.png",
+		"outputAbbreviatedPath": "\/img\/ac__cs-3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/ac__insta-1.png": {
 		"fileType": 32768,
 		"ignore": 0,
