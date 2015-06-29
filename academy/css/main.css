@@ -788,12 +788,21 @@ body {
   font-weight: 600; }
 
 .ac__content--lesson .ac__cttw {
+  position: relative;
   font-size: 1.3rem;
   margin-top: 21px;
   margin-bottom: 21px;
   padding-left: 5px;
   border-left: 3px solid #36a3dc;
   padding-left: 21px; }
+
+.ac__content--lesson .ac__cttw:after {
+  content: "";
+  margin-left: 10px;
+  display: inline-block;
+  background: url("/academy/img/twitter.svg") no-repeat top right;
+  width: 14px;
+  height: 12px; }
 
 .ac__content--lesson a, .ac__content--lesson .ac__cttw a {
   color: #36a3dc;

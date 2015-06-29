@@ -9,7 +9,8 @@
   .ac__content--lesson img { width: auto; height: auto; display: block; margin: 21px auto; max-width: 700px; }
   .ac__content--lesson li { margin-bottom: 0; }
   .ac__content--lesson strong { color: #666; font-weight: 600; }
-  .ac__content--lesson .ac__cttw { font-size: 1.3rem; margin-top: 21px; margin-bottom: 21px; padding-left: 5px; border-left: 3px solid #36a3dc; padding-left: 21px; }
+  .ac__content--lesson .ac__cttw { position: relative; font-size: 1.3rem; margin-top: 21px; margin-bottom: 21px; padding-left: 5px; border-left: 3px solid #36a3dc; padding-left: 21px; }
+  .ac__content--lesson .ac__cttw:after { content: ""; margin-left: 10px; display: inline-block; background: url("/academy/img/twitter.svg") no-repeat top right; width: 14px; height: 12px; }
   .ac__content--lesson a, .ac__content--lesson .ac__cttw a { color: #36a3dc; text-decoration: none; }
   .ac__content--lesson .ac__key { display: block; padding: 21px 14px; border-radius: 4px; border: 1px solid #eee; background: #fafafa; }
 
