@@ -761,7 +761,7 @@ body {
   margin: 42px auto;
   width: 50%; }
 
-.ac__content--lesson p, .ac__content--lesson li {
+.ac__content--lesson p, .ac__content--lesson li, .ac__content--lesson ol {
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   width: 100%;
