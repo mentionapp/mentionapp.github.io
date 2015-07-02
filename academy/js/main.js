@@ -45,6 +45,7 @@ var tw_referrer =  "twitter";
 		if ( input.val().length > 0) {
 			var form = $('.ac__form');
 			console.log(SegmentID);
+			analytics.debug();
 			
 			// Hack if ref is twitter && input !== empty
 			if (referrer.indexOf(tw_referrer) > -1) {
@@ -88,7 +89,8 @@ var tw_referrer =  "twitter";
 					// identify
 					analytics.identify(''+ SegmentID +'', properties);
 					console.log('begin track');
-					analytics.track('Registered for academy');	
+					analytics.track('Registered for academy');
+					analytics.debug();
 					console.log('end');
 				}).fail(function(){
 					console.log('failed to get json from augur API');
