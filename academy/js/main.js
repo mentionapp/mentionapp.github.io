@@ -45,7 +45,6 @@ var tw_referrer =  "twitter";
 		if ( input.val().length > 0) {
 			var form = $('.ac__form');
 			console.log(SegmentID);
-			analytics.debug();
 			
 			// Hack if ref is twitter && input !== empty
 			if (referrer.indexOf(tw_referrer) > -1) {
@@ -114,7 +113,7 @@ var tw_referrer =  "twitter";
 						linkedin: null,
 						title: null
 					};
-					
+
 					// check if property exists in Augur
 					if (data.DEMOGRAPHICS.gender !== undefined && data.DEMOGRAPHICS.gender.length > 0) {
 						properties.gender = data.DEMOGRAPHICS.gender[0].value;
