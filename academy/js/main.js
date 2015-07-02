@@ -56,7 +56,6 @@ var tw_referrer =  "twitter";
 				window.augurAPI = "http://api.augur.io/v2/user?key=ikxxvks77804a1n8a37dn0pt088q00qf&twitter_handle="+twitter;
 				$.getJSON(augurAPI).done(function(data){
 					console.log("got twitter data");
-					console.log('begin identify');
 					properties = {
 						email: null,
 						name: null,
@@ -86,11 +85,11 @@ var tw_referrer =  "twitter";
 						properties.title = data.PRIVATE.description[0].value;
 					}
 
-					// identify
+					// identify + track
 					analytics.identify(''+ SegmentID +'', properties);
-					console.log('begin track');
+					console.log('identified');
 					analytics.track('Registered for academy');
-					analytics.debug();
+					console.log('tracked');
 					console.log('end');
 				}).fail(function(){
 					console.log('failed to get json from augur API');
@@ -136,10 +135,11 @@ var tw_referrer =  "twitter";
 						properties.title = data.PRIVATE.description[0].value;
 					}
 
-					// track
-					console.log('begin track');
+					// track + id
+					analytics.identify(''+ SegmentID +'', properties);
+					console.log('identified');
 					analytics.track('Registered for academy');	
-					console.log('end');
+					console.log('tracked');
 				}).fail(function(){
 					console.log('failed to get json from augur API');
 				});
