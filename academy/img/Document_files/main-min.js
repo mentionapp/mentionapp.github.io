@@ -1,0 +1,1 @@
+$(".men__menu-link--mob").click(function(){$(".men__menu-cont--mob").removeClass("hidden"),$("body").addClass("no-scroll"),$("html").addClass("no-scroll")}),$(".men__menu-close").click(function(){$(".men__menu-cont--mob").addClass("hidden"),$("body").removeClass("no-scroll"),$("html").removeClass("no-scroll")});
