@@ -141,6 +141,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/ac__l4-1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 118950,
+		"inputAbbreviatedPath": "\/img\/ac__l4-1.png",
+		"outputAbbreviatedPath": "\/img\/ac__l4-1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/ac__l4-2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 75589,
+		"inputAbbreviatedPath": "\/img\/ac__l4-2.png",
+		"outputAbbreviatedPath": "\/img\/ac__l4-2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/ashley ennis simply measured.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
