@@ -752,7 +752,7 @@ body {
   font-size: 1.2rem;
   color: #22282B;
   font-family: Roboto;
-  font-weight: 300;
+  font-weight: 400;
   margin: 42px 0 21px 0; }
 
 .ac__content--lesson h3 {
@@ -852,7 +852,7 @@ body {
   display: block;
   border: 1px solid #eee; }
 
-.ac__expert-name {
+.ac__expert--lesson .ac__expert-name {
   font-size: 1.2rem;
   margin: 0;
   margin-bottom: 15px; }
