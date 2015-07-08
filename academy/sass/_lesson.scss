@@ -3,13 +3,14 @@
 .ac__content-wrapper--lesson { margin: 0 auto; text-align: left; max-width: 800px; }
 .ac__content--lesson { width: 100%; max-width: 800px; }
   .ac__content--lesson h2 { font-size: 1.2rem; color: #333; font-family: Roboto; font-weight: 600; margin: 42px 0 21px 0; }
+  .ac__content--lesson h3 { font-size: 1rem; color: #333; font-family: Roboto; font-weight: 400; margin: 42px 0 21px 0; }
   .ac__content--lesson hr { border: none; border-top: 1px solid #ddd; margin: 42px auto; width: 50%; }
   .ac__content--lesson p, .ac__content--lesson li { font-family: 'Open Sans', sans-serif; font-size: 1rem; width: 100%; line-height: 1.8; color: #666; font-weight: 00; margin: 0 0 21px 0; }
   .ac__content--lesson b { font-weight: 600; }
-  .ac__content--lesson img { width: auto; height: auto; display: block; margin: 21px auto; max-width: 700px; }
+  .ac__content--lesson img { width: auto; height: auto; display: block; margin: 42px auto; max-width: 700px; }
   .ac__content--lesson li { margin-bottom: 0; }
   .ac__content--lesson strong { color: #666; font-weight: 600; }
-  .ac__content--lesson .ac__cttw { position: relative; font-size: 1.3rem; margin-top: 21px; margin-bottom: 21px; padding-left: 5px; border-left: 3px solid #36a3dc; padding-left: 21px; }
+  .ac__content--lesson .ac__cttw { position: relative; font-size: 1.3rem; margin-top: 42px; margin-bottom: 42px; padding-left: 5px; border-left: 3px solid #36a3dc; padding-left: 21px; }
   .ac__content--lesson .ac__cttw:after { content: ""; margin-left: 10px; display: inline-block; background: url("/academy/img/twitter.svg") no-repeat top right; width: 14px; height: 12px; }
   .ac__content--lesson a, .ac__content--lesson .ac__cttw a { color: #36a3dc; text-decoration: none; }
   .ac__content--lesson .ac__key { display: block; padding: 21px 14px; border-radius: 4px; border: 1px solid #eee; background: #fafafa; }

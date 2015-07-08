@@ -755,6 +755,13 @@ body {
   font-weight: 600;
   margin: 42px 0 21px 0; }
 
+.ac__content--lesson h3 {
+  font-size: 1rem;
+  color: #333;
+  font-family: Roboto;
+  font-weight: 400;
+  margin: 42px 0 21px 0; }
+
 .ac__content--lesson hr {
   border: none;
   border-top: 1px solid #ddd;
@@ -777,7 +784,7 @@ body {
   width: auto;
   height: auto;
   display: block;
-  margin: 21px auto;
+  margin: 42px auto;
   max-width: 700px; }
 
 .ac__content--lesson li {
@@ -790,8 +797,8 @@ body {
 .ac__content--lesson .ac__cttw {
   position: relative;
   font-size: 1.3rem;
-  margin-top: 21px;
-  margin-bottom: 21px;
+  margin-top: 42px;
+  margin-bottom: 42px;
   padding-left: 5px;
   border-left: 3px solid #36a3dc;
   padding-left: 21px; }
