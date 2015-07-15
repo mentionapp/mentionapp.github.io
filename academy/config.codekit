@@ -163,6 +163,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/ac_l5-1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 86767,
+		"inputAbbreviatedPath": "\/img\/ac_l5-1.png",
+		"outputAbbreviatedPath": "\/img\/ac_l5-1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/ashley ennis simply measured.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -300,6 +311,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/Elizaveta Naumov.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 86406,
+		"inputAbbreviatedPath": "\/img\/Elizaveta Naumov.jpeg",
+		"outputAbbreviatedPath": "\/img\/Elizaveta Naumov.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/emily kate pope general assembly.jpeg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -329,6 +351,72 @@
 		"initialSize": 0,
 		"inputAbbreviatedPath": "\/img\/intapage.jpeg",
 		"outputAbbreviatedPath": "\/img\/intapage.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/intl-media-monitoring-2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 30404,
+		"inputAbbreviatedPath": "\/img\/intl-media-monitoring-2.png",
+		"outputAbbreviatedPath": "\/img\/intl-media-monitoring-2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/intl-media-monitoring-3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 87670,
+		"inputAbbreviatedPath": "\/img\/intl-media-monitoring-3.png",
+		"outputAbbreviatedPath": "\/img\/intl-media-monitoring-3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/intl-media-monitoring-4.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 33915,
+		"inputAbbreviatedPath": "\/img\/intl-media-monitoring-4.png",
+		"outputAbbreviatedPath": "\/img\/intl-media-monitoring-4.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/intl-media-monitoring-5.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 35392,
+		"inputAbbreviatedPath": "\/img\/intl-media-monitoring-5.png",
+		"outputAbbreviatedPath": "\/img\/intl-media-monitoring-5.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/intl-media-monitoring-6.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 31043,
+		"inputAbbreviatedPath": "\/img\/intl-media-monitoring-6.png",
+		"outputAbbreviatedPath": "\/img\/intl-media-monitoring-6.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/intl-media-monitoring.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 59578,
+		"inputAbbreviatedPath": "\/img\/intl-media-monitoring.png",
+		"outputAbbreviatedPath": "\/img\/intl-media-monitoring.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -428,6 +516,17 @@
 		"initialSize": 0,
 		"inputAbbreviatedPath": "\/img\/sm-logo-horizontal.png",
 		"outputAbbreviatedPath": "\/img\/sm-logo-horizontal.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/textmaster.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14522,
+		"inputAbbreviatedPath": "\/img\/textmaster.png",
+		"outputAbbreviatedPath": "\/img\/textmaster.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -550,6 +649,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/lesson-4\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/lesson-5\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/lesson-5\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
