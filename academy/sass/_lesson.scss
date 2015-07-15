@@ -23,14 +23,15 @@
  
 .ac__side .ac__submit { background: #36a3dc; text-decoration: none; }
 
-.ac__expert--lesson { padding: 21px; background-color: #fafafa; border-radius: 4px; max-width: 700px; margin: 0 auto; display: block; border: 1px solid #eee;  }
+.ac__expert--lesson { padding: 21px; background-color: #fafafa; border-radius: 4px; max-width: 620px; margin: 0 auto; display: block; border: 1px solid #eee;  }
 .ac__expert--lesson .ac__expert-name { font-size: 1.2rem; margin: 0; margin-bottom: 15px; }
 .ac__expert--lesson .ac__experts-desc { display: inline-block; vertical-align: middle; margin: 0; max-width: 500px; text-align: left; }
 .ac__expert--lesson .ac__tests-author { margin: 0; font-weight: 600; }
 .ac__expert--lesson .ac__experts-desc p { margin: 0; }
-.ac__expert--lesson img { border-radius: 100%; display: inline-block; height: 64px; width: auto; vertical-align: middle; margin-right: 21px; }
+.ac__expert--lesson img { border-radius: 100%; display: inline-block; height: 100px; width: auto; vertical-align: middle; margin-right: 21px; margin-left: -62px; border: 6px solid #fff; }
 
 @include mquery(1280px) { 
      .ac__side { display: none; }
      .ac__form-cont, .ac__form-cont--lesson { display: block; }
+     .ac__expert--lesson img { margin-left: 0; border: none; }
 }
