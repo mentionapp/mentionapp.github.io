@@ -692,14 +692,16 @@ body {
   cursor: pointer;
   width: 100%;
   margin-top: 18px;
-  font-weight: 600;
-  font-size: .9rem;
+  font-weight: 400;
+  font-size: 13px;
   height: 56px;
   display: block;
   line-height: 56px;
   border-radius: 4px;
   text-align: center;
-  color: #fff; }
+  color: #fff;
+  font-family: Roboto, sans-serif;
+  text-transform: uppercase; }
 
 .ac__learn {
   background: #CFCFCF;
