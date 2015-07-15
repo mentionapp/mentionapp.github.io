@@ -692,16 +692,14 @@ body {
   cursor: pointer;
   width: 100%;
   margin-top: 18px;
-  font-weight: 400;
-  font-size: 13px;
+  font-weight: 600;
+  font-size: 1rem;
   height: 56px;
   display: block;
   line-height: 56px;
   border-radius: 4px;
   text-align: center;
-  color: #fff;
-  font-family: Roboto, sans-serif;
-  text-transform: uppercase; }
+  color: #fff; }
 
 .ac__learn {
   background: #CFCFCF;
@@ -758,7 +756,7 @@ body {
   color: #22282B;
   font-family: Roboto;
   font-weight: 400;
-  margin: 126px 0 21px 0; }
+  margin: 42px 0 21px 0; }
 
 .ac__content--lesson h3 {
   font-size: 1rem;
