@@ -738,18 +738,18 @@ body {
   font-size: 2rem;
   margin-bottom: 42px;
   margin-top: 100px;
-  max-width: 700px;
+  max-width: 800px;
   line-height: 1.3;
   color: #22282B; }
 
 .ac__content-wrapper--lesson {
   margin: 0 auto;
   text-align: left;
-  max-width: 800px; }
+  max-width: 700px; }
 
 .ac__content--lesson {
   width: 100%;
-  max-width: 800px; }
+  max-width: 700px; }
 
 .ac__content--lesson h2 {
   font-size: 1.2rem;
