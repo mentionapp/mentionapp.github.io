@@ -30,8 +30,12 @@
 .ac__expert--lesson .ac__experts-desc p { margin: 0; }
 .ac__expert--lesson img { border-radius: 100%; display: inline-block; height: 100px; width: auto; vertical-align: middle; margin-right: 21px; margin-left: -62px; border: 6px solid #fff; }
 
+@include mquery(640px) {
+  .ac__content--lesson img { width: 100%; }
+}
+
 @include mquery(1280px) { 
-     .ac__side { display: none; }
-     .ac__form-cont, .ac__form-cont--lesson { display: block; }
-     .ac__expert--lesson img { margin-left: 0; border: none; }
+ .ac__side { display: none; }
+ .ac__form-cont, .ac__form-cont--lesson { display: block; }
+ .ac__expert--lesson img { margin-left: 0; border: none; }
 }

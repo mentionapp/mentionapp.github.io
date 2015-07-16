@@ -884,6 +884,9 @@ body {
   margin-left: -62px;
   border: 6px solid #fff; }
 
+@media only screen and (max-width: 640px) {
+  .ac__content--lesson img {
+    width: 100%; } }
 @media only screen and (max-width: 1280px) {
   .ac__side {
     display: none; }
