@@ -32,6 +32,7 @@
 
 @include mquery(640px) {
   .ac__content--lesson img { width: 100%; }
+  .ac__expert--lesson img { width: auto; }
 }
 
 @include mquery(1280px) { 

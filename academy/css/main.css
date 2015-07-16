@@ -886,7 +886,10 @@ body {
 
 @media only screen and (max-width: 640px) {
   .ac__content--lesson img {
-    width: 100%; } }
+    width: 100%; }
+
+  .ac__expert--lesson img {
+    width: auto; } }
 @media only screen and (max-width: 1280px) {
   .ac__side {
     display: none; }
