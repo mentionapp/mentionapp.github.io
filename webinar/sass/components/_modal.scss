@@ -1,0 +1,45 @@
+.overlay { 
+	display: none;
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+	background-color: rgba(0,0,0,.8); 
+	align-items: center; 
+}
+.modal { 
+	max-width: 600px; 
+	height: auto; 
+	border-radius: 4px; 
+	padding-bottom: 21px; 
+	margin: 5px; 
+	overflow: hidden; 
+	background: #fff; 
+	display: none; 
+	@include scaleUp(.2s); 
+}
+
+.modal p { color: $grey; padding: 21px; margin: 0; }
+.success, .loading, .error { display: none; text-align: center; color: #fff; font-family: $open; font-size: $default; }
+
+.loading { @include scaleUp(.2s); }
+
+.message-bg { height: 150px; width: 100%; display: flex; justify-content: center; align-items: center; }
+.success-bg { background: #3FC59D; }
+.error-bg { background: #E2747E; }
+
+.closer { 
+	display: inline-block;
+	padding: 14px 20px; 
+	font-size: 1rem; 
+	font-weight: 500; 
+	font-family: $roboto; 
+	border-radius: 40px; 
+	@include hover(.2s); 
+	text-transform: uppercase; 
+	font-size: $small;
+	color: #fff;
+}
+.success .closer { background: #3FC59D; }
+.error .closer { background: #E2747E; }

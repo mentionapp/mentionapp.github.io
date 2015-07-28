@@ -1,0 +1,27 @@
+.header { 
+	height: 500px; 
+	width: 100%;
+	display: flex; 
+	background-image: linear-gradient(rgba(23, 153, 221, .9), rgba(23, 153, 221, .9)), url(../img/laptop.jpg);
+	background-position: center; 
+	background-size: cover; 
+	background-repeat: no-repeat;
+	justify-content: center;
+	align-items: center;  
+}
+
+.welcome { @include container(750px, 95%); text-align: center; }
+.welcome img { height: 65px; width: auto; margin-bottom: 21px; }
+.welcome p, .welcome span, .welcome h1 { color: #fff; text-align: center; margin: 0 0 21px 0; }
+.welcome .men__btn-main--wh { display: inline-block; @include hover(.1s); }
+.welcome .men__btn-main--wh:hover { @include shadow(rgba(0,0,0,.3), 0px 4px 10px 2px); @include hover(.3s); }
+.welcome .men__btn-main--wh:active { @include scale(.95); @include hover(.1s);  }
+
+.metas { @include container(500px, 100%); display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 42px; }
+.metas-item { display: inline-block; margin: 10px 0; }
+.metas-item img { height: 16px; width: auto; margin: 0 5px 0 0; }
+
+@include mquery(500px) {
+	.metas { justify-content: center; }
+	.metas-item { margin: 10px 21px; }
+}

@@ -1,0 +1,25 @@
+.men__btn { padding: 14px 20px; font-size: 1rem; font-weight: 500; font-family: $roboto; border-radius: 3px; @include hover(.2s); text-transform: uppercase; font-size: $small; }
+
+.men__btn-gh--def { @extend .men__btn; background: transparent; border: 1px solid rgba(255,255,255,.5); color: #fff; }
+.men__btn-gh--def:hover { background: #fff; color: $primary; }
+
+.men__btn-gh--blue { @extend .men__btn-gh--def; border: 1px solid #eee; color: $primary; }
+.men__btn-gh--blue:hover { @extend .men__btn-gh--def; border: 1px solid $primary; background: $primary; color: #fff; }
+
+.men__btn-big--def { @extend .men__btn; }
+.men__btn-big--blue { @extend .men__btn-big--def; background: $primary; color: #fff; }
+.men__btn-big--darkblue { @extend .men__btn-big--def; background: #378EBE; color: #fff; }
+
+.men__btn-big--fb { @extend .men__btn-big--def; background: #3b5998; color: #fff; }
+.men__btn-big--tw { @extend .men__btn-big--def; background: #55acee; color: #fff; }
+.men__btn-big--go { @extend .men__btn-big--def; background: #dd4b39; color: #fff; }
+.men__btn-big--ln { @extend .men__btn-big--def; background: #0077b5; color: #fff; }
+
+.men__btn-big--wh { @extend .men__btn-big--def; background: #fff; color: $primary; }
+.men__btn-big--sh { @extend .men__btn-big--def; padding: 10px 20px; background: $grey; color: #fff; }
+
+.men__btn-main--def { @extend .men__btn; padding: 18px 24px; }
+.men__btn-main--wh { @extend .men__btn-main--def; background: #fff; color: $primary; }
+
+a.men__hlink { font-size: $small; font-weight: 600; font-family: $open; text-transform: uppercase; }
+a.men__hlink--wh { font-size: $small; font-weight: 600; font-family: $open; text-transform: uppercase; color: #fff; }

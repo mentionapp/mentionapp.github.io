@@ -1,0 +1,33 @@
+// global text styles
+
+$roboto: 'Roboto', Helvetica, sans-serif;
+$open: 'Open Sans', Arial, sans-serif;
+
+$base: 16px;
+$biggest: 2.56rem;
+$big: 2.18rem;
+$middle: 1.18rem;
+$normal: 1rem;
+$small: .8125rem; 
+
+$light: 300;
+$default: 400;
+$medium: 500;
+$bold: 600;
+
+* { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { font-family: $roboto; @include fontsize($base); color: $black; font-weight: $light; line-height: 1.5; }
+
+h1 { font-family: $roboto; font-size: $biggest; font-weight: $light; line-height: 1.2; margin: 0; color: $black; }
+h2 { font-family: $roboto; font-size: $big; font-weight: $light; line-height: 1.2; margin: 0; color: $black; }
+h3 { font-family: $open; font-size: $middle; font-weight: $default; line-height: 1.2; color: $black; } 
+h4 { font-family: $open; font-size: $small; font-weight: $bold; line-height: 1.2; color: $black; text-transform: uppercase; color: $black; }
+p, li, span { font-family: $open; font-size: $normal; font-weight: $default; margin-bottom: 21px; line-height: 1.8; color: $grey; }
+li { margin: 0; }
+a { margin: 0; font-family: inherit; font-size: inherit; font-weight: inherit; text-transform: none; text-decoration: none; cursor: pointer; color: $primary; }
+
+// helpers
+@include mquery(640px) {
+	h1 { font-size: $big; }
+	h2 { font-size: 1.8rem; }
+}
