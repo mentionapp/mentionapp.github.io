@@ -1,18 +1,23 @@
 $( ".men__btn-main--wh" ).click(function(event) {
 	event.preventDefault();
+
+	var SegmentID = analytics.user().id();
+
+	if (SegmentID !== null && SegmentID.length > 0) {
 	
-	if (analytics !== null && analytics.length > 0) {
-	SegmentID = analytics.user().id();
-	// exist, ok
+	// exist, ok rmeove button
 	$(this).addClass('hidden');
+	
 	// prepare loading...
 	$('.loading').addClass('visible-ib');
+	
 	// push to segment
 	analytics.identify(''+ SegmentID +'');
 	analytics.track('Registered for webinar', {
   	webinar_name: 'Test'
 	});
-	// wait for it...
+
+	// wait for it...display success modal
 	setTimeout(
   	function() {
     $('.loading').removeClass('visible-ib');
@@ -24,8 +29,11 @@ $( ".men__btn-main--wh" ).click(function(event) {
 	else {
 		// does not exist, error message
 		$(this).addClass('hidden');
+		
 		// prepare loading...
 		$('.loading').addClass('visible-ib');
+		
+		// wait for it...display error modal
 		setTimeout(
   		function() {
     	$('.loading').removeClass('visible-ib');
