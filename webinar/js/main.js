@@ -13,9 +13,12 @@ $( ".men__btn-main--wh" ).click(function(event) {
 	
 	// push to segment
 	analytics.identify(''+ SegmentID +'');
+	console.log("id is");
+	console.log(SegmentID);
 	analytics.track('Registered for webinar', {
   	webinar_name: 'Test'
 	});
+	console.log("tracked");
 
 	// wait for it...display success modal
 	setTimeout(
@@ -29,6 +32,8 @@ $( ".men__btn-main--wh" ).click(function(event) {
 	else {
 		// does not exist, error message
 		$(this).addClass('hidden');
+		console.log("nope");
+		console.log(SegmentID);
 		
 		// prepare loading...
 		$('.loading').addClass('visible-ib');
