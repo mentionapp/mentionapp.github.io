@@ -964,7 +964,7 @@
 	"javascriptCreateSourceMap": 1,
 	"javascriptOutputStyle": 1,
 	"javascriptSyntaxCheckerStyle": 1,
-	"jsCheckerReservedNamesString": "",
+	"jsCheckerReservedNamesString": "analytics",
 	"jsHintFlags2": {
 		"asi": {
 			"active": 0,
@@ -1003,7 +1003,7 @@
 			"flagValue": -1
 			},
 		"devel": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"dojo": {
@@ -1293,11 +1293,11 @@
 			"flagValue": -1
 			},
 		"devel": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"eqeq": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"evil": {

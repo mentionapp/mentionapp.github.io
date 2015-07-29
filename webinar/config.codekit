@@ -458,7 +458,7 @@
 	"javascriptCreateSourceMap": 1,
 	"javascriptOutputStyle": 1,
 	"javascriptSyntaxCheckerStyle": 1,
-	"jsCheckerReservedNamesString": "",
+	"jsCheckerReservedNamesString": "analytics, console",
 	"jsHintFlags2": {
 		"asi": {
 			"active": 0,

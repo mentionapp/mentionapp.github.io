@@ -43,3 +43,24 @@
 }
 .success .closer { background: #3FC59D; }
 .error .closer { background: #E2747E; }
+
+.calendars {
+	display: block;
+	padding: 0 0 30px 0;
+}
+
+.calendars p { margin: 0 0px 5px 0; padding: 0; color: $grey; }
+
+.calendar { 
+	display: inline-block;
+	padding: 10px; 
+	font-weight: $medium;
+	background: #fafafa; 
+	border: 1px solid #eee; 
+	color: $grey; 
+	font-size: $small; 
+	text-transform: uppercase; 
+	font-family: $open; 
+}
+.calendar:hover { background: #eee; } 
+ 
