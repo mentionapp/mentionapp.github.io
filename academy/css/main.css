@@ -886,8 +886,10 @@ body {
   width: auto;
   vertical-align: middle;
   margin-right: 21px;
-  margin-left: -62px;
-  border: 6px solid #fff; }
+  margin-left: -72px;
+  background-color: #fff;
+  border: 1px solid #EEE;
+  padding: 4px; }
 
 @media only screen and (max-width: 640px) {
   .ac__content--lesson img {

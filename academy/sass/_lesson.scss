@@ -29,7 +29,7 @@
 .ac__expert--lesson .ac__experts-desc { display: inline-block; vertical-align: middle; margin: 0; max-width: 500px; text-align: left; }
 .ac__expert--lesson .ac__tests-author { margin: 0; font-weight: 600; }
 .ac__expert--lesson .ac__experts-desc p { margin: 0; }
-.ac__expert--lesson img { border-radius: 100%; display: inline-block; height: 100px; width: auto; vertical-align: middle; margin-right: 21px; margin-left: -62px; border: 6px solid #fff; }
+.ac__expert--lesson img { border-radius: 100%; display: inline-block; height: 100px; width: auto; vertical-align: middle; margin-right: 21px; margin-left: -72px; background-color: #fff; border: 1px solid #EEE; padding: 4px; }
 
 @include mquery(640px) {
   .ac__content--lesson img { width: 100%; }
