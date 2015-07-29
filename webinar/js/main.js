@@ -55,3 +55,12 @@ $( ".closer" ).click(function(event) {
 	$( ".error, .success" ).removeClass('visible');
 	$( ".men__btn-main--wh" ).removeClass('hidden');
 });
+
+$(document).mouseup(function(event) {
+  var container = $(".modal");
+  if (!container.is(event.target) && container.has(event.target).length === 0) {
+	  $( ".overlay" ).removeClass('overlay-is-visible');
+		$( "body" ).removeClass('ov-fixed');
+		$( ".error, .success" ).removeClass('visible');
+  }
+});
