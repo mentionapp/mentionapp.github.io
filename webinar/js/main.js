@@ -1,3 +1,19 @@
+var getUrlParameter = function getUrlParameter(sParam) {
+  var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+    	sURLVariables = sPageURL.split('&'),
+    	sParameterName,
+    	i;
+
+  for (i = 0; i < sURLVariables.length; i++) {
+    sParameterName = sURLVariables[i].split('=');
+    if (sParameterName[0] === sParam) {
+      return sParameterName[1] === undefined ? true : sParameterName[1];
+    }
+  }
+};
+
+var date_webinar = getUrlParameter('date');
+
 $( ".men__btn-main--wh" ).click(function(event) {
 	event.preventDefault();
 
@@ -16,7 +32,8 @@ $( ".men__btn-main--wh" ).click(function(event) {
 	console.log("identified");
 	
 	analytics.track('Registered for webinar', {
-  	webinar_name: 'Test'
+  	webinar_name: 'Test',
+  	webinar_date: date, 
 	});
 	console.log("tracked");
 
