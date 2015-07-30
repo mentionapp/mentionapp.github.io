@@ -33,7 +33,7 @@ $( ".men__btn-main--wh" ).click(function(event) {
 	
 	analytics.track('Registered for webinar', {
   	webinar_name: 'Test',
-  	webinar_date: date, 
+  	webinar_date: date_webinar, 
 	});
 	console.log("tracked");
 
