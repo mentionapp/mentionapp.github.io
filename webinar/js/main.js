@@ -16,7 +16,7 @@ var date_webinar = getUrlParameter('date');
 var date_webinar_landing = "test";
 
 $(document).load(function() {
-	$( "metas-item span" ).replaceWith( "<span>"+ date_webinar_landing +"</span>" );
+	$( "#date" ).replaceWith( "<span>"+ date_webinar_landing +"</span>" );
 });
 
 $( ".men__btn-main--wh" ).click(function(event) {
