@@ -25,6 +25,7 @@ $( ".men__btn-main--wh" ).click(function(event) {
 	event.preventDefault();
 
 	var SegmentID = analytics.user().id();
+	var webinar_name = $("h1").text();
 
 	if (SegmentID !== null && SegmentID.length > 0) {
 	
@@ -39,7 +40,7 @@ $( ".men__btn-main--wh" ).click(function(event) {
 	console.log("identified");
 	
 	analytics.track('Registered for webinar', {
-  	webinar_name: 'Test',
+  	webinar_name: webinar_name,
   	webinar_date: date_webinar, 
 	});
 	console.log("tracked");
