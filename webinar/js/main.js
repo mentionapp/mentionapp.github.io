@@ -15,7 +15,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 var date_webinar = getUrlParameter('date');
 var plaindate = getUrlParameter('plaindate');
 var webinar_name = $("h1").text();
-var calendarLink = "https://www.google.com/calendar/render?action=TEMPLATE&text="+webinar_name+"&dates="+date_webinar;
+var calendarLink = "https://www.google.com/calendar/event?action=TEMPLATE&text="+webinar_name+"&dates="+date_webinar;
 
 
 $(document).ready(function() {
