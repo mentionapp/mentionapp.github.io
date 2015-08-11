@@ -26,6 +26,7 @@ $( ".men__btn-main--wh" ).click(function(event) {
 
 	var SegmentID = analytics.user().id();
 	var webinar_name = $("h1").text();
+	console.log(webinar_name);
 
 	if (SegmentID !== null && SegmentID.length > 0) {
 	
