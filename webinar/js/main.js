@@ -16,7 +16,7 @@ var date_webinar = getUrlParameter('date');
 var plaindate = getUrlParameter('plaindate');
 var google_timestamp = getUrlParameter('google_timestamp');
 var webinar_name = $("h1").text();
-var calendarLink = "https://www.google.com/calendar/event?action=TEMPLATE&text="+webinar_name+"&dates=20131206T050000Z/20131208T060000Z";
+var calendarLink = "https://www.google.com/calendar/event?action=TEMPLATE&text="+webinar_name+"&dates=20131206T050000Z";
 
 $(document).ready(function() {
 	if (plaindate.length) {
