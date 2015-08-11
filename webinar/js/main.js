@@ -14,10 +14,16 @@ var getUrlParameter = function getUrlParameter(sParam) {
 
 var date_webinar = getUrlParameter('date');
 var plaindate = getUrlParameter('plaindate');
+var webinar_name = $("h1").text();
+var calendarLink = "https://www.google.com/calendar/render?action=TEMPLATE&text="+webinar_name+"&dates="+date_webinar;
+
 
 $(document).ready(function() {
 	if (plaindate.length) {
 		$( "#date" ).html(plaindate);
+	}
+	if (date_webinar.length) {
+		$("#calendar_link").attr("href", calendarLink);
 	}
 });
 
@@ -25,8 +31,6 @@ $( ".men__btn-main--wh" ).click(function(event) {
 	event.preventDefault();
 
 	var SegmentID = analytics.user().id();
-	var webinar_name = $("h1").text();
-	console.log(webinar_name);
 
 	if (SegmentID !== null && SegmentID.length > 0) {
 	
