@@ -13,10 +13,12 @@ var getUrlParameter = function getUrlParameter(sParam) {
 };
 
 var date_webinar = getUrlParameter('date');
-var date_webinar_landing = "test";
+var plaindate = getUrlParameter('plaindate');
 
 $(document).ready(function() {
-	$( "#date" ).html(date_webinar_landing);
+	if (plaindate.length) {
+		$( "#date" ).html(plaindate);
+	}
 });
 
 $( ".men__btn-main--wh" ).click(function(event) {
