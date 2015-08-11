@@ -15,8 +15,8 @@ var getUrlParameter = function getUrlParameter(sParam) {
 var date_webinar = getUrlParameter('date');
 var date_webinar_landing = "test";
 
-$(document).load(function() {
-	$( "#date" ).replaceWith( "<span>"+ date_webinar_landing +"</span>" );
+$(document).ready(function() {
+	$( "#date" ).html(date_webinar_landing);
 });
 
 $( ".men__btn-main--wh" ).click(function(event) {
