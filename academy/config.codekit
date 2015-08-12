@@ -185,6 +185,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/buffer.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14064,
+		"inputAbbreviatedPath": "\/img\/buffer.png",
+		"outputAbbreviatedPath": "\/img\/buffer.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/cloudpeeps.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -432,6 +443,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/kieran.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 42696,
+		"inputAbbreviatedPath": "\/img\/kieran.jpg",
+		"outputAbbreviatedPath": "\/img\/kieran.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/logo-mention.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -472,6 +494,17 @@
 		"initialSize": 886045,
 		"inputAbbreviatedPath": "\/img\/nathan ellering coschedule.png",
 		"outputAbbreviatedPath": "\/img\/nathan ellering coschedule.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/nicole.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 31516,
+		"inputAbbreviatedPath": "\/img\/nicole.jpeg",
+		"outputAbbreviatedPath": "\/img\/nicole.jpeg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
