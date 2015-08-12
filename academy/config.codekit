@@ -509,6 +509,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/nicole.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 25823,
+		"inputAbbreviatedPath": "\/img\/nicole.jpg",
+		"outputAbbreviatedPath": "\/img\/nicole.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/office.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
