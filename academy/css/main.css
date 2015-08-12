@@ -458,6 +458,10 @@ body {
   height: 24px;
   width: auto; }
 
+.ac__logos-inner {
+  max-width: 750px;
+  margin: 0 auto; }
+
 .ac__list {
   list-style: none;
   padding: 0;
