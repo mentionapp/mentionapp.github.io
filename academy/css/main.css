@@ -742,6 +742,10 @@ body {
   height: 30px;
   width: auto; }
 
+.ac__about-cont img.bf {
+  height: 24px;
+  width: auto; }
+
 .ac__lesson-title {
   font-size: 3rem;
   margin-bottom: 42px;
