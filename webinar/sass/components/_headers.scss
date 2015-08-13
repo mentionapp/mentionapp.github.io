@@ -24,4 +24,6 @@
 @include mquery(500px) {
 	.metas { justify-content: center; }
 	.metas-item { margin: 10px 21px; }
+	.header { height: auto; }
+	.welcome .men__btn-main--wh { margin-bottom: 42px; }
 }
