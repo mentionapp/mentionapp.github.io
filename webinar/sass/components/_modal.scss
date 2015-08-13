@@ -7,6 +7,7 @@
 	height: 100%; 
 	background-color: rgba(0,0,0,.8); 
 	align-items: center; 
+	z-index: 10;
 }
 .modal { 
 	max-width: 600px; 
@@ -18,6 +19,7 @@
 	background: #fff; 
 	display: none; 
 	@include scaleUp(.2s); 
+	z-index: 100;
 }
 
 .modal p { color: $grey; padding: 21px; margin: 0; }
@@ -63,4 +65,8 @@
 	font-family: $open; 
 }
 .calendar:hover { background: #eee; } 
+
+@include mquery(500px) {
+	.message-bg { height: 150px; width: 100%; display: block; justify-content: center; align-items: center; }
+}
  

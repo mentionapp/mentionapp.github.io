@@ -18,3 +18,7 @@ input:focus { outline: none !important; border: none; }
 .visible-ib { display: inline-block !important; }
 .clearfix { display: inline-block; }
 * html .clearfix { height: 1%; }
+
+@include mquery(500px) {
+	.overlay-is-visible { display: block; }
+}
