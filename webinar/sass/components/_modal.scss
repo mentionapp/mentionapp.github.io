@@ -67,6 +67,6 @@
 .calendar:hover { background: #eee; } 
 
 @include mquery(500px) {
-	.message-bg { margin-top: 42px; height: 150px; width: 100%; display: block; justify-content: center; align-items: center; }
+	.message-bg { margin-top: 42px; }
 }
  
