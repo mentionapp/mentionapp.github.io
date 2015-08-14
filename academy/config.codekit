@@ -163,6 +163,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/ac__l8-1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 90943,
+		"inputAbbreviatedPath": "\/img\/ac__l8-1.png",
+		"outputAbbreviatedPath": "\/img\/ac__l8-1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/ac__l8-2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 40934,
+		"inputAbbreviatedPath": "\/img\/ac__l8-2.png",
+		"outputAbbreviatedPath": "\/img\/ac__l8-2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/ac_l5-1.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -351,6 +373,17 @@
 		"initialSize": 0,
 		"inputAbbreviatedPath": "\/img\/General_Assembly_logo.png",
 		"outputAbbreviatedPath": "\/img\/General_Assembly_logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/instapage_author.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 283541,
+		"inputAbbreviatedPath": "\/img\/instapage_author.png",
+		"outputAbbreviatedPath": "\/img\/instapage_author.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -720,6 +753,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/lesson-7\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/lesson-8\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/lesson-8\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
