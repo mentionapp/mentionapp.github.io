@@ -40,6 +40,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/ac__bonus.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 53033,
+		"inputAbbreviatedPath": "\/img\/ac__bonus.png",
+		"outputAbbreviatedPath": "\/img\/ac__bonus.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/ac__cs-1.png": {
 		"fileType": 32768,
 		"ignore": 0,
