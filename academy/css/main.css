@@ -533,8 +533,8 @@ body {
 
 .ac__lesson-sub {
   margin-top: 0;
-  color: #aaa;
-  font-style: italic; }
+  color: #85939d;
+  font-style: normal; }
 
 .ac__experts-cont {
   margin-top: 42px;
@@ -562,7 +562,7 @@ body {
   font-size: 1rem; }
 
 .ac__experts-desc h3 {
-  font-weight: 500; }
+  font-weight: 400; }
 
 .ac__experts-desc h3 a {
   color: #3FA2D9;
@@ -570,7 +570,7 @@ body {
 
 .ac__experts-desc p, .ac__experts-desc h3 {
   margin: 0;
-  color: #888; }
+  color: #85939d; }
 
 @media only screen and (max-width: 1280px) {
   .ac__main {
