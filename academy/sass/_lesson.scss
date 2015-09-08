@@ -1,7 +1,8 @@
 // LESSON
-.ac__lesson-title { font-size: 3rem; margin-bottom: 42px; margin-top: 100px; max-width: 800px; line-height: 1.3; color: #22282B; }
+.ac__lesson-title { font-size: 3rem; margin-bottom: 42px; margin-top: 0; max-width: 800px; line-height: 1.3; color: #22282B; }
 .ac__content-wrapper--lesson { margin: 0 auto; text-align: left; max-width: 700px; }
 .ac__content--lesson { width: 100%; max-width: 700px; }
+  .ac__content--lesson h1 { text-align: left; }
   .ac__content--lesson h2 { font-size: 1.2rem; color: #22282B; font-family: Roboto; font-weight: 400; margin: 42px 0 21px 0; }
   .ac__content--lesson h3 { font-size: 1rem; color: #22282B; font-family: Roboto; font-weight: 400; margin: 42px 0 21px 0; }
   .ac__content--lesson h4 { font-size: 1rem; font-style: italic; font-weight: 400; }
@@ -20,9 +21,18 @@
 
 .ac__form-cont--lesson { max-width: 700px; display: none; border: 1px solid #eee; margin-top: 10px; }
 .ac__content--lesson .ac__form-cont--lesson h2 { margin-top: 0; }
-.ac__form-cont--lesson .ac__submit { color: #fff; }
+.ac__form-cont--lesson input { width: 100%; margin-right: 0; }
+.ac__form-cont--lesson .ac__submit { width: 100%; color: rgba(0,0,0,.5); margin-top: 15px; }
  
-.ac__side .ac__submit { background: #36a3dc; text-decoration: none; }
+.ac__side .ac__submit { 
+    background: #36a3dc; 
+    text-decoration: none; 
+    margin-top: 15px;
+    text-transform: none;
+    width: 100%;
+    font-size: .9rem;
+    color: #fff; 
+}
 
 .ac__expert--lesson { padding: 21px; background-color: #fafafa; border-radius: 4px; max-width: 620px; margin: 84px auto; display: block; border: 1px solid #eee;  }
 .ac__expert--lesson .ac__expert-name { font-size: 1.2rem; margin: 0; margin-bottom: 15px; }
