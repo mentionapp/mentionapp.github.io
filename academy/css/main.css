@@ -901,6 +901,9 @@ body {
   color: rgba(0, 0, 0, 0.5);
   margin-top: 15px; }
 
+.ac__side input {
+  width: 100%; }
+
 .ac__side .ac__submit {
   background: #36a3dc;
   text-decoration: none;
