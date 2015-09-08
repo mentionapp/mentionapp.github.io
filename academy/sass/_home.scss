@@ -1,16 +1,32 @@
 // HOME
 .ac__main--home { margin: 0 auto; margin-right: 0; padding: 0; }
-.ac__welcome--home { height: auto; background: transparent; width: 100%; padding-bottom: 84px; position: relative; }
+.ac__welcome--home { height: auto; background: transparent; width: 100%; padding-bottom: 0; position: relative; }
 .ac__titles { border: none; max-width: 1280px; }
-.ac__welcome--home .ac__title { text-align: center; color: #fff; }
-.ac__welcome--home .ac__subtitle { text-align: center; color: #fff; }
+.ac__welcome--home .ac__title { text-align: center; color: #fff; margin-top: 120px; }
+.ac__welcome--home .ac__subtitle { 
+	text-align: center; 
+	color: #fff; 
+	font-size: 1rem; 
+	font-family: 'Open Sans', sans-serif; 
+	margin-top: 15px; 
+	opacity: .9; 
+}
 .ac__welcome--home .ac__content { color: #fff; }
-.ac__nav--home { max-width: 1280px; margin-top: 0; padding-top: 57px; }
-.ac__form-cont--home { max-width: 650px; margin: 0 auto; background-color: rgba(0,0,0,.3); border: none; z-index: 100; }
-.ac__form-cont--home h2 { margin-top: 0; color: #fff; }
+.ac__nav--home { max-width: 1280px; margin-top: 0; padding-top: 42px; }
+.ac__form-cont--home { max-width: 100%; margin: 160px auto 0 auto; padding: 42px 0; background-color: rgba(0,0,0,.3); border: none; z-index: 100; }
+.ac__form-cont--home h2 { margin-top: 0; color: #fff; font-family: 'Open Sans', sans-serif; }
 .ac__form-cont--home a { text-decoration: none; }
 .ac__menu--home .ac__cta--nav { color: #fff; }
 .ac__main-desc { background-color: #fafafa; margin-top: 0; text-align: center; max-width: 100%; padding: 42px 0; }
-.ac__main-desc p { margin: 0 auto; font-family: 'Open Sans'; font-size: 1.2rem; width: 100%; max-width: 800px; line-height: 1.8; color: #888; font-weight: 500; }
+.ac__main-desc p { 
+	margin: 0 auto; 
+	font-family: 'Open Sans'; 
+	font-size: 1rem; 
+	width: 100%; 
+	max-width: 800px; 
+	line-height: 1.8; 
+	color: #85939d; 
+	font-weight: 500; 
+}
 .ac__form-success { text-align: center; color: #fff; @include fadeIn; }
 .ac__form-success .ac__shares { display: inline-block; }

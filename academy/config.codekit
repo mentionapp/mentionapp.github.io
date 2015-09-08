@@ -474,6 +474,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/Instapage_blue_large.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11999,
+		"inputAbbreviatedPath": "\/img\/Instapage_blue_large.png",
+		"outputAbbreviatedPath": "\/img\/Instapage_blue_large.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/intapage.jpeg": {
 		"fileType": 16384,
 		"ignore": 0,

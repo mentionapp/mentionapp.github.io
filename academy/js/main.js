@@ -1,3 +1,17 @@
+// General autoscroll function
+$('a[href^="#"]').click(function(){
+	var idlink = $(this).attr("href");
+	$('html, body').animate({
+		scrollTop:$(idlink).offset().top
+	}, 'slow');
+	var $cta = $( ".men__btn-main--wh" );
+	var input = $( ".men__last-form-input" );
+	if($cta.data('clicked')) {
+      input.focus();
+    }
+	return false;
+});
+
 $(document).ready(function() {
 var SegmentID = null;
 var referrer = document.referrer;
