@@ -12,6 +12,12 @@ var getUrlParameter = function getUrlParameter(sParam) {
   }
 };
 
+analytics.ready(function() {
+	segmentID = analytics.user().id();
+	if (segmentID !== null && segmentID.length > 0) {
+		segmentID = analytics.user().id();
+	} 
+});
 var date_webinar = getUrlParameter('date');
 // var google_timestamp = getUrlParameter('google_timestamp');
 // var google_timestamp_e = getUrlParameter('google_timestamp_end');
