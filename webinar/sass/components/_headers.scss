@@ -1,5 +1,5 @@
 .header { 
-	height: 500px; 
+	height: 550px; 
 	width: 100%;
 	display: flex; 
 	background-image: linear-gradient(rgba(23, 153, 221, .9), rgba(23, 153, 221, .9)), url(../img/laptop.jpg);
@@ -7,15 +7,60 @@
 	background-size: cover; 
 	background-repeat: no-repeat;
 	justify-content: center;
-	align-items: center;  
+	align-items: flex-end;  
 }
+
+.header-container {
+	width: 100%;
+	text-align: center;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  height: auto; 
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+ 	padding: 21px;
+	background: #fdfdfd;
+	border-bottom: 1px solid #eee;
+	margin-top: 84px;
+	flex-wrap: wrap;
+}
+
+input {
+	margin-right: 25px;
+	height: 47px;
+	width: 250px;
+	color: #222;
+	font-size: 1rem;
+	padding-left: 21px;
+	border-radius: 2px;
+	border: 1px solid #eee;
+}
+
+button { border: none; }
 
 .welcome { @include container(750px, 95%); text-align: center; }
 .welcome img { height: 65px; width: auto; margin-bottom: 21px; }
-.welcome p, .welcome span, .welcome h1 { color: #fff; text-align: center; margin: 0 0 21px 0; }
-.welcome .men__btn-main--wh { display: inline-block; @include hover(.1s); }
-.welcome .men__btn-main--wh:hover { @include shadow(rgba(0,0,0,.3), 0px 4px 10px 2px); @include hover(.3s); }
-.welcome .men__btn-main--wh:active { @include scale(.95); @include hover(.1s);  }
+
+.welcome p,
+.welcome span,
+.welcome h1 {
+  margin: 0 0 21px 0; 
+  text-align: center;
+  color: #fff;
+}
+
+.welcome .men__btn-main--wh { display: block; @include hover(.1s); }
+
+.welcome .men__btn-main--wh:hover {
+	@include hover(.3s); 
+  @include shadow(rgba(0,0,0,.3), 0px 4px 10px 2px);
+}
+
+.welcome .men__btn-main--wh:active { @include scale(.95); @include hover(.1s); }
 
 .metas { width: auto; max-width: 95%; display: block; margin-bottom: 42px; }
 .metas-item { display: inline-block; margin: 10px 10px; }

@@ -13,71 +13,46 @@ var getUrlParameter = function getUrlParameter(sParam) {
 };
 
 var date_webinar = getUrlParameter('date');
-var plaindate = getUrlParameter('plaindate');
-var google_timestamp = getUrlParameter('google_timestamp');
-var google_timestamp_e = getUrlParameter('google_timestamp_end');
+// var plaindate = getUrlParameter('plaindate');
+// var google_timestamp = getUrlParameter('google_timestamp');
+// var google_timestamp_e = getUrlParameter('google_timestamp_end');
 var webinar_name = $("h1").text();
-var calendarLink = "https://www.google.com/calendar/event?action=TEMPLATE&text="+webinar_name+"&dates="+google_timestamp+"/"+google_timestamp_e;
+// var calendarLink = "https://www.google.com/calendar/event?action=TEMPLATE&text="+webinar_name+"&dates="+google_timestamp+"/"+google_timestamp_e;
 
-$(document).ready(function() {
-	if (plaindate.length) {
-		$( "#date" ).html(plaindate);
-	}
-	if (date_webinar.length) {
-		$("#calendar_link").attr("href", calendarLink);
-	}
-});
+$( "#form-webinar" ).submit(function(e) {
+	e.preventDefault();
 
-$( ".men__btn-main--wh" ).click(function(event) {
-	event.preventDefault();
+	// var SegmentID = analytics.user().id();
+	var email = $('#form-webinar-email').val();
+	$( ".overlay" ).addClass('overlay-is-visible');
+	$( ".success" ).addClass('visible');
 
-	var SegmentID = analytics.user().id();
-
-	if (SegmentID !== null && SegmentID.length > 0) {
-	
-	// exist, ok rmeove button
-	$(this).addClass('hidden');
-	
-	// prepare loading...
-	$('.loading').addClass('visible-ib');
-	
+	// if (SegmentID !== null && SegmentID.length > 0) {
 	// push to segment
-	analytics.identify(''+ SegmentID +'');
-	console.log("identified");
-	
-	analytics.track('Registered for webinar', {
-  	webinar_name: webinar_name,
-  	webinar_date: date_webinar, 
-	});
-	console.log("tracked");
-
-	// wait for it...display success modal
-	setTimeout(
-  	function() {
-    $('.loading').removeClass('visible-ib');
-   	$( ".overlay" ).addClass('overlay-is-visible');
-    $( ".success" ).addClass('visible');
-  	}, 2000);
-	} 
-
-	else {
-		// does not exist, error message
-		$(this).addClass('hidden');
-		console.log("failed");
-		
-		// prepare loading...
-		$('.loading').addClass('visible-ib');
-		
-		// wait for it...display error modal
-		setTimeout(
-  		function() {
-    	$('.loading').removeClass('visible-ib');
-			$( ".overlay" ).addClass('overlay-is-visible');
-			$( "body" ).addClass('ov-fixed');
-    	$( ".error" ).addClass('visible');
-  	}, 2000);
-	}
+	// analytics.identify(''+ SegmentID +'');
+	console.log(email);
+	webinarCreate(email);
 });
+
+function webinarCreate(email) {
+$.ajax({
+  url: 'https://zapier.com/hooks/catch/39ijg9/',
+  type: 'POST',
+  dataType: 'json',
+  data: {email: email},
+  success: function() {
+    console.log('Success call');
+    analytics.track('Registered for webinar', {
+  		webinar_name: webinar_name,
+  		webinar_date: date_webinar, 
+		});
+		console.log("tracked");
+   },
+   error: function() {
+    console.log('Error call');
+   }
+ });
+}
 
 $( ".closer" ).click(function(event) {
 	event.preventDefault();
