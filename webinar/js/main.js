@@ -13,17 +13,32 @@ var getUrlParameter = function getUrlParameter(sParam) {
 };
 
 var date_webinar = getUrlParameter('date');
-// var plaindate = getUrlParameter('plaindate');
 // var google_timestamp = getUrlParameter('google_timestamp');
 // var google_timestamp_e = getUrlParameter('google_timestamp_end');
 var webinar_name = $("h1").text();
 // var calendarLink = "https://www.google.com/calendar/event?action=TEMPLATE&text="+webinar_name+"&dates="+google_timestamp+"/"+google_timestamp_e;
+
+$(document).ready(function() {
+	var firstName_email = getUrlParameter('firstName');
+	var lastName_email = getUrlParameter('lastName');
+	var email_email = getUrlParameter('email');
+	$('#form-webinar-email').val(email_email);
+	$('#form-webinar-first').val(firstName_email);
+	$('#form-webinar-last').val(lastName_email);
+});
 
 $( "#form-webinar" ).submit(function(e) {
 	e.preventDefault();
 
 	// var SegmentID = analytics.user().id();
 	var email = $('#form-webinar-email').val();
+	var first = $('#form-webinar-first').val();
+	var last = $('#form-webinar-last').val();
+	var data_webinar = {
+		Email: email,
+		firstName: first,
+		lastName: last
+	}
 	$( ".overlay" ).addClass('overlay-is-visible');
 	$( ".success" ).addClass('visible');
 
@@ -31,15 +46,15 @@ $( "#form-webinar" ).submit(function(e) {
 	// push to segment
 	// analytics.identify(''+ SegmentID +'');
 	console.log(email);
-	webinarCreate(email);
+	webinarCreate(data_webinar);
 });
 
-function webinarCreate(email) {
+function webinarCreate(data_webinar) {
 $.ajax({
   url: 'https://zapier.com/hooks/catch/39ijg9/',
   type: 'POST',
   dataType: 'json',
-  data: {email: email},
+  data: data_webinar,
   success: function() {
     console.log('Success call');
     analytics.track('Registered for webinar', {
