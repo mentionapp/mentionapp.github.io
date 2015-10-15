@@ -18,7 +18,7 @@
 .men__btn-big--wh { @extend .men__btn-big--def; background: #fff; color: $primary; }
 .men__btn-big--sh { @extend .men__btn-big--def; padding: 10px 20px; background: $grey; color: #fff; }
 
-.men__btn-big--ye { @extend .men__btn-big--def; background: #FC0; color: rgba(0,0,0,.5); }
+.men__btn-big--ye { @extend .men__btn-big--def; background: #FC0; color: rgba(0,0,0,.5); cursor: pointer; }
 
 .men__btn-main--def { @extend .men__btn; padding: 18px 24px; }
 .men__btn-main--wh { @extend .men__btn-main--def; background: #fff; color: $primary; }
