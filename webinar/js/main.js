@@ -131,7 +131,6 @@ $(window).load(function() {
    	dataType: "json",
    	success: function(data) { 
    		console.log('success'); 
-   		$('.men__btn-big--ye').prop('disabled', false);
    		var i;
 			for (i = 0; i < data.length; ++i) {
 				var webinarSubject = data[i].subject;
