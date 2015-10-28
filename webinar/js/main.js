@@ -126,7 +126,7 @@ var upcomingWebinars;
 $(window).load(function() {
 	console.log("loading...");
 	$.ajax({
-   	url: "http://localhost:8888/wp-content/themes/mention/scripts/wp-webinars.php",
+   	url: "https://mention.com/wp-content/themes/mention/scripts/wp-webinars.php",
    	type: "GET",
    	dataType: "json",
    	success: function(data) { 
