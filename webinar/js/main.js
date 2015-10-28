@@ -142,6 +142,7 @@ $(window).load(function() {
 			  	webinar_date = data[i].times[0].startTime;
 			  	webinar_timezone = data[i].timeZone;
 			  	webinar_description = data[i].description;
+			  	$('.men__btn-big--ye').prop('disabled', false);
 			  	parseWebinarInfo();
 			  	console.log("done");
 			  	console.log(upcomingWebinars);
