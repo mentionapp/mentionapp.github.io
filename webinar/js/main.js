@@ -118,11 +118,10 @@ var upcomingWebinars;
 $(window).load(function() {
 	console.log("loading...");
 	$.ajax({
-   	url: "http://localhost:8888/wp-content/themes/mention/scripts/wp-webinars.php",
+   	url: "https://mention.com/wp-content/themes/mention/scripts/wp-webinars.php",
    	type: "GET",
    	dataType: "json",
    	success: function(data) { 
-			$('.men__btn-big--ye').css('background', '#FC0');
    		$('.men__btn-big--ye').prop('disabled', false);
    		var i;
 			for (i = 0; i < data.length; ++i) {
@@ -138,6 +137,7 @@ $(window).load(function() {
 			  	parseWebinarInfo();
 			  	console.log("done");
 			  	console.log(upcomingWebinars);
+			  	$('.men__btn-big--ye').css('background', '#FC0');
 			  	break
 			  }
 			  else { noWebinarUpcoming(); }
