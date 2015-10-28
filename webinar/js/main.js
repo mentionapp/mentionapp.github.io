@@ -50,6 +50,7 @@ var webinar_name;
 var webinar_date;
 var webinar_timezone;
 var webinar_description;
+var webinar_key;
 
 // Prefill form
 $(document).ready(function() {
@@ -78,13 +79,17 @@ $( "#form-webinar" ).submit(function(e) {
 	var data_webinar = {
 		email: email,
 		firstName: first,
-		lastName: last
+		lastName: last,
+		webinar: webinar_key
 	};
 
 	$( ".overlay" ).addClass('overlay-is-visible');
 	$( ".success" ).addClass('visible');
 
-	registerWebinar(data_webinar);
+	if (webinar_key) {
+		registerWebinar(data_webinar);
+	}
+	
 });
 
 /*
@@ -128,9 +133,8 @@ $(window).load(function() {
 	$.ajax({
    	url: "https://mention.com/wp-content/themes/mention/scripts/wp-webinars.php",
    	type: "GET",
-   	dataType: "json",
    	success: function(data) { 
-   		console.log('success'); 
+   		console.log(data); 
    		var i;
 			for (i = 0; i < data.length; ++i) {
 				var webinarSubject = data[i].subject;
@@ -142,6 +146,8 @@ $(window).load(function() {
 			  	webinar_date = data[i].times[0].startTime;
 			  	webinar_timezone = data[i].timeZone;
 			  	webinar_description = data[i].description;
+			  	webinar_key = data[i].webinarKey;
+			  	console.log(webinar_key)
 			  	$('.men__btn-big--ye').prop('disabled', false);
 			  	parseWebinarInfo();
 			  	console.log("done");
