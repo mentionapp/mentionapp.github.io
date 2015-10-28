@@ -35,7 +35,15 @@ var getUrlParameter = function getUrlParameter(sParam) {
 
 // Variables from query string
 var name_webinar_inURL = getUrlParameter('webinar_name');
+
 var author_webinar_inURL = getUrlParameter('author_name');
+var author_position_webinar_inURL = getUrlParameter('author_position');
+var author_img_webinar_inURL = getUrlParameter('author_img');
+
+var guest_webinar_inURL = getUrlParameter('guest_name');
+var guest_position_webinar_inURL = getUrlParameter('guest_position');
+var guest_img_webinar_inURL = getUrlParameter('guest_img');
+
 
 // Variables from API
 var webinar_name;
@@ -118,10 +126,11 @@ var upcomingWebinars;
 $(window).load(function() {
 	console.log("loading...");
 	$.ajax({
-   	url: "https://mention.com/wp-content/themes/mention/scripts/wp-webinars.php",
+   	url: "http://localhost:8888/wp-content/themes/mention/scripts/wp-webinars.php",
    	type: "GET",
    	dataType: "json",
    	success: function(data) { 
+   		console.log('success'); 
    		$('.men__btn-big--ye').prop('disabled', false);
    		var i;
 			for (i = 0; i < data.length; ++i) {
@@ -137,7 +146,6 @@ $(window).load(function() {
 			  	parseWebinarInfo();
 			  	console.log("done");
 			  	console.log(upcomingWebinars);
-			  	$('.men__btn-big--ye').css('background', '#FC0');
 			  	break
 			  }
 			  else { noWebinarUpcoming(); }
@@ -171,17 +179,40 @@ function parseWebinarInfo() {
 	$('.men__btn-big--ye').text('Register to the webinar');
 	$('.learn p').text(webinar_description);
 
+	authorParsing();
+	$('.men__btn-big--ye').css('background', '#FC0');
+
+}
+
+function authorParsing() {
+	
 	// detect author & parsing
-	if (/Vincent/.test(author_webinar_inURL)) {
-		$(".author_name").text('Vincent Le Hénaff');
-		$(".author_position").text('Business Developer');
-		$(".author_img").attr('src', 'https://avatars.slack-edge.com/2014-07-22/2478420834_192.jpg');
-	} else if (/Matt/.test(author_webinar_inURL)) {
-		$(".author_name").text('Matt Golia');
-		$(".author_position").text('Account Manager');
-		$(".author_img").attr('src', 'https://avatars.slack-edge.com/2015-05-15/4900888766_915d7be691f8ad89b4f7_192.jpg');
+	if (author_webinar_inURL && author_webinar_inURL.length > 0) {
+		console.log("has author");
+		if (/Vincent/.test(author_webinar_inURL)) {
+			$("#author_name--main").text('Vincent Le Hénaff');
+			$("#author_position--main").text('Business Developer');
+			$("#author_img--main").attr('src', 'https://avatars.slack-edge.com/2014-07-22/2478420834_192.jpg');
+		} else if (/Matt/.test(author_webinar_inURL)) {
+			$("#author_name--main").text('Matt Golia');
+			$("#author_position--main").text('Account Manager');
+			$("#author_img--main").attr('src', 'https://avatars.slack-edge.com/2015-05-15/4900888766_915d7be691f8ad89b4f7_192.jpg');
+		} else {
+			$("#author_name--main").text(author_webinar_inURL);
+			$("#author_position--main").text(author_position_webinar_inURL);
+			$("#author_img--main").attr('src', author_img_webinar_inURL);
+		}
 	}
 
+	// detect if there's a guest
+	if (guest_webinar_inURL && guest_webinar_inURL.length > 0) {
+		console.log("has guest");
+		$(".card--guest").removeClass('hidden');
+		
+		$("#author_name--guest").text(guest_webinar_inURL);
+		$("#author_position--guest").text(guest_position_webinar_inURL);
+		$("#author_img--guest").attr('src', guest_img_webinar_inURL);
+	}
 }
 
 function noWebinarUpcoming() {
