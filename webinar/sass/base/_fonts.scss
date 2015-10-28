@@ -15,16 +15,78 @@ $default: 400;
 $medium: 500;
 $bold: 600;
 
-* { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-body { font-family: $roboto; @include fontsize($base); color: $black; font-weight: $light; line-height: 1.5; }
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+  text-rendering: optimizeLegibility;
+}
 
-h1 { font-family: $roboto; font-size: $biggest; font-weight: $light; line-height: 1.2; margin: 0; color: $black; }
-h2 { font-family: $roboto; font-size: $big; font-weight: $light; line-height: 1.2; margin: 0; color: $black; }
-h3 { font-family: $open; font-size: $middle; font-weight: $default; line-height: 1.2; color: $black; } 
-h4 { font-family: $open; font-size: $small; font-weight: $bold; line-height: 1.2; color: $black; text-transform: uppercase; color: $black; }
-p, li, span { font-family: $open; font-size: $normal; font-weight: $default; margin-bottom: 21px; line-height: 1.8; color: $grey; }
+body {
+  font-family: $roboto; 
+  font-weight: $light;
+  line-height: 1.5; 
+  color: $black;@include fontsize($base);
+}
+
+h1 {
+  font-family: $roboto;
+  font-size: $biggest;
+  font-weight: $light;
+  line-height: 1.2;
+  margin: 0;
+  color: $black;
+}
+
+h2 {
+  font-family: $roboto;
+  font-size: $big;
+  font-weight: $light;
+  line-height: 1.2;
+  margin: 0;
+  color: $black;
+}
+
+h3 {
+  font-family: $open;
+  font-size: $middle;
+  font-weight: $default;
+  line-height: 1.2;
+  color: $black;
+}
+
+h4 {
+  font-family: $open;
+  font-size: $small;
+  font-weight: $bold;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: $black;
+  color: $black;
+}
+
+p,
+li,
+span {
+  font-family: $open;
+  font-size: $normal;
+  font-weight: $default;
+  line-height: 1.8;
+  margin-bottom: 21px;
+  color: $grey;
+}
+
 li { margin: 0; }
-a { margin: 0; font-family: inherit; font-size: inherit; font-weight: inherit; text-transform: none; text-decoration: none; cursor: pointer; color: $primary; }
+
+a {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: none;
+  color: $primary;
+}
 
 // helpers
 @include mquery(640px) {

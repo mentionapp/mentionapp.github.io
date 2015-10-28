@@ -1,27 +1,118 @@
-.men__btn { padding: 14px 20px; font-size: 1rem; font-weight: 500; font-family: $roboto; border-radius: 3px; @include hover(.2s); text-transform: uppercase; font-size: $small; }
+.men__btn {
+  font-family: $roboto;
+  font-size: 1rem;
+  font-size: $small; 
+  font-weight: 500;
+  padding: 14px 20px;
+  text-transform: uppercase;
+  border-radius: 3px; @include hover(.2s);
+}
 
-.men__btn-gh--def { @extend .men__btn; background: transparent; border: 1px solid rgba(255,255,255,.5); color: #fff; }
+.men__btn-gh--def {
+  color: #fff; 
+  border: 1px solid rgba(255,255,255,.5);
+  background: transparent;
+  @extend .men__btn;
+}
+
 .men__btn-gh--def:hover { background: #fff; color: $primary; }
 
-.men__btn-gh--blue { @extend .men__btn-gh--def; border: 1px solid #eee; color: $primary; }
-.men__btn-gh--blue:hover { @extend .men__btn-gh--def; border: 1px solid $primary; background: $primary; color: #fff; }
+.men__btn-gh--blue {
+  color: $primary; 
+  border: 1px solid #eee;
+  @extend .men__btn-gh--def;
+}
 
-.men__btn-big--def { @extend .men__btn; }
-.men__btn-big--blue { @extend .men__btn-big--def; background: $primary; color: #fff; }
-.men__btn-big--darkblue { @extend .men__btn-big--def; background: #378EBE; color: #fff; }
+.men__btn-gh--blue:hover {
+  color: #fff; 
+  border: 1px solid $primary;
+  background: $primary;
+  @extend .men__btn-gh--def;
+}
 
-.men__btn-big--fb { @extend .men__btn-big--def; background: #3b5998; color: #fff; }
-.men__btn-big--tw { @extend .men__btn-big--def; background: #55acee; color: #fff; }
-.men__btn-big--go { @extend .men__btn-big--def; background: #dd4b39; color: #fff; }
-.men__btn-big--ln { @extend .men__btn-big--def; background: #0077b5; color: #fff; }
+.men__btn-big--def {
+  @extend .men__btn;
+}
 
-.men__btn-big--wh { @extend .men__btn-big--def; background: #fff; color: $primary; }
-.men__btn-big--sh { @extend .men__btn-big--def; padding: 10px 20px; background: $grey; color: #fff; }
+.men__btn-big--blue {
+  color: #fff; 
+  background: $primary;
+  @extend .men__btn-big--def;
+}
 
-.men__btn-big--ye { @extend .men__btn-big--def; background: #FC0; color: rgba(0,0,0,.5); cursor: pointer; }
+.men__btn-big--darkblue {
+  color: #fff; 
+  background: #378ebe;
+  @extend .men__btn-big--def;
+}
 
-.men__btn-main--def { @extend .men__btn; padding: 18px 24px; }
-.men__btn-main--wh { @extend .men__btn-main--def; background: #fff; color: $primary; }
+.men__btn-big--fb {
+  color: #fff; 
+  background: #3b5998;
 
-a.men__hlink { font-size: $small; font-weight: 600; font-family: $open; text-transform: uppercase; }
-a.men__hlink--wh { font-size: $small; font-weight: 600; font-family: $open; text-transform: uppercase; color: #fff; }
+  @extend .men__btn-big--def;
+}
+
+.men__btn-big--tw {
+  color: #fff; 
+  background: #55acee;
+  @extend .men__btn-big--def;
+}
+
+.men__btn-big--go {
+  color: #fff; 
+  background: #dd4b39;
+  @extend .men__btn-big--def;
+}
+
+.men__btn-big--ln {
+  color: #fff; 
+  background: #0077b5;
+  @extend .men__btn-big--def;
+}
+
+.men__btn-big--wh {
+  color: $primary; 
+  background: #fff;
+  @extend .men__btn-big--def;
+}
+
+.men__btn-big--sh {
+  padding: 10px 20px;
+  color: #fff; 
+  background: $grey;
+  @extend .men__btn-big--def;
+}
+
+.men__btn-big--ye {
+  cursor: pointer; 
+  color: rgba(0,0,0,.5);
+  background: #eee;
+  @extend .men__btn-big--def;
+}
+
+.men__btn-main--def {
+  padding: 18px 24px; 
+  @extend .men__btn;
+}
+
+.men__btn-main--wh {
+  color: $primary; 
+  background: #fff;
+  @extend .men__btn-main--def;
+}
+
+a.men__hlink {
+  font-family: $open;
+  font-size: $small;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+a.men__hlink--wh {
+  font-family: $open;
+  font-size: $small;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+}

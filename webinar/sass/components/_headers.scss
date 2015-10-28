@@ -42,7 +42,7 @@ input {
 
 button { border: none; margin-left: 25px; }
 
-.welcome { @include container(750px, 95%); text-align: center; }
+.welcome { @include container(1280px, 95%); text-align: center; }
 .welcome img { height: 65px; width: auto; margin-bottom: 21px; }
 
 .welcome p,
@@ -60,13 +60,23 @@ button { border: none; margin-left: 25px; }
   @include shadow(rgba(0,0,0,.3), 0px 4px 10px 2px);
 }
 
-.welcome .men__btn-main--wh:active { @include scale(.95); @include hover(.1s); }
+.welcome .men__btn-main--wh:active {
+	@include hover(.1s); 
+  @include scale(.95);
+}
 
-.metas { width: auto; max-width: 95%; display: block; margin-bottom: 42px; }
+.metas {
+  display: block;
+  width: auto;
+  max-width: 95%;
+  margin-bottom: 42px;
+}
 .metas-item { display: inline-block; margin: 10px 10px; }
 .metas-item img { height: 16px; width: auto; margin: 0 5px 0 0; }
 
-@include mquery(500px) {
+@include mquery(930px) {
+	input { width: 100%; margin: 5px 0; }
+	.men__btn-big--ye { width: 100%; margin: 5px 0; }
 	.metas { justify-content: center; }
 	.metas-item { margin: 10px 21px; }
 	.header { padding-top: 21px; height: auto; }

@@ -24,11 +24,26 @@
 }
 
 .modal p { color: $grey; padding: 21px; margin: 0; }
-.success, .loading, .error { display: none; text-align: center; color: #fff; font-family: $open; font-size: $default; }
+.success,
+.loading,
+.error {
+  font-family: $open;
+  font-size: $default; 
+  display: none;
+  text-align: center;
+  color: #fff;
+}
 
 .loading { @include scaleUp(.2s); }
 
-.message-bg { height: 150px; width: 100%; display: flex; justify-content: center; align-items: center; }
+.message-bg {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  align-items: center; 
+  justify-content: center;
+}
+
 .success-bg { background: #3FC59D; }
 .error-bg { background: #E2747E; }
 

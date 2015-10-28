@@ -1,3 +1,24 @@
+/*
+This is the main JS file for the webinar page
+Here we handle the :
+- Registration
+- The popup
+- The tracking
+*/
+
+analytics.ready(function() {
+	segmentID = analytics.user().id();
+	if (segmentID !== null && segmentID.length > 0) {
+		segmentID = analytics.user().id();
+	} 
+});
+
+/*
+Here we catch every parameter on URL
+Fill the fields in the form and create the proper variables
+*/
+
+// Catch query string
 var getUrlParameter = function getUrlParameter(sParam) {
   var sPageURL = decodeURIComponent(window.location.search.substring(1)),
     	sURLVariables = sPageURL.split('&'),
@@ -12,18 +33,17 @@ var getUrlParameter = function getUrlParameter(sParam) {
   }
 };
 
-analytics.ready(function() {
-	segmentID = analytics.user().id();
-	if (segmentID !== null && segmentID.length > 0) {
-		segmentID = analytics.user().id();
-	} 
-});
-var date_webinar = getUrlParameter('date');
-// var google_timestamp = getUrlParameter('google_timestamp');
-// var google_timestamp_e = getUrlParameter('google_timestamp_end');
-var webinar_name = $("h1").text();
-// var calendarLink = "https://www.google.com/calendar/event?action=TEMPLATE&text="+webinar_name+"&dates="+google_timestamp+"/"+google_timestamp_e;
+// Variables from query string
+var name_webinar_inURL = getUrlParameter('webinar_name');
+var author_webinar_inURL = getUrlParameter('author_name');
 
+// Variables from API
+var webinar_name;
+var webinar_date;
+var webinar_timezone;
+var webinar_description;
+
+// Prefill form
 $(document).ready(function() {
 	var firstName_email = getUrlParameter('firstName');
 	var lastName_email = getUrlParameter('lastName');
@@ -33,29 +53,39 @@ $(document).ready(function() {
 	$('#form-webinar-last').val(lastName_email);
 });
 
+/*
+When the form is submitted
+It creates an object with the data
+Display the popup
+Trigger the RegisterWebinar function (see below)
+*/
+
 $( "#form-webinar" ).submit(function(e) {
 	e.preventDefault();
 
-	// var SegmentID = analytics.user().id();
 	var email = $('#form-webinar-email').val();
 	var first = $('#form-webinar-first').val();
 	var last = $('#form-webinar-last').val();
+	
 	var data_webinar = {
-		Email: email,
+		email: email,
 		firstName: first,
 		lastName: last
-	}
+	};
+
 	$( ".overlay" ).addClass('overlay-is-visible');
 	$( ".success" ).addClass('visible');
 
-	// if (SegmentID !== null && SegmentID.length > 0) {
-	// push to segment
-	// analytics.identify(''+ SegmentID +'');
-	console.log(email);
-	webinarCreate(data_webinar);
+	registerWebinar(data_webinar);
 });
 
-function webinarCreate(data_webinar) {
+/*
+This is the key function that will register the user in the webinar
+It makes a post call with the data from the form to a zapier webhook 
+and Zapier handles the webinar creation
+*/
+
+function registerWebinar(data_webinar) {
 $.ajax({
   url: 'https://zapier.com/hooks/catch/39ijg9/',
   type: 'POST',
@@ -65,7 +95,7 @@ $.ajax({
     console.log('Success call');
     analytics.track('Registered for webinar', {
   		webinar_name: webinar_name,
-  		webinar_date: date_webinar, 
+  		webinar_date: webinar_date, 
 		});
 		console.log("tracked");
    },
@@ -75,17 +105,108 @@ $.ajax({
  });
 }
 
-$( ".closer" ).click(function(event) {
-	event.preventDefault();
-	$( ".overlay" ).removeClass('overlay-is-visible');
-	$( "body" ).removeClass('ov-fixed');
+/* 
+This is where we fetch all the upcoming webinars data
+on load we get all upcoming webinars and set an object with their name
+
+if the names in object matches the name in the query string
+If it does then we trigger a function that will get the data from it.
+*/ 
+
+var upcomingWebinars;
+
+$(window).load(function() {
+	console.log("loading...");
+	$.ajax({
+   	url: "http://localhost:8888/wp-content/themes/mention/scripts/wp-webinars.php",
+   	type: "GET",
+   	dataType: "json",
+   	success: function(data) { 
+			$('.men__btn-big--ye').css('background', '#FC0');
+   		$('.men__btn-big--ye').prop('disabled', false);
+   		var i;
+			for (i = 0; i < data.length; ++i) {
+				var webinarSubject = data[i].subject;
+			  
+			  if (data[i].subject === name_webinar_inURL) {
+			  	upcomingWebinars = data[i];
+			  	console.log("matched");
+			  	webinar_name = webinarSubject;
+			  	webinar_date = data[i].times[0].startTime;
+			  	webinar_timezone = data[i].timeZone;
+			  	webinar_description = data[i].description;
+			  	parseWebinarInfo();
+			  	console.log("done");
+			  	console.log(upcomingWebinars);
+			  	break
+			  }
+			  else { noWebinarUpcoming(); }
+			}
+   	},
+   	error: function() { 
+   		console.log('nope'); 
+   		noWebinarUpcoming();
+   	}
+	});
+});
+
+/*
+If it matches we launch a function that will replace the elements in the page.
+Get the right timezone data, format the dates and parse the info.
+
+If there's nothing then dislay error message and disable button.
+*/
+
+function parseWebinarInfo() {
+	console.log("parsing");
+	
+	// timezone stuff
+	var tz = moment.tz(webinar_date, webinar_timezone);
+	var webinar_date_formatted = tz.format("dddd, MMMM Do - HH:mm");
+	var tz_abrr = moment.tz(webinar_date, webinar_timezone).format("z");
+	
+	// parsing
+	$('h1').text(webinar_name);
+	$('.metas-item span').text(webinar_date_formatted + ' ' + tz_abrr);
+	$('.men__btn-big--ye').text('Register to the webinar');
+	$('.learn p').text(webinar_description);
+
+	// detect author & parsing
+	if (/Vincent/.test(author_webinar_inURL)) {
+		$(".author_name").text('Vincent Le Hénaff');
+		$(".author_position").text('Business Developer');
+		$(".author_img").attr('src', 'https://avatars.slack-edge.com/2014-07-22/2478420834_192.jpg');
+	} else if (/Matt/.test(author_webinar_inURL)) {
+		$(".author_name").text('Matt Golia');
+		$(".author_position").text('Account Manager');
+		$(".author_img").attr('src', 'https://avatars.slack-edge.com/2015-05-15/4900888766_915d7be691f8ad89b4f7_192.jpg');
+	}
+
+}
+
+function noWebinarUpcoming() {
+	$('h1').text('No upcoming webinar. Stay tuned.');
+	$('.metas-item span').text('No date available');
+	$('.men__btn-big--ye').prop('disabled', true);
+	$('.men__btn-big--ye').text('Button disabled');
+}
+
+/*
+Those are the closing functions for the modal
+First closes on click on the cross
+Second closes on click outside the container
+*/
+
+$( ".closer" ).click(function(e) {
+	e.preventDefault();
+	$( ".overlay, body" ).removeClass('overlay-is-visible ov-fixed');
 	$( ".error, .success" ).removeClass('visible');
 	$( ".men__btn-main--wh" ).removeClass('hidden');
 });
 
-$(document).mouseup(function(event) {
+$(document).mouseup(function(e) {
   var container = $(".modal");
-  if (!container.is(event.target) && container.has(event.target).length === 0) {
+  if (!container.is(e.target) && container.has(e.target).length === 0) {
 	  $( ".overlay" ).removeClass('overlay-is-visible');
 		$( "body" ).removeClass('ov-fixed');
 		$( ".error, .success" ).removeClass('visible');

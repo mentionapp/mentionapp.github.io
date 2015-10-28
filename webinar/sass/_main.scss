@@ -1,7 +1,19 @@
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; 
+  text-rendering: optimizeLegibility;
+}
 
-* { box-sizing: border-box; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
 html { height: 100%; }
-body { overflow-x: hidden; -webkit-overflow-scrolling: touch; height: auto; font-size: $base; background: #fff; }
+
+body {
+  font-size: $base;
+  overflow-x: hidden;
+  height: auto;
+  background: #fff; 
+  -webkit-overflow-scrolling: touch;
+}
+
 input:focus { outline: none !important; border: none; }
 .clearfix:after {
      visibility: hidden;
