@@ -34,10 +34,31 @@ input {
 	height: 47px;
 	width: 200px;
 	color: #222;
-	font-size: 1rem;
+	font-size: .825rem;
 	padding-left: 21px;
 	border-radius: 2px;
 	border: 1px solid #eee;
+	&#form-webinar-first {
+		width: 150px;
+	}
+	&#form-webinar-last {
+		width: 150px;
+	}
+}
+
+select {
+  width: auto;
+  padding-left: 21px;
+  color: #22282B;
+  background: #fff;
+  border: 1px solid #eee;
+  height: 47px;
+  font-size: .825rem;
+  line-height: 47px;
+  border-radius: 2px;
+  &:focus {
+  	outline: none;
+  }
 }
 
 button { border: none; margin-left: 25px; }
@@ -74,7 +95,13 @@ button { border: none; margin-left: 25px; }
 .metas-item img { height: 16px; width: auto; margin: 0 5px 0 0; }
 
 @include mquery(930px) {
-	input { width: 100%; margin: 5px 0; }
+	input,
+	input#form-webinar-first,
+	input#form-webinar-last,
+	select {
+  	width: 100%;
+  	margin: 5px 0;
+	}
 	.men__btn-big--ye { width: 100%; margin: 5px 0; }
 	.metas { justify-content: center; }
 	.metas-item { margin: 10px 21px; }

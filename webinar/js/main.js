@@ -6,12 +6,37 @@ Here we handle the :
 - The tracking
 */
 
+
+/*
+Here we will set the SegmentID and add the demo select
+*/
+
+var isAnonymous;
+var segmentID;
+
 analytics.ready(function() {
 	segmentID = analytics.user().id();
 	if (segmentID !== null && segmentID.length > 0) {
 		segmentID = analytics.user().id();
-	} 
+		analytics.identify(segmentID, {});
+		isAnonymous = false;
+		addDemoSelect();
+	} else {
+		segmentID = analytics.user().anonymousId();
+		analytics.identify(segmentID, {});
+		isAnonymous = true;
+		addDemoSelect();
+	}
 });
+
+function addDemoSelect() {
+	if (/_/.test(segmentID) === false) {
+		console.log('add demo select');
+		var formDemo = $('#form-webinar-demo');
+		formDemo.removeClass('hidden').addClass('visible');
+		formDemo.attr("required", "true");
+	}
+}
 
 /*
 Here we catch every parameter on URL
@@ -83,14 +108,54 @@ $( "#form-webinar" ).submit(function(e) {
 		webinar: webinar_key
 	};
 
+	var data_webinar_demo = {
+		email: email,
+		firstName: first,
+		lastName: last,
+		webinar: webinar_name
+	};
+
 	$( ".overlay" ).addClass('overlay-is-visible');
 	$( ".success" ).addClass('visible');
 
 	if (webinar_key) {
 		registerWebinar(data_webinar);
+		checkDemoRequest(data_webinar_demo);
 	}
 	
 });
+
+/*
+This part take care of checking if the user asked for a demo. If yes then push
+the demo request to Zapier and Pipedrive.
+*/
+
+function checkDemoRequest(data_webinar_demo) {
+	var demoForm = $('#form-webinar-demo');
+	if (demoForm.hasClass('visible') && demoForm.val() === "Yes") {
+		pushDemoRequest(data_webinar_demo);
+	}
+}
+
+function pushDemoRequest(data_webinar_demo) {
+	$.ajax({
+		url: 'https://zapier.com/hooks/catch/3zt23g/',
+		type: 'POST',
+		dataType: 'json',
+		data: data_webinar_demo,
+	})
+	.done(function() {
+		console.log("sent to zapier");
+		analytics.track('Submitted demo request', {
+  		demo_request_source: "Webinar form",
+  		email: data_webinar_demo.email, 
+		});
+		console.log("demo tracked");
+	})
+	.fail(function() {
+		console.log("error");
+	});
+}
 
 /*
 This is the key function that will register the user in the webinar
@@ -147,12 +212,12 @@ $(window).load(function() {
 			  	webinar_timezone = data[i].timeZone;
 			  	webinar_description = data[i].description;
 			  	webinar_key = data[i].webinarKey;
-			  	console.log(webinar_key)
+			  	console.log(webinar_key);
 			  	$('.men__btn-big--ye').prop('disabled', false);
 			  	parseWebinarInfo();
 			  	console.log("done");
 			  	console.log(upcomingWebinars);
-			  	break
+			  	break;
 			  }
 			  else { noWebinarUpcoming(); }
 			}
@@ -171,27 +236,7 @@ Get the right timezone data, format the dates and parse the info.
 If there's nothing then dislay error message and disable button.
 */
 
-function parseWebinarInfo() {
-	console.log("parsing");
-	
-	// timezone stuff
-	var tz = moment.tz(webinar_date, webinar_timezone);
-	var webinar_date_formatted = tz.format("dddd, MMMM Do - HH:mm");
-	var tz_abrr = moment.tz(webinar_date, webinar_timezone).format("z");
-	
-	// parsing
-	$('h1').text(webinar_name);
-	$('.metas-item span').text(webinar_date_formatted + ' ' + tz_abrr);
-	$('.men__btn-big--ye').text('Register to the webinar');
-	$('.learn p').text(webinar_description);
-
-	authorParsing();
-	$('.men__btn-big--ye').css('background', '#FC0');
-
-}
-
 function authorParsing() {
-	
 	// detect author & parsing
 	if (author_webinar_inURL && author_webinar_inURL.length > 0) {
 		console.log("has author");
@@ -219,6 +264,25 @@ function authorParsing() {
 		$("#author_position--guest").text(guest_position_webinar_inURL);
 		$("#author_img--guest").attr('src', guest_img_webinar_inURL);
 	}
+}
+
+function parseWebinarInfo() {
+	console.log("parsing");
+	
+	// timezone stuff
+	var tz = moment.tz(webinar_date, webinar_timezone);
+	var webinar_date_formatted = tz.format("dddd, MMMM Do - HH:mm");
+	var tz_abrr = moment.tz(webinar_date, webinar_timezone).format("z");
+	
+	// parsing
+	$('h1').text(webinar_name);
+	$('.metas-item span').text(webinar_date_formatted + ' ' + tz_abrr);
+	$('.men__btn-big--ye').text('Register to the webinar');
+	$('.learn p').text(webinar_description);
+
+	authorParsing();
+	$('.men__btn-big--ye').css('background', '#FC0');
+
 }
 
 function noWebinarUpcoming() {
