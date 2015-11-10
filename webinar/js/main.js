@@ -270,9 +270,10 @@ function parseWebinarInfo() {
 	console.log("parsing");
 	
 	// timezone stuff
-	var tz = moment.tz(webinar_date, webinar_timezone);
+	var webinar_timezone_update = moment.tz().format("z");
+	var tz = moment.tz(webinar_date, webinar_timezone_update);
 	var webinar_date_formatted = tz.format("dddd, MMMM Do - HH:mm");
-	var tz_abrr = moment.tz(webinar_date, webinar_timezone).format("z");
+	var tz_abrr = moment.tz(webinar_date, webinar_timezone_update).format("z");
 	
 	// parsing
 	$('h1').text(webinar_name);
