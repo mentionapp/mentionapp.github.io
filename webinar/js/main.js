@@ -69,6 +69,10 @@ var guest_webinar_inURL = getUrlParameter('guest_name');
 var guest_position_webinar_inURL = getUrlParameter('guest_position');
 var guest_img_webinar_inURL = getUrlParameter('guest_img');
 
+var guest2_webinar_inURL = getUrlParameter('guest_2_name');
+var guest2_position_webinar_inURL = getUrlParameter('guest_2_position');
+var guest2_img_webinar_inURL = getUrlParameter('guest_2_img');
+
 
 // Variables from API
 var webinar_name;
@@ -244,7 +248,7 @@ function authorParsing() {
 			$("#author_name--main").text('Vincent Le Hénaff');
 			$("#author_position--main").text('Business Developer');
 			$("#author_img--main").attr('src', 'https://avatars.slack-edge.com/2014-07-22/2478420834_192.jpg');
-		} else if (/Matt/.test(author_webinar_inURL)) {
+		} else if (/Golia/.test(author_webinar_inURL)) {
 			$("#author_name--main").text('Matt Golia');
 			$("#author_position--main").text('Account Manager');
 			$("#author_img--main").attr('src', 'https://avatars.slack-edge.com/2015-05-15/4900888766_915d7be691f8ad89b4f7_192.jpg');
@@ -263,6 +267,16 @@ function authorParsing() {
 		$("#author_name--guest").text(guest_webinar_inURL);
 		$("#author_position--guest").text(guest_position_webinar_inURL);
 		$("#author_img--guest").attr('src', guest_img_webinar_inURL);
+	}
+
+	// detect if there's a 2nd guest
+	if (guest2_webinar_inURL && guest2_webinar_inURL.length > 0) {
+		console.log("has guest");
+		$(".card--guest2").removeClass('hidden');
+		
+		$("#author_name--guest2").text(guest2_webinar_inURL);
+		$("#author_position--guest2").text(guest2_position_webinar_inURL);
+		$("#author_img--guest2").attr('src', guest2_img_webinar_inURL);
 	}
 }
 

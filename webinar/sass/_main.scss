@@ -15,14 +15,16 @@ body {
 }
 
 input:focus { outline: none !important; border: none; }
+
 .clearfix:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
+  font-size: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: ' ';
 }
+
 .ov-fixed { overflow: hidden; }
 .hidden { display: none !important; }
 .overlay-is-visible { @include flex(flex,center,no-wrap); }
