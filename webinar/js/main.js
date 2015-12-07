@@ -6,7 +6,6 @@ Here we handle the :
 - The tracking
 */
 
-
 /*
 Here we will set the SegmentID and add the demo select
 */
@@ -57,29 +56,6 @@ var getUrlParameter = function getUrlParameter(sParam) {
     }
   }
 };
-
-// Variables from query string
-var name_webinar_inURL = getUrlParameter('webinar_name');
-
-var author_webinar_inURL = getUrlParameter('author_name');
-var author_position_webinar_inURL = getUrlParameter('author_position');
-var author_img_webinar_inURL = getUrlParameter('author_img');
-
-var guest_webinar_inURL = getUrlParameter('guest_name');
-var guest_position_webinar_inURL = getUrlParameter('guest_position');
-var guest_img_webinar_inURL = getUrlParameter('guest_img');
-
-var guest2_webinar_inURL = getUrlParameter('guest_2_name');
-var guest2_position_webinar_inURL = getUrlParameter('guest_2_position');
-var guest2_img_webinar_inURL = getUrlParameter('guest_2_img');
-
-
-// Variables from API
-var webinar_name;
-var webinar_date;
-var webinar_timezone;
-var webinar_description;
-var webinar_key;
 
 // Prefill form
 $(document).ready(function() {
@@ -175,9 +151,10 @@ $.ajax({
   data: data_webinar,
   success: function() {
     console.log('Success call');
+    var webinar_date_unix = moment.tz(webinar_date, "ddd, MMM Do, YYYY h:mm A", webinar_tz).format();
     analytics.track('Registered for webinar', {
   		webinar_name: webinar_name,
-  		webinar_date: webinar_date, 
+  		webinar_date: webinar_date_unix
 		});
 		console.log("tracked");
    },
@@ -199,38 +176,11 @@ var upcomingWebinars;
 
 $(window).load(function() {
 	console.log("loading...");
-	$.ajax({
-   	url: "https://mention.com/wp-content/themes/mention/scripts/wp-webinars.php",
-   	type: "GET",
-   	success: function(data) { 
-   		console.log(data); 
-   		var i;
-			for (i = 0; i < data.length; ++i) {
-				var webinarSubject = data[i].subject;
-			  
-			  if (data[i].subject === name_webinar_inURL) {
-			  	upcomingWebinars = data[i];
-			  	console.log("matched");
-			  	webinar_name = webinarSubject;
-			  	webinar_date = data[i].times[0].startTime;
-			  	webinar_timezone = data[i].timeZone;
-			  	webinar_description = data[i].description;
-			  	webinar_key = data[i].webinarKey;
-			  	console.log(webinar_key);
-			  	$('.men__btn-big--ye').prop('disabled', false);
-			  	parseWebinarInfo();
-			  	console.log("done");
-			  	console.log(upcomingWebinars);
-			  	break;
-			  }
-			  else { noWebinarUpcoming(); }
-			}
-   	},
-   	error: function() { 
-   		console.log('nope'); 
-   		noWebinarUpcoming();
-   	}
-	});
+	if (webinar_name) {
+		parseWebinarInfo();
+	} else {
+		noWebinarUpcoming();
+	}
 });
 
 /*
@@ -242,62 +192,68 @@ If there's nothing then dislay error message and disable button.
 
 function authorParsing() {
 	// detect author & parsing
-	if (author_webinar_inURL && author_webinar_inURL.length > 0) {
+	if (author_webinar && author_webinar.length > 0) {
 		console.log("has author");
-		if (/Vincent/.test(author_webinar_inURL)) {
+		if (/Vincent/.test(author_webinar)) {
 			$("#author_name--main").text('Vincent Le Hénaff');
 			$("#author_position--main").text('Business Developer');
 			$("#author_img--main").attr('src', 'https://avatars.slack-edge.com/2014-07-22/2478420834_192.jpg');
-		} else if (/Golia/.test(author_webinar_inURL)) {
+		} else if (/Golia/.test(author_webinar)) {
 			$("#author_name--main").text('Matt Golia');
 			$("#author_position--main").text('Account Manager');
 			$("#author_img--main").attr('src', 'https://avatars.slack-edge.com/2015-05-15/4900888766_915d7be691f8ad89b4f7_192.jpg');
 		} else {
-			$("#author_name--main").text(author_webinar_inURL);
-			$("#author_position--main").text(author_position_webinar_inURL);
-			$("#author_img--main").attr('src', author_img_webinar_inURL);
+			$("#author_name--main").text(author_webinar);
+			$("#author_position--main").text(author_position_webinar);
+			$("#author_img--main").attr('src', author_img_webinar);
 		}
 	}
 
 	// detect if there's a guest
-	if (guest_webinar_inURL && guest_webinar_inURL.length > 0) {
+	if (guest_webinar && guest_webinar.length > 0) {
 		console.log("has guest");
 		$(".card--guest").removeClass('hidden');
 		
-		$("#author_name--guest").text(guest_webinar_inURL);
-		$("#author_position--guest").text(guest_position_webinar_inURL);
-		$("#author_img--guest").attr('src', guest_img_webinar_inURL);
+		$("#author_name--guest").text(guest_webinar);
+		$("#author_position--guest").text(guest_position_webinar);
+		$("#author_img--guest").attr('src', guest_img_webinar);
 	}
 
 	// detect if there's a 2nd guest
-	if (guest2_webinar_inURL && guest2_webinar_inURL.length > 0) {
+	if (guest2_webinar && guest2_webinar.length > 0) {
 		console.log("has guest");
 		$(".card--guest2").removeClass('hidden');
 		
-		$("#author_name--guest2").text(guest2_webinar_inURL);
-		$("#author_position--guest2").text(guest2_position_webinar_inURL);
-		$("#author_img--guest2").attr('src', guest2_img_webinar_inURL);
+		$("#author_name--guest2").text(guest2_webinar);
+		$("#author_position--guest2").text(guest2_position_webinar);
+		$("#author_img--guest2").attr('src', guest2_img_webinar);
 	}
 }
 
 function parseWebinarInfo() {
 	console.log("parsing");
 	
-	// timezone stuff
-	var webinar_timezone_update = jstz.determine().name();
-	var tz = moment.tz(webinar_date, webinar_timezone_update);
-	var webinar_date_formatted = tz.format("dddd, MMMM Do - HH:mm");
-	var tz_abrr = moment.tz(webinar_date, webinar_timezone_update).format("z");
+	// get my tz
+	var my_tz = jstz.determine().name(); 
+
+	// inform the date
+	var webinar_current_tz = moment.tz(webinar_date, "ddd, MMM Do, YYYY h:mm A", webinar_tz); 
+	console.log(webinar_current_tz);
 	
+	// reformat for the right TZ
+	var webinar_date_formatted = webinar_current_tz.tz(my_tz).format("dddd, MMMM Do - HH:mm");
+
+	// get new TZ
+	var tz_abrr = moment.tz(my_tz).format("z"); // Get the right abbreviation for the timezone
+
 	// parsing
 	$('h1').text(webinar_name);
 	$('.metas-item span').text(webinar_date_formatted + ' ' + tz_abrr);
 	$('.men__btn-big--ye').text('Register to the webinar');
-	$('.learn p').text(webinar_description);
+	$('.learn p').html(webinar_description);
 
 	authorParsing();
 	$('.men__btn-big--ye').css('background', '#FC0');
-
 }
 
 function noWebinarUpcoming() {
