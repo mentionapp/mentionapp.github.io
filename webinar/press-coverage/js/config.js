@@ -7,7 +7,7 @@ var author_img_webinar = "http://1.gravatar.com/avatar/5ca6ab462db94a0c878a09471
 
 var guest_webinar = "Maxxie Goldstein";
 var guest_position_webinar = "Co-Founder & CEO @ MEYVYN";
-var guest_img_webinar = "http://blog.mention.com/wp-content/uploads/2015/12/maxxie.png";
+var guest_img_webinar = "http://blog.mention.com/wp-content/uploads/2015/12/6359362d-f9e5-4941-8478-b5b6a2e52761-1.jpg";
 
 var guest2_webinar;
 var guest2_position_webinar;
