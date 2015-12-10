@@ -7,27 +7,31 @@ var gulp         = require("gulp"),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss    = require('gulp-minify-css'),
     concat       = require('gulp-concat'),
+    order        = require("gulp-order"),
     rename       = require('gulp-rename'),
     replace      = require('gulp-replace'),
-    notify       = require("gulp-notify");
+    notify       = require("gulp-notify"),
+    exec         = require('child_process').exec,
+    file         = require('gulp-file');
 
 /* Begin from Config.js */
 
-var title = "Social Sales: Dos and Don'ts with Close.io and Workable";
-var description = "Join our CEO Matthieu Vaxelaire for a live Q&amp;A about social sales with Steli and Rob on Thursday, December 10th at 1 pm EST / 10 am PST.";
-var webinar_img = "https://mention.com/wp-content/uploads/2015/12/dos-donts-us-grey.png";
+var meta_webinars = [
+  { slug : "social-sales" },
+  { slug : "press-coverage" }
+];
+
 
 /* End from Config.js */
 
-gulp.task('composite', function(cb){
-  return gulp.src(['js/*.js'])
+gulp.task('js', function(cb){
+  return gulp.src(['js/main.js'])
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
-	  .pipe(concat('composite.js'))
-	  .pipe(rename('composite-min.js'))
 	  .pipe(uglify())
+    .pipe(rename('main-min.js'))
 	  .pipe(gulp.dest('js/min/'))
-    .pipe(notify("Main composite done."))
+    .pipe(notify("Main JS done."))
 
   cb(err);
 });
@@ -40,17 +44,31 @@ gulp.task('sass', function () {
   .pipe(notify("SCSS to CSS done."))
 });
 
-gulp.task('replace', function(){
-  gulp.src(['index.html'])
-    .pipe(replace('{{img}}', webinar_img))
-    .pipe(replace('{{title}}', title))
-    .pipe(replace('{{description}}', description))
-    .pipe(gulp.dest("./"))
-    .pipe(notify("Replaced"));
-});
+// Use this to run default gulp
 
 gulp.task('default', [
   'sass',
-  'composite',
-  'replace'
-  ], function(){});
+  'js'
+], function(){});
+
+
+gulp.task('new', function () {
+  var slug;
+  gulp.src([
+    './js/**/*', 
+    './css/**/*',
+    './img/**/*',
+    './index.html',
+  ], {
+    base: './'
+  }).pipe(gulp.dest('new-webinar'))
+});
+
+gulp.task('build', [
+  'default',
+  'new'
+], function(){});
+
+
+
+

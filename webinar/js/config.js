@@ -20,9 +20,4 @@ var webinar_tz = "EST";
 var webinar_description = "A lot of people say social media can’t be used for sales.<br><br>Do you know how to prove them wrong?<br><br>We’ll be talking with Steli Efti (CEO at Close.io) and Rob Long (VP Growth at Workable) about how to generate leads with social, and what to avoid at all costs. Steli’s a social media skeptic, while Rob loves it, so you get to hear both sides of the argument.<br><br> Join our Q & A to learn social sales dos and don'ts and ask them your own questions!";
 var webinar_key = "5435968266388082946";
 
-// Variables for the meta properties (duplicate this in gulpfile.js)
-var title = "Social Sales: Dos and Don'ts with Close.io and Workable";
-var description = "Join our CEO Matthieu Vaxelaire for a live Q&amp;A about social sales with Steli and Rob on Thursday, December 10th at 1 pm EST / 10 am PST.";
-var webinar_img = "https://mention.com/wp-content/uploads/2015/12/dos-donts-us-grey.png";
-
 /* End config Section for every webinar */

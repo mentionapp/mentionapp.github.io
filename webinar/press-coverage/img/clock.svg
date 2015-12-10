@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch Beta 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Fill 211</title>
+    <desc>Created with Sketch Beta.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="My-screen" sketch:type="MSArtboardGroup" transform="translate(-719.000000, -308.000000)" fill-opacity="0.9" fill="#FFFFFF">
+            <g id="Kickstart-your-Menti-+-MENTION-WEBINAR-+-Attend-this-webinar--+-time-+-chrono-+-date-+-Rectangle-5-+-REGISTER-NOW-FOR-FRE" sketch:type="MSLayerGroup" transform="translate(471.000000, 117.000000)">
+                <g id="Kickstart-your-Menti-+-MENTION-WEBINAR-+-Attend-this-webinar--+-time-+-chrono-+-date" sketch:type="MSShapeGroup">
+                    <g id="time-+-chrono-+-date" transform="translate(11.000000, 185.000000)">
+                        <g id="time" transform="translate(237.000000, 1.000000)">
+                            <path d="M12,13 L8,13 L8,9 C8,8.725 7.775,8.5 7.5,8.5 C7.225,8.5 7,8.725 7,9 L7,13.475 L6.9975,13.5 C6.9975,13.6 7.03,13.7 7.085,13.77475 C7.175,13.89975 7.3275,14 7.5,14 L7.5425,14 L12,14 C12.2775,14 12.5025,13.77475 12.5025,13.5 C12.5025,13.225 12.2775,13 12,13 L12,13 Z M8,20 C4.135,20 1,16.875 1,13 C1,9.125 4.135,6 8,6 C11.865,6 15,9.125 15,13 C15,16.875 11.865,20 8,20 L8,20 Z M8,5 C3.5825,5 0,8.575 0,13 C0,17.42475 3.5825,21 8,21 C12.4175,21 16,17.42475 16,13 C16,8.575 12.4175,5 8,5 L8,5 Z" id="Fill-211"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
