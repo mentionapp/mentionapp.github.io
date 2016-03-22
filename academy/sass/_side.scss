@@ -5,18 +5,16 @@
 .ac__side p { color: #888; margin-bottom: 30px; font-family: 'Open Sans'; line-height: 1.6; font-size: 1rem; }
 .ac__side hr { border: none; border-top: 1px solid #ddd; margin: 42px 0; }
 .hbspt-form {
+	width: 100% !important;
+	max-width: 500px !important;
+	margin: 0 auto 10px auto !important;
 	fieldset {
-		margin: 0 auto 10px auto !important;
-		width: 100% !important;
-		max-width: 700px !important;
 		text-align: left;
 	}
-
 	.hs-form-field {
 		float: none !important;
 		display: inline-block;
 		width: 100%;
-		max-width: 335px;
 		margin: 0 auto;
 	}
 
@@ -27,34 +25,50 @@
 	.hs-form-required {
 		display: none;
 	}
+	label span {
+		font-family: "Roboto",Helvetica,sans-serif;
+		font-weight: 500;
+		color: #FFFFFF;
+	}
 	input[type="text"], input[type="email"] {
 		display: inline-block;
 		width: 100% !important;
 		margin: 0;
-		color: #222;
-		font-size: 1rem;
-		height: 56px;
-		border: 1px solid #eee;
-		border-radius: 3px;
-		padding-left: 15px;
+		margin: 5px auto 9px auto;
+		padding-left: 11px;
+		min-height: 30px;
+		line-height: 30px;
+		height: 40px;
+		font-size: .8125rem;
+		font-family: "Open Sans",Helvetica,sans-serif;
+		color: #000;
+		transition: all .3s ease-in-out;
+		border: 1px solid #EEE;
+		border-radius: 4px;
+	}
+	.actions {
+		padding-right: 15px;
 	}
 	input[type="submit"]  {
 		display: inline-block;
-		background-color: #CBC93B;
-		cursor: pointer;
-		min-width: 150px;
+		width: 100% !important;
+		padding: 8px 49px;
+		margin: 8px 0 0 0;
+		background: none #fc0;
+		font-family: "Open Sans",Helvetica,sans-serif;
+		font-size: .8125rem;
 		font-weight: 500;
-		font-size: .825rem;
-		padding: 15px 21px;
-		font-family: 'Roboto', sans-serif;
-		text-transform: uppercase;
+		color: #806603;
 		border-radius: 3px;
-		text-align: center;
-		color: rgba(0,0,0,.5);
+		border: 0;
+		height: auto;
+		cursor: pointer;
+		transition : all .2s ease-in-out;
 	}
 	.hs-error-msgs {
 		list-style: none;
 		padding: 0;
+		margin: 0;
 		color: #7F0909;
 	}
 }
@@ -67,14 +81,18 @@
 
 @include mquery(700px) {
 	.hbspt-form {
-		fieldset { margin: 0 !important; }
+		margin: 0;
 		.input {
 			width: 100% !important;
 			margin: 0 0 15px 0 !important;
+			padding: 0 !important;
 		}
 		.hs-form-field {
 			width: 100% !important;
 			display: block;
+			padding: 0 15px;
+		}
+		.actions {
 			padding: 0 15px;
 		}
 	}

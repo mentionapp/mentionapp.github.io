@@ -716,49 +716,63 @@ body {
   border-top: 1px solid #ddd;
   margin: 42px 0; }
 
-.hbspt-form fieldset {
-  margin: 0 auto 10px auto !important;
+.hbspt-form {
   width: 100% !important;
-  max-width: 700px !important;
-  text-align: left; }
-.hbspt-form .hs-form-field {
-  float: none !important;
-  display: inline-block;
-  width: 100%;
-  max-width: 335px;
-  margin: 0 auto; }
-.hbspt-form .input {
-  padding: 0 15px 0 0 !important;
-  margin: 0 !important; }
-.hbspt-form .hs-form-required {
-  display: none; }
-.hbspt-form input[type="text"], .hbspt-form input[type="email"] {
-  display: inline-block;
-  width: 100% !important;
-  margin: 0;
-  color: #222;
-  font-size: 1rem;
-  height: 56px;
-  border: 1px solid #eee;
-  border-radius: 3px;
-  padding-left: 15px; }
-.hbspt-form input[type="submit"] {
-  display: inline-block;
-  background-color: #CBC93B;
-  cursor: pointer;
-  min-width: 150px;
-  font-weight: 500;
-  font-size: .825rem;
-  padding: 15px 21px;
-  font-family: 'Roboto', sans-serif;
-  text-transform: uppercase;
-  border-radius: 3px;
-  text-align: center;
-  color: rgba(0, 0, 0, 0.5); }
-.hbspt-form .hs-error-msgs {
-  list-style: none;
-  padding: 0;
-  color: #7F0909; }
+  max-width: 500px !important;
+  margin: 0 auto 10px auto !important; }
+  .hbspt-form fieldset {
+    text-align: left; }
+  .hbspt-form .hs-form-field {
+    float: none !important;
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto; }
+  .hbspt-form .input {
+    padding: 0 15px 0 0 !important;
+    margin: 0 !important; }
+  .hbspt-form .hs-form-required {
+    display: none; }
+  .hbspt-form label span {
+    font-family: "Roboto",Helvetica,sans-serif;
+    font-weight: 500;
+    color: #FFFFFF; }
+  .hbspt-form input[type="text"], .hbspt-form input[type="email"] {
+    display: inline-block;
+    width: 100% !important;
+    margin: 0;
+    margin: 5px auto 9px auto;
+    padding-left: 11px;
+    min-height: 30px;
+    line-height: 30px;
+    height: 40px;
+    font-size: .8125rem;
+    font-family: "Open Sans",Helvetica,sans-serif;
+    color: #000;
+    transition: all .3s ease-in-out;
+    border: 1px solid #EEE;
+    border-radius: 4px; }
+  .hbspt-form .actions {
+    padding-right: 15px; }
+  .hbspt-form input[type="submit"] {
+    display: inline-block;
+    width: 100% !important;
+    padding: 8px 49px;
+    margin: 8px 0 0 0;
+    background: none #fc0;
+    font-family: "Open Sans",Helvetica,sans-serif;
+    font-size: .8125rem;
+    font-weight: 500;
+    color: #806603;
+    border-radius: 3px;
+    border: 0;
+    height: auto;
+    cursor: pointer;
+    transition: all .2s ease-in-out; }
+  .hbspt-form .hs-error-msgs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #7F0909; }
 
 .ac__learn {
   background: #CFCFCF;
@@ -798,15 +812,18 @@ body {
   width: auto; }
 
 @media only screen and (max-width: 700px) {
-  .hbspt-form fieldset {
-    margin: 0 !important; }
-  .hbspt-form .input {
-    width: 100% !important;
-    margin: 0 0 15px 0 !important; }
-  .hbspt-form .hs-form-field {
-    width: 100% !important;
-    display: block;
-    padding: 0 15px; } }
+  .hbspt-form {
+    margin: 0; }
+    .hbspt-form .input {
+      width: 100% !important;
+      margin: 0 0 15px 0 !important;
+      padding: 0 !important; }
+    .hbspt-form .hs-form-field {
+      width: 100% !important;
+      display: block;
+      padding: 0 15px; }
+    .hbspt-form .actions {
+      padding: 0 15px; } }
 .ac__lesson-title {
   font-size: 3rem;
   margin-bottom: 42px;
