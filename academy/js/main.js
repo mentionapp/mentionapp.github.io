@@ -32,14 +32,6 @@ var tw_referrer =  "twitter";
 		$('#ac__input-default').attr("placeholder", "Your Twitter handle without @");
 	}
 
-	// Toggle form success
-	$('.ac__form').submit(function(e){
-	    e.preventDefault();
-	    $('.ac__form-success').removeClass('hidden');
-	    $('.ac__form-success').addClass('visible');
-	    $('.ac__form').addClass('hidden');
-	});
-
 	// Does Segment ID exist?
 	$(window).load(function() {
 		SegmentID = analytics.user().id();

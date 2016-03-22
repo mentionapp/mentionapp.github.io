@@ -132,11 +132,18 @@
 				</section>
 
 				<section class="ac__content ac__form-cont ac__form-cont--lesson">
-					<h2>Enroll now for the 8 weeks free course</h2>
-					<form action="" class="ac__form ac__form--default">
-						<input type="text" placeholder="Enter your e-mail address here" class="ac__input">
-						<a href="#" class="ac__submit">Get onboard the Mention Academy</a>
-					</form>
+					<h2>Enroll now for the 8 days free course</h2>
+					<!--[if lte IE 8]>
+					<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+					<![endif]-->
+					<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+					<script>
+						hbspt.forms.create({
+							css: '',
+							portalId: '1896803',
+							formId: '2cad978d-4cde-4544-b063-c2c4d17aaed1'
+						});
+					</script>
 				</section>
 
 			</div>
@@ -146,13 +153,25 @@
 		<aside class="ac__side">
 			<div class="ac__ctas">
 				<div class="ac__ctas-cont">
-					<h3>Free 8 week course on media monitoring</h3>
-					<p>Every week, you’ll receive an email focusing on how monitoring can help grow a different area of your business.</p>
-					<form action="" class="ac__form ac__form--default">
-						<input type="text" placeholder="Enter your e-mail address here" class="ac__input">
-						<a href="#" class="ac__submit">Get onboard the Mention Academy</a>
-					</form>
-					<div id="test" class="ac__form-success hidden">
+					<h3>Free 8 day course on media monitoring</h3>
+					<p>Every day, you’ll receive an email focusing on how monitoring can help grow a different area of your business.</p>
+					<!--[if lte IE 8]>
+					<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+					<![endif]-->
+					<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+					<script>
+						hbspt.forms.create({
+							css: '',
+							portalId: '1896803',
+							formId: '2cad978d-4cde-4544-b063-c2c4d17aaed1',
+							onFormSubmit: function($form) {
+								$('.ac__form-success').removeClass('hidden');
+								$('.ac__form-success').addClass('visible');
+								$form.addClass('hidden');
+							}
+						});
+					</script>
+					<div class="ac__form-success hidden">
 						<p>Thank you for subscribing to the Mention Academy! You'll be hearing from us soon :)</p>
 						<div class="ac__shares">
 							<a href="https://twitter.com/share" class="twitter-share-button" data-via="Mention">Tweet</a>

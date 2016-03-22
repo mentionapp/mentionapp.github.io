@@ -1,38 +1,81 @@
 .ac__side .ac__ctas-cont, .ac__side .ac__about-cont { padding:0 39px; }
-  .ac__side .ac__ctas { padding: 0; position: initial; margin-top: 65px; }
-  .ac__side .ac__form { margin: 0; }
-    .ac__side h3 { color: #22282B; line-height: 1.3; font-family: Roboto; font-weight: 400; font-size: 1rem; text-align: left; }
-    .ac__side p { color: #888; margin-bottom: 30px; font-family: 'Open Sans'; line-height: 1.6; font-size: 1rem; }
-    .ac__side hr { border: none; border-top: 1px solid #ddd; margin: 42px 0; }
-    .ac__input { 
-        width: 350px;
-        color: #222; 
-        font-size: 1rem; 
-        height: 56px; 
-        border: 1px solid #eee; 
-        border-radius: 3px; 
-        display: inline-block; 
-        margin-right: 15px;
-        padding-left: 15px; 
-    }
-    .ac__submit { 
-        background-color: #CBC93B; 
-        cursor: pointer; 
-        width: auto;
-        min-width: 150px;  
-        font-weight: 500; 
-        font-size: .825rem;
-        padding: 15px 21px;
-        font-family: 'Roboto', sans-serif;
-        text-transform: uppercase; 
-        display: inline-block; 
-        border-radius: 3px; 
-        text-align: center; 
-        color: rgba(0,0,0,.5);  
-    }
-    .ac__learn { background: #CFCFCF; border: none; border-radius: 4px;width: 100%; margin-top: 18px; font-weight: 500; font-size: .85rem; height: 56px; display: block; line-height: 56px; border-radius: 4px; text-align: center; color: #fff; text-decoration: none; }
-    .ac__about-cont { text-align: center; }
-    .ac__about-cont img { margin: 5px; width: auto; height: 31px; vertical-align: middle; }
-    .ac__about-cont img.wb { height: 70px; width: auto; }
-    .ac__about-cont img.sm { height: 30px; width: auto; }
-    .ac__about-cont img.bf { height: 24px; width: auto; }
+.ac__side .ac__ctas { padding: 0; position: initial; margin-top: 65px; }
+.ac__side .ac__form { margin: 0; }
+.ac__side h3 { color: #22282B; line-height: 1.3; font-family: Roboto; font-weight: 400; font-size: 1rem; text-align: left; }
+.ac__side p { color: #888; margin-bottom: 30px; font-family: 'Open Sans'; line-height: 1.6; font-size: 1rem; }
+.ac__side hr { border: none; border-top: 1px solid #ddd; margin: 42px 0; }
+.hbspt-form {
+	fieldset {
+		margin: 0 auto 10px auto !important;
+		width: 100% !important;
+		max-width: 700px !important;
+		text-align: left;
+	}
+
+	.hs-form-field {
+		float: none !important;
+		display: inline-block;
+		width: 100%;
+		max-width: 335px;
+		margin: 0 auto;
+	}
+
+	.input {
+		padding: 0 15px 0 0 !important;
+		margin: 0 !important;
+	}
+	.hs-form-required {
+		display: none;
+	}
+	input[type="text"], input[type="email"] {
+		display: inline-block;
+		width: 100% !important;
+		margin: 0;
+		color: #222;
+		font-size: 1rem;
+		height: 56px;
+		border: 1px solid #eee;
+		border-radius: 3px;
+		padding-left: 15px;
+	}
+	input[type="submit"]  {
+		display: inline-block;
+		background-color: #CBC93B;
+		cursor: pointer;
+		min-width: 150px;
+		font-weight: 500;
+		font-size: .825rem;
+		padding: 15px 21px;
+		font-family: 'Roboto', sans-serif;
+		text-transform: uppercase;
+		border-radius: 3px;
+		text-align: center;
+		color: rgba(0,0,0,.5);
+	}
+	.hs-error-msgs {
+		list-style: none;
+		padding: 0;
+		color: #7F0909;
+	}
+}
+.ac__learn { background: #CFCFCF; border: none; border-radius: 4px;width: 100%; margin-top: 18px; font-weight: 500; font-size: .85rem; height: 56px; display: block; line-height: 56px; border-radius: 4px; text-align: center; color: #fff; text-decoration: none; }
+.ac__about-cont { text-align: center; }
+.ac__about-cont img { margin: 5px; width: auto; height: 31px; vertical-align: middle; }
+.ac__about-cont img.wb { height: 70px; width: auto; }
+.ac__about-cont img.sm { height: 30px; width: auto; }
+.ac__about-cont img.bf { height: 24px; width: auto; }
+
+@include mquery(700px) {
+	.hbspt-form {
+		fieldset { margin: 0 !important; }
+		.input {
+			width: 100% !important;
+			margin: 0 0 15px 0 !important;
+		}
+		.hs-form-field {
+			width: 100% !important;
+			display: block;
+			padding: 0 15px;
+		}
+	}
+}

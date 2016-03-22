@@ -638,7 +638,7 @@ body {
 .ac__nav--home {
   max-width: 1280px;
   margin-top: 0;
-  padding-top: 42px; }
+  padding: 42px 20px 0 20px; }
 
 .ac__form-cont--home {
   max-width: 100%;
@@ -716,31 +716,49 @@ body {
   border-top: 1px solid #ddd;
   margin: 42px 0; }
 
-.ac__input {
-  width: 350px;
+.hbspt-form fieldset {
+  margin: 0 auto 10px auto !important;
+  width: 100% !important;
+  max-width: 700px !important;
+  text-align: left; }
+.hbspt-form .hs-form-field {
+  float: none !important;
+  display: inline-block;
+  width: 100%;
+  max-width: 335px;
+  margin: 0 auto; }
+.hbspt-form .input {
+  padding: 0 15px 0 0 !important;
+  margin: 0 !important; }
+.hbspt-form .hs-form-required {
+  display: none; }
+.hbspt-form input[type="text"], .hbspt-form input[type="email"] {
+  display: inline-block;
+  width: 100% !important;
+  margin: 0;
   color: #222;
   font-size: 1rem;
   height: 56px;
   border: 1px solid #eee;
   border-radius: 3px;
-  display: inline-block;
-  margin-right: 15px;
   padding-left: 15px; }
-
-.ac__submit {
+.hbspt-form input[type="submit"] {
+  display: inline-block;
   background-color: #CBC93B;
   cursor: pointer;
-  width: auto;
   min-width: 150px;
   font-weight: 500;
   font-size: .825rem;
   padding: 15px 21px;
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
-  display: inline-block;
   border-radius: 3px;
   text-align: center;
   color: rgba(0, 0, 0, 0.5); }
+.hbspt-form .hs-error-msgs {
+  list-style: none;
+  padding: 0;
+  color: #7F0909; }
 
 .ac__learn {
   background: #CFCFCF;
@@ -779,6 +797,16 @@ body {
   height: 24px;
   width: auto; }
 
+@media only screen and (max-width: 700px) {
+  .hbspt-form fieldset {
+    margin: 0 !important; }
+  .hbspt-form .input {
+    width: 100% !important;
+    margin: 0 0 15px 0 !important; }
+  .hbspt-form .hs-form-field {
+    width: 100% !important;
+    display: block;
+    padding: 0 15px; } }
 .ac__lesson-title {
   font-size: 3rem;
   margin-bottom: 42px;
@@ -969,3 +997,5 @@ body {
   .ac__expert--lesson img {
     margin-left: 0;
     border: none; } }
+
+/*# sourceMappingURL=main.css.map */
