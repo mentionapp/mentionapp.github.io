@@ -796,6 +796,16 @@ body {
   border-top: 1px solid #ddd;
   margin: 42px 0; }
 
+.ac__side .hbspt-form fieldset {
+  width: 100% !important; }
+
+.ac__side .hbspt-form .hs-form-field {
+  max-width: inherit; }
+
+.ac__side .hbspt-form .hs_submit {
+  max-width: inherit;
+  padding-right: 15px; }
+
 .ac__side .hbspt-form label span {
   color: #22282b; }
 

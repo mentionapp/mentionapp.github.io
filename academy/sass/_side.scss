@@ -5,6 +5,9 @@
 .ac__side p { color: #888; margin-bottom: 30px; font-family: 'Open Sans'; line-height: 1.6; font-size: 1rem; }
 .ac__side hr { border: none; border-top: 1px solid #ddd; margin: 42px 0; }
 
+.ac__side .hbspt-form fieldset { width: 100% !important; }
+.ac__side .hbspt-form .hs-form-field { max-width: inherit; }
+.ac__side .hbspt-form .hs_submit { max-width: inherit; padding-right: 15px; }
 .ac__side .hbspt-form label span { color: #22282b; }
 
 .ac__learn { background: #CFCFCF; border: none; border-radius: 4px;width: 100%; margin-top: 18px; font-weight: 500; font-size: .85rem; height: 56px; display: block; line-height: 56px; border-radius: 4px; text-align: center; color: #fff; text-decoration: none; }
