@@ -131,7 +131,7 @@
 							}
 						});
 					</script>
-					<div id="test" class="ac__form-success hidden">
+					<div class="ac__form-success hidden">
 						<p>Thank you for subscribing to the Mention Academy! You'll be hearing from us soon :)</p>
 						<div class="ac__shares">
 							<a href="https://twitter.com/share" class="twitter-share-button" data-via="Mention">Tweet</a>
@@ -165,7 +165,7 @@
 							}
 						});
 					</script>
-					<div id="test" class="ac__form-success hidden">
+					<div class="ac__form-success hidden">
 						<p>Thank you for subscribing to the Mention Academy! You'll be hearing from us soon :)</p>
 						<div class="ac__shares">
 							<a href="https://twitter.com/share" class="twitter-share-button" data-via="Mention">Tweet</a>
